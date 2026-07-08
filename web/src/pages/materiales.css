@@ -1,0 +1,303 @@
+/* ============================================================
+   MaterialesPage — el proyecto como referencia descargable.
+   Hero corto + secciones en tarjetas (rejilla responsive).
+   Usa exclusivamente las CSS vars del tema (claro/oscuro).
+   ============================================================ */
+
+/* --- Hero --- */
+.mat-hero {
+  min-height: clamp(280px, 40vh, 400px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(2.5rem, 6vw, 4rem) 1.25rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.mat-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    120% 80% at 50% -20%,
+    color-mix(in srgb, var(--gold) 9%, transparent),
+    transparent 55%
+  );
+  z-index: 0;
+}
+
+.mat-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.mat-hero__mark {
+  color: var(--ink);
+  margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mat-hero__kicker {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.9rem;
+}
+
+.mat-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 6vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+.mat-hero__subtitle {
+  font-size: clamp(1rem, 2.2vw, 1.18rem);
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.mat-hero__subtitle em {
+  font-style: italic;
+  color: var(--ink);
+}
+
+.mat-hero__divider {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--gold),
+    var(--gold) 30%,
+    transparent 30%,
+    transparent 70%,
+    var(--gold) 70%
+  );
+  margin: 2rem auto 0;
+}
+
+/* --- Wrapper de secciones --- */
+.mat-wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 1.5rem clamp(1rem, 4vw, 2rem) 2rem;
+}
+
+.mat-section {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.mat-section__head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--divider);
+}
+
+.mat-section__kicker {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  flex-shrink: 0;
+  padding-top: 0.35rem;
+}
+
+.mat-section__head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.mat-section__lead {
+  font-size: 0.98rem;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 68ch;
+}
+
+/* --- Rejilla de tarjetas de archivo --- */
+.mat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* --- Tarjeta / fila de archivo (es un <a>) --- */
+.mat-file {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1.1rem 1.15rem;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius);
+  background: var(--bg2);
+  color: var(--ink);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease),
+    box-shadow 0.25s var(--ease), background-color 0.25s var(--ease);
+}
+
+/* Filo dorado que aparece a la izquierda en hover */
+.mat-file::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--gold);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.28s var(--ease);
+}
+
+.mat-file:hover {
+  border-color: color-mix(in srgb, var(--gold) 55%, var(--divider));
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--gold) 18%, transparent);
+  color: var(--ink);
+}
+
+.mat-file:hover::before {
+  transform: scaleY(1);
+}
+
+.mat-file:active {
+  transform: translateY(-1px);
+}
+
+/* --- Badge por tipo --- */
+.mat-file__badge {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.3em 0.5em;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  line-height: 1;
+  margin-top: 0.15rem;
+}
+
+.mat-file__badge.is-pdf {
+  color: #a3402f;
+  background: color-mix(in srgb, #a3402f 12%, transparent);
+  border-color: color-mix(in srgb, #a3402f 35%, transparent);
+}
+
+.mat-file__badge.is-docx {
+  color: var(--blue);
+  background: color-mix(in srgb, var(--blue) 12%, transparent);
+  border-color: color-mix(in srgb, var(--blue) 38%, transparent);
+}
+
+.mat-file__badge.is-md {
+  color: var(--gold);
+  background: color-mix(in srgb, var(--gold) 14%, transparent);
+  border-color: color-mix(in srgb, var(--gold) 40%, transparent);
+}
+
+:root[data-theme='dark'] .mat-file__badge.is-pdf {
+  color: #e08b7a;
+}
+
+/* --- Cuerpo del texto --- */
+.mat-file__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.mat-file__title {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.mat-file__desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.mat-file__action {
+  flex-shrink: 0;
+  align-self: center;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.25s var(--ease);
+}
+
+.mat-file:hover .mat-file__action {
+  color: var(--gold);
+}
+
+/* --- Nota de fuente primaria --- */
+.mat-note {
+  margin-top: clamp(3rem, 7vw, 4.5rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--divider);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.mat-note em {
+  font-style: italic;
+}
+
+/* --- Responsive --- */
+@media (max-width: 560px) {
+  .mat-section__head {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .mat-section__kicker {
+    padding-top: 0;
+  }
+  .mat-grid {
+    grid-template-columns: 1fr;
+  }
+  .mat-file__action {
+    display: none;
+  }
+}
+
+/* --- Movimiento reducido --- */
+@media (prefers-reduced-motion: reduce) {
+  .mat-file,
+  .mat-file::before,
+  .mat-file__action {
+    transition: none;
+  }
+  .mat-file:hover {
+    transform: none;
+  }
+  .mat-file:hover::before {
+    transform: scaleY(1);
+  }
+}

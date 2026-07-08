@@ -1,0 +1,563 @@
+/* ============================================================
+   PresentationPage — deck de slides. Tema clásico académico.
+   Ocupa el alto disponible bajo el header del Layout.
+   ============================================================ */
+
+.deck {
+  position: relative;
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+  background-image:
+    radial-gradient(
+      120% 90% at 50% -10%,
+      color-mix(in srgb, var(--gold) 7%, transparent),
+      transparent 60%
+    );
+}
+
+/* Pantalla completa: el deck ocupa todo el viewport */
+.deck.is-fs {
+  min-height: 100vh;
+}
+
+.deck-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--gold);
+  width: 0;
+  transition: width 0.4s ease;
+  z-index: 5;
+}
+
+.deck-stage {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.deck-slide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.75rem, 5vw, 4.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 5.5rem); /* deja aire para el HUD */
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.deck-slide.is-cover {
+  align-items: flex-start;
+}
+
+.deck-slide.is-quote {
+  justify-content: center;
+}
+
+/* Slides anchos (con diagrama): más aire horizontal */
+.deck-slide.has-figure {
+  max-width: 1180px;
+}
+
+/* Envoltorio de contenido textual (kicker, título, cuerpo). */
+.deck-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.deck-slide.is-cover .deck-content {
+  align-items: flex-start;
+}
+
+/* Monograma de portada */
+.deck-cover-mark {
+  color: var(--ink);
+  margin-bottom: 1.6rem;
+}
+
+/* Halo/bloom detrás del monograma de portada */
+.deck-cover-halo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deck-cover-logo {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+}
+
+/* ---------------------------------------------------------------
+   Stagger reveal de los ítems de cada slide.
+   El slide se re-monta al cambiar (key), así la animación se
+   reinicia en cada diapositiva. prefers-reduced-motion lo anula
+   (regla global en theme.css → duración ~0 → estado final).
+   --------------------------------------------------------------- */
+.deck-content > * {
+  animation: deckItemIn 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.deck-content > *:nth-child(1) { animation-delay: 0.06s; }
+.deck-content > *:nth-child(2) { animation-delay: 0.16s; }
+.deck-content > *:nth-child(3) { animation-delay: 0.26s; }
+.deck-content > *:nth-child(4) { animation-delay: 0.36s; }
+.deck-content > *:nth-child(5) { animation-delay: 0.46s; }
+.deck-content > *:nth-child(6) { animation-delay: 0.56s; }
+
+/* Stagger interno para listas, grid y cadena */
+.deck-points li,
+.deck-grid4 .deck-card,
+.deck-chain .deck-step {
+  animation: deckItemIn 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.deck-points li:nth-child(1),
+.deck-grid4 .deck-card:nth-child(1),
+.deck-chain .deck-step:nth-child(1) { animation-delay: 0.34s; }
+.deck-points li:nth-child(2),
+.deck-grid4 .deck-card:nth-child(2),
+.deck-chain .deck-step:nth-child(2) { animation-delay: 0.46s; }
+.deck-points li:nth-child(3),
+.deck-grid4 .deck-card:nth-child(3),
+.deck-chain .deck-step:nth-child(3) { animation-delay: 0.58s; }
+.deck-grid4 .deck-card:nth-child(4) { animation-delay: 0.70s; }
+
+@keyframes deckItemIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --- Tipografía del deck --- */
+.deck-kicker {
+  font-family: var(--font-mono);
+  font-size: clamp(0.7rem, 1.1vw, 0.85rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.4rem;
+}
+
+.deck-h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 6vw, 4.6rem);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.2rem;
+}
+
+.deck-h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 4.4vw, 3.2rem);
+  line-height: 1.08;
+  color: var(--blue);
+  margin-bottom: 1.6rem;
+}
+
+.deck-lead {
+  font-size: clamp(1.1rem, 2.1vw, 1.6rem);
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+.deck-sub {
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
+  color: var(--muted);
+  max-width: 58ch;
+  line-height: 1.5;
+  margin-top: 1.4rem;
+}
+
+.deck .hl {
+  color: var(--blue);
+}
+
+.deck em {
+  color: var(--blue);
+  font-style: italic;
+}
+
+/* Énfasis cinético en los términos griegos: subrayado dorado que crece */
+.deck .gk {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--blue);
+  white-space: nowrap;
+  background-image: linear-gradient(var(--gold), var(--gold));
+  background-repeat: no-repeat;
+  background-position: left 88%;
+  background-size: 0% 1.5px;
+  animation: gkUnderline 0.6s ease forwards;
+  animation-delay: 0.55s;
+}
+
+@keyframes gkUnderline {
+  to {
+    background-size: 100% 1.5px;
+  }
+}
+
+.deck-divider {
+  width: 70px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1.4rem 0;
+}
+
+.deck-meta {
+  margin-top: 2.2rem;
+  font-family: var(--font-mono);
+  font-size: clamp(0.78rem, 1.2vw, 0.95rem);
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+/* Listas */
+.deck-points {
+  list-style: none;
+  margin-top: 0.6rem;
+  max-width: 62ch;
+}
+
+.deck-points li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 1.05rem;
+  font-size: clamp(1.02rem, 1.9vw, 1.5rem);
+  line-height: 1.45;
+}
+
+.deck-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1.5px solid var(--gold);
+  transform: rotate(45deg);
+}
+
+.deck-points li strong {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* Grid de 4 criterios */
+.deck-grid4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.6rem;
+  max-width: 60ch;
+  margin-top: 0.6rem;
+}
+
+.deck-card {
+  border-left: 2px solid var(--divider);
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.deck-card__n {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 0.85rem;
+}
+
+.deck-card__t {
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.deck-card__d {
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  color: var(--muted);
+}
+
+/* Cadena (a)(b) */
+.deck-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 64ch;
+  margin-top: 0.4rem;
+}
+
+.deck-step {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
+  line-height: 1.4;
+}
+
+.deck-step__q {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  flex: 0 0 auto;
+}
+
+/* Cita de cierre */
+.deck-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.5rem, 3.6vw, 2.8rem);
+  line-height: 1.28;
+  max-width: 24ch;
+}
+
+.deck-quote__src {
+  display: block;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.5em;
+  color: var(--gold);
+  margin-top: 1.2rem;
+  letter-spacing: 0.08em;
+}
+
+/* --- Controles --- */
+.deck-hud {
+  position: absolute;
+  bottom: 1.4rem;
+  right: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 5;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.deck-hud button {
+  background: none;
+  border: 1px solid var(--divider);
+  color: var(--muted);
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.deck-hud button:hover:not(:disabled) {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.deck-hud button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.deck-counter {
+  min-width: 4.2rem;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.deck-counter__cur {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.deck-counter__sep {
+  margin: 0 0.35em;
+  color: var(--divider);
+}
+
+.deck-fs {
+  font-size: 0.95rem !important;
+}
+
+.deck-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 5;
+}
+
+.deck-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--divider);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.deck-dot.on {
+  background: var(--gold);
+  transform: scale(1.35);
+}
+
+.deck-hint {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  opacity: 0.6;
+  z-index: 4;
+}
+
+/* En columna estrecha, los slides con diagrama pueden superar el alto del
+   viewport (texto + figura apilados). Dejamos que el escenario haga scroll
+   vertical para que nada se recorte; el swipe horizontal sigue navegando. */
+@media (max-width: 920px) {
+  .deck-stage {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  .deck-slide.has-figure {
+    justify-content: flex-start;
+    padding-top: clamp(1.5rem, 5vw, 2.5rem);
+    padding-bottom: 6.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .deck-grid4 {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+  .deck-hint {
+    display: none;
+  }
+  /* Controles thumb-friendly: barra centrada abajo con objetivos ≥44px */
+  .deck-hud {
+    left: 50%;
+    right: auto;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    gap: 1.4rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: saturate(160%) blur(6px);
+    border: 1px solid var(--divider);
+  }
+  .deck-hud button {
+    width: 2.9rem;
+    height: 2.9rem;
+    font-size: 1.15rem;
+  }
+  .deck-counter {
+    font-size: 0.9rem;
+    min-width: 3.4rem;
+  }
+  /* Los puntos suben por encima de la barra y encogen para caber los 13 */
+  .deck-dots {
+    bottom: 4.4rem;
+    gap: 0.35rem;
+  }
+  .deck-dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Botón de índice (▦) — mismo estilo que el resto del HUD.
+   --------------------------------------------------------------- */
+.deck-ix {
+  font-size: 0.95rem !important;
+}
+
+/* ---------------------------------------------------------------
+   Overlay de índice: rejilla para saltar a cualquier diapositiva.
+   Se abre con la tecla «I» o el botón; se cierra con Esc/I/clic fuera.
+   --------------------------------------------------------------- */
+.deck-index {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(150%) blur(10px);
+}
+
+.deck-index__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.7rem;
+  width: 100%;
+  max-width: 860px;
+  max-height: 78vh;
+  overflow-y: auto;
+}
+
+.deck-index__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: left;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius);
+  background: var(--bg2);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+
+.deck-index__card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.deck-index__card.on {
+  border-color: var(--gold);
+  background: color-mix(in srgb, var(--gold) 12%, var(--bg2));
+}
+
+.deck-index__n {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+}
+
+.deck-index__k {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.3;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.deck-index__hint {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  opacity: 0.7;
+}

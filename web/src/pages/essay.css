@@ -1,0 +1,914 @@
+/* ============================================================
+   EssayPage — hero, índice y artículo. Tema clásico académico.
+   ============================================================ */
+
+/* --- Hero --- */
+.essay-hero {
+  min-height: clamp(400px, 52vh, 560px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(2.5rem, 6vw, 4rem) 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.essay-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.essay-hero__mark {
+  color: var(--ink);
+  margin-bottom: 1.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Fondo sutil del hero */
+.essay-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    120% 80% at 50% -20%,
+    color-mix(in srgb, var(--gold) 9%, transparent),
+    transparent 55%
+  );
+  z-index: 0;
+}
+
+/* Botones / CTA */
+.essay-hero__cta {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.essay-btn {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border: 1px solid var(--divider);
+  border-radius: 999px;
+  padding: 0.7em 1.4em;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s,
+    transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+.essay-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.essay-btn:active {
+  transform: translateY(0);
+}
+
+.essay-btn--solid {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--bg);
+}
+
+.essay-btn--solid:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--bg);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--gold) 30%, transparent);
+}
+
+:root[data-theme='dark'] .essay-btn--solid {
+  color: #14171c;
+}
+
+.essay-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+.essay-hero__subtitle {
+  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.essay-hero__divider {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--gold),
+    var(--gold) 30%,
+    transparent 30%,
+    transparent 70%,
+    var(--gold) 70%
+  );
+  margin: 2rem auto;
+}
+
+.essay-hero__meta {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.essay-hero__meta strong {
+  color: var(--ink);
+}
+
+/* --- Layout artículo + índice --- */
+/* Grid de dos columnas centrado como grupo: el índice y el artículo se
+   mantienen juntos en el centro, con márgenes laterales equilibrados.
+   (Antes: flex con article max-width dejaba una banda muerta enorme a la
+   derecha — hasta 560px en pantallas anchas.) */
+.essay-wrap {
+  display: grid;
+  grid-template-columns: 210px minmax(0, var(--measure));
+  justify-content: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem) 1.25rem 2rem;
+}
+
+.essay-toc {
+  position: sticky;
+  top: calc(var(--header-h) + 16px);
+  align-self: flex-start;
+  max-height: calc(100vh - var(--header-h) - 32px);
+  overflow-y: auto;
+  padding-right: 1.5rem;
+  border-right: 1px solid var(--divider);
+}
+
+/* Cabecera del índice: en escritorio es un rótulo; en móvil, el botón que
+   despliega el panel colapsable. */
+.essay-toc__toggle {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: default;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+.essay-toc__chev {
+  display: none;
+}
+
+.essay-toc__panel {
+  /* En escritorio siempre visible; en móvil colapsa (ver media query). */
+}
+
+.essay-toc ul {
+  list-style: none;
+}
+
+.essay-toc li {
+  margin-bottom: 0.8rem;
+}
+
+.essay-toc a {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.essay-toc a {
+  display: block;
+  padding-left: 0.7rem;
+  border-left: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.essay-toc a:hover {
+  color: var(--gold);
+}
+
+.essay-toc a.is-active {
+  color: var(--ink);
+  font-weight: 600;
+  border-left-color: var(--gold);
+}
+
+.essay-toc__foot {
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--divider);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* --- Artículo --- */
+.essay-article {
+  min-width: 0;
+}
+
+.essay-article section {
+  margin-bottom: 3.4rem;
+  scroll-margin-top: calc(var(--header-h) + 16px);
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.essay-article section.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Sin JS o con reduce-motion: nada oculto */
+@media (prefers-reduced-motion: reduce) {
+  .essay-article section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Término griego en el cuerpo del ensayo (mapas) */
+.essay .gk {
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* Reveal escalonado de los elementos de los mapas y de las tarjetas
+   formales, ligado a que la sección entre en viewport (.is-in). */
+.essay-article section .argmap__col,
+.essay-article section .argmap__step,
+.essay-article section .argmap__closing,
+.essay-article section .argument-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.essay-article section.is-in .argmap__col,
+.essay-article section.is-in .argmap__step,
+.essay-article section.is-in .argmap__closing,
+.essay-article section.is-in .argument-card {
+  opacity: 1;
+  transform: none;
+}
+
+.essay-article section.is-in .argmap__col:nth-child(2) { transition-delay: 0.08s; }
+.essay-article section.is-in .argmap__col:nth-child(3) { transition-delay: 0.16s; }
+.essay-article section.is-in .argmap__col:nth-child(4) { transition-delay: 0.24s; }
+.essay-article section.is-in .argmap__step:nth-child(3) { transition-delay: 0.08s; }
+.essay-article section.is-in .argmap__step:nth-child(4) { transition-delay: 0.16s; }
+.essay-article section.is-in .argument-card:nth-child(2) { transition-delay: 0.07s; }
+.essay-article section.is-in .argument-card:nth-child(3) { transition-delay: 0.14s; }
+.essay-article section.is-in .argument-card:nth-child(4) { transition-delay: 0.21s; }
+.essay-article section.is-in .argument-card:nth-child(5) { transition-delay: 0.28s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .essay-article section .argmap__col,
+  .essay-article section .argmap__step,
+  .essay-article section .argmap__closing,
+  .essay-article section .argument-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.essay-article h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.essay-article h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.essay-article h4 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--blue);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.essay-article p {
+  margin-bottom: 1.5em;
+  text-align: justify;
+}
+
+.section-divider {
+  width: 60%;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--gold),
+    var(--gold) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  margin: 1.5rem 0 2.5rem;
+}
+
+/* Capitular */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 3.5em;
+  font-weight: 700;
+  line-height: 1;
+  padding-right: 0.12em;
+  color: var(--gold);
+  margin-top: 0.08em;
+}
+
+/* Cita destacada */
+.pull-quote {
+  background-color: color-mix(in srgb, var(--blue) 5%, transparent);
+  border-left: 3px solid var(--gold);
+  padding: 1.4em 1.5em;
+  margin: 2em 0;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.essay-list {
+  margin: 0 0 1.5em 1.5em;
+}
+
+.essay-list li {
+  margin-bottom: 0.5em;
+}
+
+/* Bibliografía */
+.bibliography-section ul {
+  list-style: none;
+}
+
+.bibliography-section li {
+  margin-bottom: 1em;
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+/* --- Mapas (mermaid como fuente cruda por ahora) --- */
+.mermaid-src {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  background: var(--bg2);
+  border: 1px solid var(--divider);
+  border-left: 3px solid var(--gold);
+  border-radius: 6px;
+  padding: 1em 1.2em;
+  margin: 1em 0 2em;
+  overflow-x: auto;
+  white-space: pre;
+  color: var(--muted);
+}
+
+/* --- Rigor formal --- */
+.st-credit {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 1.2em 0 0.5em;
+}
+
+.formal-grid {
+  display: grid;
+  /* min(100%, 280px) evita que el track mínimo (280px) desborde el viewport
+     en móvil; min-width:0 en la card deja que el <pre> haga scroll interno
+     en vez de ensanchar la columna (causa del scroll horizontal a 375px). */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.argument-card {
+  min-width: 0;
+  border: 1px solid var(--gold);
+  padding: 1.5em;
+  background-color: color-mix(in srgb, var(--blue) 5%, transparent);
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.argument-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--gold) 16%, transparent);
+}
+
+.argument-card h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.argument-card code {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  white-space: pre;
+  background-color: var(--bg2);
+  padding: 0.8em;
+  border-radius: 3px;
+  overflow-x: auto;
+  margin: 0.8rem 0;
+  line-height: 1.5;
+}
+
+.validity {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.validity.valid {
+  color: #2d5016;
+}
+
+.validity.invalid {
+  color: #8b3a3a;
+}
+
+:root[data-theme='dark'] .validity.valid {
+  color: #8fbf6b;
+}
+
+:root[data-theme='dark'] .validity.invalid {
+  color: #d98a8a;
+}
+
+.argument-desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 0.8rem;
+  text-align: left !important;
+}
+
+.st-lang-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 0.2em;
+}
+
+.st-block {
+  background: var(--bg2);
+  border: 1px solid var(--divider);
+  border-left: 3px solid var(--gold);
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  padding: 0.85em 1em;
+  margin: 0.75em 0 0.4em;
+  overflow-x: auto;
+  white-space: pre;
+  color: var(--ink);
+}
+
+/* --- Ejecución en vivo (botón «Ejecutar» → /api/st) --- */
+.st-run {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin: 0.35em 0 0.2em;
+  flex-wrap: wrap;
+}
+
+.st-run__btn {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: var(--bg);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+  padding: 0.4em 0.95em;
+  cursor: pointer;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.st-run__btn:hover:not(:disabled) {
+  opacity: 0.86;
+  transform: translateY(-1px);
+}
+
+.st-run__btn:disabled {
+  opacity: 0.55;
+  cursor: progress;
+}
+
+.st-run__badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+.st-run__badge--ok {
+  color: #2d5016;
+}
+
+.st-run__badge--err {
+  color: #8b3a3a;
+}
+
+:root[data-theme='dark'] .st-run__badge--ok {
+  color: #8fbf6b;
+}
+
+:root[data-theme='dark'] .st-run__badge--err {
+  color: #d98a8a;
+}
+
+.st-output {
+  background: var(--bg);
+  border: 1px solid var(--divider);
+  border-left: 3px solid #2d5016;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.55;
+  padding: 0.75em 1em;
+  margin: 0.55em 0 0.3em;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--ink);
+}
+
+.st-output--err {
+  border-left-color: #8b3a3a;
+}
+
+:root[data-theme='dark'] .st-output {
+  border-left-color: #8fbf6b;
+}
+
+:root[data-theme='dark'] .st-output--err {
+  border-left-color: #d98a8a;
+}
+
+.st-cta {
+  margin-top: 2em;
+  padding: 1.1em 1.3em;
+  background: var(--bg2);
+  border: 1px solid var(--divider);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.st-cta code {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: var(--bg);
+  border: 1px solid var(--divider);
+  border-radius: 5px;
+  padding: 0.6em 0.8em;
+  margin: 0.6em 0;
+  overflow-x: auto;
+  white-space: pre;
+  color: var(--ink);
+}
+
+/* ---------------------------------------------------------------
+   Mapas del argumento (nativos, reemplazan a Mermaid)
+   --------------------------------------------------------------- */
+.argmap {
+  margin: 1.2em 0 2.6em;
+  font-family: var(--font-body);
+}
+
+.argmap .gk,
+.argmap .map-gk .gk {
+  color: var(--blue);
+  font-style: italic;
+}
+
+/* -- Mapa 1: criterios -- */
+.argmap--criteria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.argmap__root {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--bg2);
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  padding: 0.7em 1.2em;
+  position: relative;
+  margin-bottom: 2.2rem;
+}
+
+.argmap__root::after {
+  content: '';
+  position: absolute;
+  bottom: -2.2rem;
+  left: 50%;
+  width: 1px;
+  height: 2.2rem;
+  background: var(--divider);
+}
+
+.argmap__branches {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2.2rem;
+  position: relative;
+}
+
+.argmap__branches::before {
+  content: '';
+  position: absolute;
+  top: -2.2rem;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  background: var(--divider);
+}
+
+.argmap__col {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
+
+.argmap__col::before {
+  content: '';
+  position: absolute;
+  top: -2.2rem;
+  left: 50%;
+  width: 1px;
+  height: 2.2rem;
+  background: var(--divider);
+}
+
+.argmap__crit {
+  background: color-mix(in srgb, var(--blue) 7%, transparent);
+  border: 1px solid var(--divider);
+  border-top: 2px solid var(--gold);
+  border-radius: 6px;
+  padding: 0.7em 0.6em;
+  min-height: 5.4em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  justify-content: center;
+}
+
+.argmap__n {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--gold);
+}
+
+.argmap__label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.argmap__label .gk {
+  font-size: 0.85em;
+}
+
+.argmap__link {
+  width: 1px;
+  height: 1.1rem;
+  background: var(--divider);
+  margin: 0 auto;
+}
+
+.argmap__result {
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: var(--muted);
+  padding: 0.2em 0.3em;
+}
+
+.argmap__converge {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bg);
+  background: var(--blue);
+  border-radius: 999px;
+  padding: 0.55em 1.6em;
+}
+
+:root[data-theme='dark'] .argmap__converge {
+  color: #14171c;
+}
+
+/* Dentro de la píldora azul, el término griego hereda el color claro
+   (si no, quedaría azul sobre azul, invisible). */
+.argmap__converge .gk {
+  color: inherit;
+}
+
+/* -- Mapa 2: cadena -- */
+.argmap--chain {
+  max-width: 60ch;
+}
+
+.argmap__seed {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+  background: var(--bg2);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 0.7em 1em;
+  margin-bottom: 0.4rem;
+}
+
+.argmap__step {
+  border-left: 1px solid var(--divider);
+  margin-left: 0.9rem;
+  padding: 0.9rem 0 0.9rem 1.4rem;
+  position: relative;
+}
+
+.argmap__step::before {
+  content: '';
+  position: absolute;
+  left: -0.42rem;
+  top: 1.3rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: var(--bg);
+  border: 1.5px solid var(--gold);
+  border-radius: 50%;
+}
+
+.argmap__q {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.argmap__qtag {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 0.85em;
+  margin-right: 0.2em;
+}
+
+.argmap__a {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-top: 0.3em;
+}
+
+.argmap__closing {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--gold) 12%, transparent);
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  padding: 0.8em 1.1em;
+  margin-top: 0.8rem;
+  margin-left: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Nav al pie del artículo */
+.essay-endnav {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--divider);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .essay-wrap {
+    grid-template-columns: minmax(0, var(--measure));
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1.25rem 2rem;
+  }
+  .essay-toc {
+    position: relative;
+    top: auto;
+    max-height: none;
+    overflow: visible;
+    border-right: none;
+    border-bottom: 1px solid var(--divider);
+    padding: 0 0 0.5rem;
+  }
+  /* El índice colapsa tras un botón para no empujar el cuerpo del ensayo. */
+  .essay-toc__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 0;
+    padding: 0.9rem 0.2rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .essay-toc__chev {
+    display: inline-block;
+    transition: transform 0.28s ease;
+    color: var(--muted);
+  }
+  .essay-toc.is-open .essay-toc__chev {
+    transform: rotate(180deg);
+  }
+  .essay-toc__panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+  }
+  .essay-toc.is-open .essay-toc__panel {
+    grid-template-rows: 1fr;
+  }
+  .essay-toc__panel-inner {
+    min-height: 0;
+    overflow: hidden;
+  }
+  .essay-toc.is-open .essay-toc__panel-inner {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .argmap__branches {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem 1rem;
+    row-gap: 1.6rem;
+  }
+  /* En 2 columnas los conectores horizontales confunden: se ocultan */
+  .argmap__branches::before,
+  .argmap__col::before {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .essay-article p,
+  .pull-quote {
+    text-align: left;
+  }
+  .formal-grid {
+    grid-template-columns: 1fr;
+  }
+}

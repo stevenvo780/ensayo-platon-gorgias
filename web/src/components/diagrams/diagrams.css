@@ -1,0 +1,121 @@
+/* ============================================================
+   Diagramas animados de la presentación.
+   SVG con viewBox (escalan en móvil), texto con las fuentes/tokens
+   del design system. Glow dorado sobre el fondo del slide.
+   ============================================================ */
+
+.dg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible; /* deja respirar el glow; el .deck recorta el scroll */
+}
+
+/* Texto dentro del SVG (tamaños en unidades de viewBox → escalan) */
+.dg text {
+  paint-order: stroke;
+}
+
+.dg-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  fill: var(--muted);
+  transition: fill 0.4s ease;
+}
+
+.dg-label--lit {
+  fill: var(--gold);
+}
+
+.dg-label--ink {
+  fill: var(--ink);
+}
+
+.dg-gk {
+  font-family: var(--font-body);
+  font-style: italic;
+  fill: var(--blue);
+}
+
+.dg-term {
+  font-family: var(--font-display);
+  font-weight: 700;
+  fill: var(--ink);
+}
+
+.dg-term--gold {
+  fill: var(--gold);
+}
+
+.dg-term--muted {
+  fill: var(--muted);
+}
+
+.dg-note {
+  font-family: var(--font-body);
+  fill: var(--muted);
+  font-style: italic;
+}
+
+/* Nodo/rama tenue (empeiría, omitido) vs encendido (téchne) */
+.dg-dim {
+  opacity: 0.55;
+}
+
+/* ============================================================
+   Contenedor de figura dentro del slide.
+   Sin figura: el slide se comporta como antes.
+   Con figura: rejilla texto | diagrama en pantallas anchas,
+   apilado (texto arriba, diagrama abajo) en estrechas.
+   ============================================================ */
+
+.deck-figure {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.deck-figure .dg {
+  max-width: 560px;
+}
+
+@media (min-width: 921px) {
+  .deck-slide.has-figure .deck-content {
+    max-width: none;
+  }
+  .deck-slide.has-figure .deck-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+    gap: clamp(1.5rem, 3.5vw, 3.5rem);
+    align-items: center;
+    width: 100%;
+  }
+  .deck-slide.has-figure .deck-content {
+    align-self: center;
+  }
+}
+
+/* Móvil / estrecho: apilar. El diagrama va debajo del texto, más chico. */
+@media (max-width: 920px) {
+  .deck-layout {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.1rem, 4vw, 2rem);
+    width: 100%;
+  }
+  .deck-figure {
+    order: 2;
+  }
+  .deck-figure .dg {
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 420px) {
+  .deck-figure .dg {
+    max-width: 340px;
+  }
+}

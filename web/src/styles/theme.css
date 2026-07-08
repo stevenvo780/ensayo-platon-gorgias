@@ -1,0 +1,157 @@
+/* ============================================================
+   Design system — tema clásico académico (Gorgias · τέχνη)
+   Tokens, reset y tipografía base. Importado desde main.jsx.
+   ============================================================ */
+
+:root {
+  /* --- Paleta: modo claro (default) --- */
+  --bg: #FBF8F0;
+  --ink: #211E18;
+  --blue: #1C3A5E;
+  --gold: #B08D4C;
+  --bg2: #F5F0E5;
+  --muted: #5A5348;
+  --divider: #D4C5B0;
+
+  /* --- Tipografía --- */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'EB Garamond', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* --- Métrica --- */
+  --measure: 70ch;
+  --radius: 4px;
+  --header-h: 64px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  color-scheme: light;
+}
+
+/* Modo oscuro por preferencia del sistema (si no hay override manual) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171C;
+    --ink: #F5F1E8;
+    --blue: #5B9BD5;
+    --gold: #D4AF7B;
+    --bg2: #1E2229;
+    --muted: #B8B0A4;
+    --divider: #3A3F47;
+    color-scheme: dark;
+  }
+}
+
+/* Override manual (localStorage → data-theme) — gana sobre lo anterior */
+:root[data-theme="light"] {
+  --bg: #FBF8F0;
+  --ink: #211E18;
+  --blue: #1C3A5E;
+  --gold: #B08D4C;
+  --bg2: #F5F0E5;
+  --muted: #5A5348;
+  --divider: #D4C5B0;
+}
+
+:root[data-theme="dark"] {
+  --bg: #14171C;
+  --ink: #F5F1E8;
+  --blue: #5B9BD5;
+  --gold: #D4AF7B;
+  --bg2: #1E2229;
+  --muted: #B8B0A4;
+  --divider: #3A3F47;
+  color-scheme: dark;
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Salvaguarda: ninguna página debe hacer scroll horizontal. Los bloques
+   anchos (código ST, mapas, tablas) gestionan su propio overflow-x interno.
+   `clip` (no `hidden`) evita crear un contenedor de scroll que rompería el
+   índice pegajoso (position: sticky). */
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.75;
+  transition: background-color 0.4s, color 0.4s;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+em {
+  font-style: italic;
+}
+
+/* Títulos display */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+/* Utilidad: cita bekker/estéfano (patrón <Ref>) */
+.ref {
+  color: var(--blue);
+  font-size: 0.9em;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+/* Etiqueta mono */
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Accesibilidad: respeta reduce-motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

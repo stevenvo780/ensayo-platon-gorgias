@@ -1,0 +1,303 @@
+/* ============================================================
+   Layout compartido — header, nav, footer.
+   ============================================================ */
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 2rem;
+  min-height: var(--header-h);
+  background-color: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--divider);
+  transition: background-color 0.4s, border-color 0.4s;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--ink);
+}
+
+.site-brand:hover {
+  color: var(--ink);
+}
+
+.site-brand__word {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.site-brand__dot {
+  color: var(--gold);
+}
+
+.site-brand__gk {
+  font-style: italic;
+}
+
+.site-header__right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* --- GitHub link --- */
+.site-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.site-github:hover {
+  color: var(--gold);
+  transform: translateY(-1px);
+}
+
+/* --- Nav --- */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.site-nav__link {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 3px;
+  transition: color 0.2s ease;
+}
+
+/* Subrayado dorado que crece desde el centro en hover / activo */
+.site-nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.5px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.site-nav__link:hover {
+  color: var(--gold);
+}
+
+.site-nav__link:hover::after,
+.site-nav__link.is-active::after {
+  transform: scaleX(1);
+}
+
+.site-nav__link.is-active {
+  color: var(--ink);
+}
+
+/* --- Botón hamburguesa (solo móvil) --- */
+.site-burger {
+  display: none;
+  background: none;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site-burger:hover {
+  border-color: var(--gold);
+}
+
+.site-burger__bars {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 12px;
+}
+
+.site-burger__bars span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1.6px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.28s ease, opacity 0.2s ease;
+}
+
+.site-burger__bars span:nth-child(1) {
+  top: 0;
+}
+.site-burger__bars span:nth-child(2) {
+  top: 5px;
+}
+.site-burger__bars span:nth-child(3) {
+  top: 10px;
+}
+
+/* Estado abierto → X */
+.is-menu-open .site-burger__bars span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.is-menu-open .site-burger__bars span:nth-child(2) {
+  opacity: 0;
+}
+.is-menu-open .site-burger__bars span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+/* Telón (scrim) para cerrar tocando fuera */
+.site-scrim {
+  position: fixed;
+  inset: var(--header-h) 0 0 0;
+  z-index: 90;
+  border: none;
+  padding: 0;
+  background: color-mix(in srgb, var(--ink) 18%, transparent);
+  animation: scrimIn 0.2s ease both;
+  cursor: default;
+}
+
+@keyframes scrimIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- Toggle de tema --- */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: background-color 0.25s, color 0.25s;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background-color: var(--gold);
+  color: var(--bg);
+}
+
+/* --- Main --- */
+.site-main {
+  flex: 1;
+}
+
+/* --- Footer --- */
+.site-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-top: 1px solid var(--divider);
+  margin-top: 4rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 720px) {
+  .site-header {
+    padding: 0.6rem 1rem;
+  }
+  .site-brand__word {
+    font-size: 1.05rem;
+  }
+  .site-header__right {
+    gap: 0.7rem;
+  }
+
+  /* La barra inline se convierte en un menú desplegable bajo el header. */
+  .site-burger {
+    display: inline-flex;
+  }
+  .site-nav {
+    position: fixed;
+    top: var(--header-h);
+    right: 0;
+    left: 0;
+    z-index: 95;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 1rem 1rem;
+    background: color-mix(in srgb, var(--bg) 96%, transparent);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--divider);
+    box-shadow: 0 12px 24px color-mix(in srgb, var(--ink) 10%, transparent);
+    /* Colapsado por defecto */
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.24s ease, transform 0.24s ease, visibility 0.24s;
+  }
+  .site-nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .site-nav__link {
+    font-size: 0.82rem;
+    letter-spacing: 0.09em;
+    padding: 0.85rem 0.4rem;
+    border-bottom: 1px solid var(--divider);
+  }
+  .site-nav__link:last-of-type {
+    border-bottom: none;
+  }
+  /* En el menú vertical el subrayado se ancla a la izquierda */
+  .site-nav__link::after {
+    left: 0.4rem;
+    right: auto;
+    width: 1.4rem;
+    transform-origin: left;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-brand__word {
+    display: none;
+  }
+}

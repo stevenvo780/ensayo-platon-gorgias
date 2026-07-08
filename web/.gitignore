@@ -1,0 +1,10 @@
+# Vercel link (mantener local — NO borrar el directorio .vercel/)
+.vercel
+
+# Dependencias y build
+node_modules
+dist
+
+# Logs / OS
+*.log
+.DS_Store

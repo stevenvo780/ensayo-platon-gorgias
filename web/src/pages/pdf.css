@@ -1,0 +1,196 @@
+/* ============================================================
+   PdfPage — formato de entrega del profesor.
+   Times New Roman 12, interlineado 1.5, A4 con márgenes 2.54cm.
+   Fondo gris + hoja blanca en pantalla; limpio al imprimir.
+   Esta página NO usa los tokens de tema (formato académico fijo).
+   ============================================================ */
+
+@page {
+  size: A4;
+  margin: 2.54cm;
+}
+
+.pdf-root {
+  --tinta: #000;
+  background: #f2f2f2;
+  min-height: 100vh;
+  /* TNR real donde exista; si no, Tinos (clon métricamente idéntico con griego);
+     el politónico cae por-glifo a una fuente que lo tenga. */
+  font-family: 'Times New Roman', 'Tinos', 'Liberation Serif', Georgia, serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  color: var(--tinta);
+}
+
+/* CRÍTICO: el CSS global del sitio pone Cormorant/EB Garamond (con cifras de
+   estilo antiguo) en h1/h2/h3 y body. Aquí forzamos Times New Roman en TODO el
+   documento y cifras «lining» (alineadas), para que encaje con el criterio del
+   profesor. (El botón conserva su propia tipografía sans.) */
+.pdf-root h1,
+.pdf-root h2,
+.pdf-root h3,
+.pdf-root h4,
+.pdf-root p,
+.pdf-root li,
+.pdf-root ul,
+.pdf-root em,
+.pdf-root strong,
+.pdf-root i,
+.pdf-root b {
+  font-family: 'Times New Roman', 'Tinos', 'Liberation Serif', Georgia, serif;
+  font-variant-numeric: lining-nums;
+  -webkit-font-feature-settings: 'lnum' 1, 'onum' 0;
+  font-feature-settings: 'lnum' 1, 'onum' 0;
+  color: var(--tinta);
+}
+
+.pdf-article {
+  box-sizing: border-box;
+  background: #fff;
+  color: var(--tinta);
+  max-width: 21cm;
+  min-height: 29.7cm;
+  margin: 24px auto;
+  padding: 2.54cm;
+  /* respiro inferior en pantalla para que el botón flotante no tape el texto;
+     en @media print vuelve a 0. */
+  padding-bottom: 5.5rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.pdf-article p {
+  margin: 0 0 0.6em 0;
+  text-indent: 0;
+}
+
+.pdf-article h1.titulo {
+  text-align: center;
+  font-size: 14pt;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 0 0 1em 0;
+}
+
+.pdf-article h2.subtitulo {
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 1em 0 0.4em 0;
+}
+
+.pdf-article h3.subtitulo {
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 0.8em 0 0.3em 0;
+}
+
+.pdf-article ul.bibliografia {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 0.6em 0;
+}
+
+.pdf-article ul.bibliografia li {
+  text-align: left;
+  text-indent: -1.2em;
+  padding-left: 1.2em;
+  margin: 0 0 0.35em 0;
+}
+
+.pdf-article hr.sep {
+  border: none;
+  height: 0.8em;
+}
+
+.pdf-actions {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+.dl-btn,
+.print-btn {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+}
+
+/* primaria: descarga el PDF limpio (pandoc, sin cromo del navegador) */
+.dl-btn {
+  background: #1b3a5b;
+  color: #fff;
+}
+.dl-btn:hover {
+  background: #254e79;
+}
+
+/* secundaria: imprimir desde el navegador */
+.print-btn {
+  background: #fff;
+  color: #1b3a5b;
+  border: 1px solid #c9c2b4;
+}
+.print-btn:hover {
+  background: #f3efe6;
+}
+
+/* En columna estrecha el justificado abre «ríos» de espacio enorme entre
+   palabras; se alinea a la izquierda y se apaga la partición SOLO en pantalla
+   angosta. En pantallas anchas y en @media print se conserva justify (ahí no
+   hay ríos) para cumplir el formato del profesor. */
+@media screen and (max-width: 820px) {
+  .pdf-article {
+    text-align: left;
+    hyphens: none;
+    -webkit-hyphens: none;
+  }
+}
+
+/* En pantalla móvil el margen de 2.54cm asfixia el texto; se reduce solo en
+   pantalla (la impresión mantiene @page margin 2.54cm intacto). */
+@media screen and (max-width: 640px) {
+  .pdf-article {
+    margin: 12px auto;
+    padding: 1.4cm 1.1cm;
+    /* mantiene el respiro inferior para que los botones no tapen el último párrafo */
+    padding-bottom: 6.5rem;
+  }
+  .pdf-actions {
+    right: 12px;
+    bottom: 12px;
+  }
+  .dl-btn,
+  .print-btn {
+    padding: 11px 14px;
+    font-size: 13px;
+  }
+}
+
+@media print {
+  .pdf-root {
+    background: #fff;
+  }
+  .pdf-article {
+    margin: 0;
+    max-width: none;
+    min-height: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  .pdf-actions {
+    display: none !important;
+  }
+}

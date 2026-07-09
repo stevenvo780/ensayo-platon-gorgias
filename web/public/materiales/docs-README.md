@@ -3,6 +3,7 @@
 > Material **supplementary**. El ensayo (`../ensayo/Ensayo_Final.md`) se sostiene
 > solo; borrar esta carpeta no lo rompe.
 
+- `METODOLOGIA.md` — cómo se produce y **se audita** el ensayo (proceso + las 7 lentes adversariales + cómo reproducirlo).
 - `formal/derivaciones.md` — refutaciones del *Gorgias* en notación legible (A1–A5).
 - `aparato/dodds-guthrie.md` — aparato erudito (Dodds, Guthrie) + nota *Fedro*. ⚠️ verificar contra copia física.
 - `mapas/argumento.md` — diagramas del argumento (mermaid).

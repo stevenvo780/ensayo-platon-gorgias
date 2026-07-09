@@ -18,6 +18,28 @@
 | 6 jul 2026 | v5 (crítica profunda + verificación adversarial) | Crítica profunda en `Critica_Ensayo.md` + workflow de verificación adversarial de 5 lentes (longitud, exégesis helenista, coherencia/regresiones, adversario Sócrates+profesor, completitud). Cambios: (a) **tesis modal** honesta en Intro y Conclusión (la retórica es *susceptible* de τέχνη; su clasificación como *esencialmente* ἐμπειρία es indebida); (b) **notación lógica (∀∃→¬) retirada del cuerpo** a prosa (cumple el invariante de diseño: los símbolos viven en `docs/formal/`); (c) §2: la «falacia de composición» → ataque a la **premisa esencialista**; (d) §3.1: tensión del *Fedro* planteada y resuelta con honestidad (la retórica *toma* premisas de la ética/política, no conoce la verdad dialécticamente); (e) §3.4a: **reinterpretación explícita del 4º criterio**; (f) §3.4b: respuesta a la **paridad con la cocina** (la retórica persuade por λόγος dirigido al juicio; su fin propio es el *asentimiento razonado* del auditorio, no un placer ciego) — cierra el flanco filosófico más duro que detectó la lente adversarial; (g) título: «criterios socráticos» → «implícitos», «verificación aristotélica» → «con Aristóteles»; (h) fixes de citas detectados por la lente helenista: «saber universal (459c)» → «poder universal de persuadir (456a–c)», Bekker 1366a→1358b para los tres géneros, regresión «educar bien»→«elogiar bien» en la Conclusión, título de Toulmin unificado con la bibliografía, «*layout*»→«esquema». La cita «casa con orden… buena… mala» se **confirmó en 504a** contra el fuente (la lente se equivocó de memoria; no se tocó). (i) **retirada de Cialdini** («aplica lo mejor»): el 3.er criterio se funda ahora solo en el libro II de la *Retórica* (tratado causal de las pasiones) — un solo movimiento que atiende la 2ª recomendación del profesor (menos autores), gana rigor (fuera el eslabón más débil / crisis de replicación), baja extensión y **resuelve una incoherencia** (los atajos no-racionales de Cialdini chocaban con el nuevo §3.4b, que sostiene que la retórica persuade por λόγος dirigido al juicio). Intro pasa a **un** anacronismo (teoría de la argumentación). Cuerpo 3.035→**2.906** (−108 vs. el punto de partida 3.014). Autores: Platón, Aristóteles, Perelman, Toulmin. Citas de Platón siguen exactas (`make verify`). |
 | 7–8 jul 2026 | v6 (entrega) | **Vuelta a la versión base del autor** (su planteamiento original): la v5 quedó archivada en `ensayo/archivo/`. Con ello **Cialdini se reincorpora** como uno de los **dos anacronismos declarados** del autor —teoría de la argumentación para los principios racionales (§3.2) y Cialdini *solo* para el conocimiento de causas (§3.3)—, la misma estrategia presente desde el anteproyecto. Se conservan las correcciones factuales de cita (452d «el mayor bien», 454e «creencia sin el saber», Bekker 1356a, 456a–c, 1358b). **Recorte a ≤5 páginas** en el formato de entrega (TNR 12 / 1.5 / 2.54 cm), confirmado con `pdfinfo` (5 pp; cuerpo ~1.305 palabras). Fecha de entrega: **17-jul-2026**. Citas de Platón exactas (`make verify`). |
 | 9 jul 2026 | v6.1 (blindaje de dos flancos) | Al confrontar el v6 con la **recomendación fuerte del profesor** (analizar «especialmente» la orientación al bien y su trilema), se detectaron dos flancos de nivel *defensa oral* y se cerraron con **dos ediciones quirúrgicas** que hacen explícito lo que ya estaba implícito en el texto del autor: **(1)** en §Orientación se refuta de frente la **paridad con la cocina** — el fin propio de la retórica no es el placer que *sortea* el juicio, sino el **asentimiento razonado por λόγος** (un bien del alma), lo que reinterpreta el 4º criterio sin reducirlo a mera persuasión eficaz; **(2)** en el 3.er criterio se recoloca la carga causal en **Aristóteles** (libro II de la *Retórica* = tratado de las αἰτίαι que «da razón de cada efecto», *no* la ἐμπειρία que Sócrates denuncia), y **Cialdini queda como cuantificación experimental** («confirma, no descubre»), blindando el flanco «esto es empeiría». **Transparencia de auditoría:** estas dos reformulaciones fueron *señaladas y aplicadas con asistencia de IA* sobre puntos propios del autor, en su registro, y quedan **pendientes de su revisión de voz**. Cuerpo **1.439 palabras** (≤1490), **5 páginas** (`make pages` OK), citas exactas (`make verify`). Espejado en la web (`web/src/content/essay.jsx`) y en el PDF de descarga. |
+| 9 jul 2026 | v6.2 (auditoría adversarial resuelta) | Se ejecutó la **auditoría de 7 lentes** (formalizada en `docs/METODOLOGIA.md`) contra v6.1; **6 hallazgos de arquitectura argumentativa** (H1–H6), ninguno factual ni de cita, cuatro concentrados en el 4.º criterio. Reparados con edición quirúrgica declarada (ver §Auditoría abajo). Compensado con recortes solo-borrado: cuerpo **1.488 palabras** (≤1490), **5 páginas** (`make pages`), `make verify` OK. Espejado en la web; PDF/DOCX/espejo regenerados. Asistido y declarado; pendiente de la voz del autor. |
+
+## Auditoría adversarial (H1–H6) y su resolución — 9 jul 2026
+
+> Ejecución de las 7 lentes de `docs/METODOLOGIA.md` contra v6.1. Ninguno de los seis
+> hallazgos es error factual o de cita; los seis son de **arquitectura argumentativa**, y
+> cuatro (H1, H2, H4, H6) caen sobre el 4.º criterio —justo donde el profesor avisó que la
+> objeción socrática es más fuerte—. Prioridad de reparación aplicada: H2 → H1 → H4 → H6 → H5 → H3.
+
+| # | Hallazgo (lente) | Reparación aplicada (v6.2) | Ubicación |
+|---|---|---|---|
+| **H1** | «Toma sus premisas de fuera» reabre la objeción: gana el 4.º criterio vaciándolo de contenido normativo (carga de prueba). | Se **declara explícita la reinterpretación** del 4.º criterio (de «conocer el Bien» a «ordenarse a un fin propio») y se defiende: **ninguna** τέχνη cumple la versión fuerte —tampoco la medicina—, luego exigírselo solo a la retórica es arbitrario. | §Orientación (a) |
+| **H2** | «Ser peligroso ⟹ ser τέχνη» prueba demasiado (un terremoto es peligroso). Validez / exceso. | Restringido a «solo quien conoce las causas puede **manipular con método**»; el peligro *sistemático* es lo que prueba la τέχνη. | §Objeción (c) |
+| **H3** | Perelman/Toulmin citados, no usados (economía). | Se les da **función real**: Perelman (auditorio universal) separa convicción razonada de manipulada (H4); Toulmin (*backing*) = cómo la retórica «da razón», el λόγον διδόναι. | §criterio 2 y §Orientación |
+| **H4** | «Convicción razonada» se afirma, no se prueba; la demagogia también usa λόγος (adversario). | Anclada en **el auditorio que juzga**: la τέχνη apela a un oyente que puede sopesar y disentir; la adulación sortea ese juicio. | §Orientación (intro) |
+| **H5** | Tensión §2 (objeto ≠ solo lo justo) vs §Orientación (converge con la justicia). Autoconsistencia. | Cláusula: «converge con la justicia en parte de su materia (lo justo, en lo judicial) sin agotarse en ella (§2)». | §Orientación (b) |
+| **H6** | La conclusión declara el 4.º criterio cumplido al nivel de los otros tres (carga de prueba). | Subordinada: se satisface «en la versión defendible del 4.º criterio, la que ninguna τέχνη cumple en su forma fuerte». | §Conclusión |
+
+**Nota de integridad:** las seis reparaciones se aplicaron con asistencia de IA sobre puntos
+ya propios del autor (hacer explícito lo implícito, no introducir tesis nuevas), en su
+registro y declaradas aquí; quedan **pendientes de su revisión de voz**. El aparato de
+fuentes no se tocó (citas de Platón exactas, `make verify`).
 
 ## Cobertura de las recomendaciones del profesor (anteproyecto → ensayo)
 
@@ -184,6 +206,14 @@ una sección **«Autores y fuentes»** con las 9 fichas.
   **carta del profesor** (`Steven Vallejo revisado.md/.docx`) están en `.gitignore`; se rehízo el
   historial (rama limpia, *orphan*) para que **no aparezcan en ningún commit** del remoto público.
 - README presentable + enlace a GitHub desde el sitio.
+- **Reorganización para auditoría (9-jul).** Se eliminó la app web muerta `retorica-techne/`
+  (segundo proyecto Vite abandonado) y el `index.html` de raíz (sitio pre-React); se
+  des-trackeó `__pycache__`. Los 9 resúmenes de autor se unificaron en
+  `material-estudio/autores/` (fuente única), eliminando los duplicados `08-13`. El espejo
+  `web/public/materiales/` pasó a **generarse** con `scripts/sync_materiales.sh` (`make
+  materiales`), corrigiendo un bug de trazabilidad (el ensayo servido estaba desfasado). Se
+  documentó el método en `docs/METODOLOGIA.md`. Resultado: sin redundancias, con fuente
+  única y espejo reproducible.
 
 ### Correcciones de coherencia para la auditoría (3 obligatorias — aplicadas)
 

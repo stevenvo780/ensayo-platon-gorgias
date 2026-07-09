@@ -19,6 +19,64 @@
 | 7–8 jul 2026 | v6 (entrega) | **Vuelta a la versión base del autor** (su planteamiento original): la v5 quedó archivada en `ensayo/archivo/`. Con ello **Cialdini se reincorpora** como uno de los **dos anacronismos declarados** del autor —teoría de la argumentación para los principios racionales (§3.2) y Cialdini *solo* para el conocimiento de causas (§3.3)—, la misma estrategia presente desde el anteproyecto. Se conservan las correcciones factuales de cita (452d «el mayor bien», 454e «creencia sin el saber», Bekker 1356a, 456a–c, 1358b). **Recorte a ≤5 páginas** en el formato de entrega (TNR 12 / 1.5 / 2.54 cm), confirmado con `pdfinfo` (5 pp; cuerpo ~1.305 palabras). Fecha de entrega: **17-jul-2026**. Citas de Platón exactas (`make verify`). |
 | 9 jul 2026 | v6.1 (blindaje de dos flancos) | Al confrontar el v6 con la **recomendación fuerte del profesor** (analizar «especialmente» la orientación al bien y su trilema), se detectaron dos flancos de nivel *defensa oral* y se cerraron con **dos ediciones quirúrgicas** que hacen explícito lo que ya estaba implícito en el texto del autor: **(1)** en §Orientación se refuta de frente la **paridad con la cocina** — el fin propio de la retórica no es el placer que *sortea* el juicio, sino el **asentimiento razonado por λόγος** (un bien del alma), lo que reinterpreta el 4º criterio sin reducirlo a mera persuasión eficaz; **(2)** en el 3.er criterio se recoloca la carga causal en **Aristóteles** (libro II de la *Retórica* = tratado de las αἰτίαι que «da razón de cada efecto», *no* la ἐμπειρία que Sócrates denuncia), y **Cialdini queda como cuantificación experimental** («confirma, no descubre»), blindando el flanco «esto es empeiría». **Transparencia de auditoría:** estas dos reformulaciones fueron *señaladas y aplicadas con asistencia de IA* sobre puntos propios del autor, en su registro, y quedan **pendientes de su revisión de voz**. Cuerpo **1.439 palabras** (≤1490), **5 páginas** (`make pages` OK), citas exactas (`make verify`). Espejado en la web (`web/src/content/essay.jsx`) y en el PDF de descarga. |
 
+## Cobertura de las recomendaciones del profesor (anteproyecto → ensayo)
+
+> El anteproyecto obtuvo **Nota 5,0** con dos recomendaciones. Aquí se audita, punto por
+> punto, que el ensayo final las atiende. Es también la **hoja de ruta de la defensa oral**.
+
+**Elogios del profesor (para no perderlos de vista):** intuición filosóficamente valiosa
+(la retórica tiene más fundamento teórico y conocimiento de causas de lo que Platón admite);
+contextualización clara y rigurosa; pregunta bien formulada; estrategia bien estructurada
+—«su proyecto de ensayo es impecable»—. El ensayo final **no debe perder** esas fortalezas.
+
+### Recomendación 1 — orientación al bien (la fuerte). Estado: **abordada**
+
+El profesor invitó a analizar las cuatro condiciones, «especialmente esta», y planteó un
+**trilema-trampa**. Mapa de cobertura en el v6.1:
+
+| Pregunta del profesor | Dónde responde el ensayo | Movimiento |
+|---|---|---|
+| ¿Cómo orientarse al bien si no lo conoce? | §Orientación **(a)** | τέχνη ≠ φρόνησις (*EN* VI 1140a–b): conoce los **medios** dado un fin, no la ciencia del Bien |
+| Si lo conoce, ¿en qué difiere de la justicia? | §Orientación **(b)** | **objeto formal** distinto: produce discursos persuasivos, no almas justas |
+| ¿Entonces nunca actúa injustamente? | §Objeción **(c)** | orientación = del **arte** (τέλος); uso = del **agente** (ἦθος) |
+| ¿Entonces no es riesgo democrático? | §Objeción **(c)** | **la paradoja**: que pueda manipular *prueba* que es τέχνη — solo un arte que conoce las causas del asentimiento es peligroso |
+
+La 4ª condición recibe **dos secciones** (Orientación + Objeción), como pidió el profesor
+(profundizar «especialmente» en ella).
+
+### Recomendación 2 — reducir autores. Estado: **resuelta**
+
+Anteproyecto: Aristóteles + Perelman + Toulmin + **Cialdini + Kahneman + Thaler-Sunstein +
+Lakoff** = 7 modernos. Ensayo final: **3** (Perelman, Toulmin, Cialdini), cada uno **confinado
+a un solo criterio**, y con la restricción que el propio autor declaró (conductuales *solo*
+para las causas, nunca para el bien). Fuera: Kahneman, Thaler-Sunstein, Lakoff.
+
+### Dos flancos de segundo nivel (nivel defensa oral) — cerrados en v6.1
+
+No eran recomendaciones desatendidas, sino las objeciones que un 5,0 debe anticipar:
+
+1. **¿Redefinir el criterio 4?** Sócrates pide orientación *al bien del alma*, no a un fin
+   interno cualquiera (eso lo cumple hasta la cocina). **Cierre (v6.1):** el fin propio de la
+   retórica es el **asentimiento razonado por λόγος** —que ejercita el juicio del oyente en vez
+   de sortearlo—, y *eso* es un bien del alma que la adulación no toca. Disuelve la paridad con
+   la culinaria.
+2. **¿Cialdini = ἐμπειρία?** Sus principios son regularidades empíricas — justo lo que Sócrates
+   denuncia. **Cierre (v6.1):** la carga causal la porta **Aristóteles** (libro II de la
+   *Retórica*, que «da razón de cada efecto»); Cialdini baja a **cuantificación experimental**
+   («confirma, no descubre»).
+
+### Guía rápida para la sustentación oral
+
+- **Carta más fuerte:** la paradoja del riesgo democrático (§Objeción c). Que el retórico pueda
+  manipular **prueba** que la retórica es τέχνη —no lo contrario—.
+- **Si aprietan por el criterio 4:** insistir en *asentimiento razonado* (bien del alma) vs.
+  placer ciego (cocina); el «bien» del arte es el de su función, no la φρόνησις.
+- **Si aprietan por Cialdini:** replegarse a Aristóteles II como el saber causal; Cialdini es
+  solo confirmación moderna. Si incomoda, es el eslabón *prescindible* (v5 llegó a quitarlo).
+- **Punto que se asume con transparencia:** si el «bien» del 4º criterio es formal, la línea
+  τέχνη/ἐμπειρία se apoya sobre todo en el λόγος (criterios 2–3). El ensayo lo reconoce, no lo
+  esconde.
+
 ## Lecciones aprendidas (no repetir)
 
 1. **Menos autores, más profundidad.** El error del anteproyecto fue acumular 7 autores para 5 páginas. Regla: cada autor incluido debe trabajarse a fondo y quedar confinado a UN criterio del argumento.

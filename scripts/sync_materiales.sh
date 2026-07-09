@@ -72,6 +72,10 @@ cp "$ROOT/ensayo/archivo/Ensayo_base_pre-v6_2026-07-07.md"  "$DST/base-pre-v6.md
 cp "$ROOT/README.md"     "$DST/repo-readme.md"
 cp "$ROOT/web/DESIGN.md" "$DST/web-design.md"
 
+# --- Iteraciones del ensayo (historial seccionado con ciclos de crítica) ---
+mkdir -p "$DST/iteraciones"
+cp "$ROOT"/docs/iteraciones/*.md "$DST/iteraciones/"
+
 # --- Manifiesto legible del espejo (generado) ---
 cat > "$DST/README.txt" <<'EOF'
 MATERIALES · La retórica como τέχνη — Ensayo sobre el Gorgias de Platón

@@ -214,6 +214,12 @@ una sección **«Autores y fuentes»** con las 9 fichas.
   materiales`), corrigiendo un bug de trazabilidad (el ensayo servido estaba desfasado). Se
   documentó el método en `docs/METODOLOGIA.md`. Resultado: sin redundancias, con fuente
   única y espejo reproducible.
+- **Historial de iteración seccionado (9-jul).** Se creó `docs/iteraciones/` (índice + 8 docs,
+  del anteproyecto a la v6.2): cada versión con su **ciclo de crítica → cambio → evidencia**,
+  reconstruido del registro real de esta bitácora (no fabricado). Se expone como **subvista de
+  navegación** en `/materiales` («Iteraciones del ensayo»), sustituyendo el volcado de versiones
+  suelto por un recorrido coherente. Las ediciones asistidas van marcadas y pendientes de la voz
+  del autor.
 
 ### Correcciones de coherencia para la auditoría (3 obligatorias — aplicadas)
 

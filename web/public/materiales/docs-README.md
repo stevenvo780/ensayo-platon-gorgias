@@ -4,6 +4,7 @@
 > solo; borrar esta carpeta no lo rompe.
 
 - `METODOLOGIA.md` — cómo se produce y **se audita** el ensayo (proceso + las 7 lentes adversariales + cómo reproducirlo).
+- `iteraciones/` — historial del ensayo versión por versión, cada una con su **ciclo de crítica** y evidencia (del anteproyecto a la v6.2).
 - `formal/derivaciones.md` — refutaciones del *Gorgias* en notación legible (A1–A5).
 - `aparato/dodds-guthrie.md` — aparato erudito (Dodds, Guthrie) + nota *Fedro*. ⚠️ verificar contra copia física.
 - `mapas/argumento.md` — diagramas del argumento (mermaid).

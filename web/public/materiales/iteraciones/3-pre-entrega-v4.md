@@ -27,4 +27,4 @@ longitud queda abierto y motiva la crítica profunda de la v5.
 ## Evidencia
 
 Cuerpo 2.929 palabras. Todas las citas de Platón verificadas (`make verify`). Exportado a
-`.docx`. Detalle en la [bitácora](../../ensayo/Bitacora_Ensayo.md) (fila v4).
+`.docx`. Detalle en la [bitácora](../../ensayo/Bitacora_Ensayo.md).

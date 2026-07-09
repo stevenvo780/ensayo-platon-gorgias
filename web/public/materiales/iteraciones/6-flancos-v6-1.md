@@ -28,6 +28,5 @@ puntos de arquitectura por afinar.
 
 ## Evidencia
 
-Cuerpo 1.439 palabras (≤1490); **5 páginas**; `make verify` OK. Fila v6.1 de la
-[bitácora](../../ensayo/Bitacora_Ensayo.md). **Edición asistida y declarada, pendiente de la voz
+Cuerpo 1.439 palabras (≤1490); **5 páginas**; `make verify` OK. Registro maestro: [bitácora](../../ensayo/Bitacora_Ensayo.md). **Edición asistida y declarada, pendiente de la voz
 del autor.**

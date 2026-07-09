@@ -1,45 +1,18 @@
 # 📓 Bitácora del Ensayo Final — «La retórica como τέχνη»
 
-> Registro de versiones, decisiones y lecciones para no repetir errores.
-> Entrega: **17 de julio de 2026** (actualizada desde el 13-jul). Archivo canónico del ensayo: `Ensayo_Final.md` (contiene, desde el 7-jul-2026, la **versión base del autor**; la revisión v5 quedó archivada en `ensayo/archivo/Ensayo_v5_revision_2026-07-06.md`). El antiguo `Ensayo_Final_v2.md` fue renombrado a este nombre una vez que ya contenía los tres arreglos de v3, para que el nombre del archivo y la bitácora coincidan.
+> **Qué es esto:** el registro de **proceso** del proyecto —la construcción de la plataforma
+> web, el repositorio y las lecciones—, más los punteros al resto. El **historial del ensayo
+> versión por versión** (con ciclos de crítica) vive en `docs/iteraciones/`, para no duplicarlo.
+> Entrega: **17 de julio de 2026**. Ensayo canónico: `ensayo/Ensayo_Final.md`.
 
 ---
 
-## Historial de versiones
+## Historial del ensayo
 
-| Fecha | Versión | Qué pasó |
-|---|---|---|
-| ~may 2026 | Anteproyecto | Enviado al profesor con 7 autores propuestos (Aristóteles, Perelman-Olbrechts-Tyteca, Toulmin, Cialdini, Kahneman, Thaler-Sunstein, Lakoff) |
-| 4 jun 2026 | Respuesta del profesor | **Nota 5,0** al anteproyecto (`Steven Vallejo revisado.md`). Dos recomendaciones: (1) analizar a fondo las cuatro condiciones de τέχνη, especialmente la **orientación al bien** con sus contra-preguntas socráticas; (2) **reducir autores** y tratarlos con cuidado — "mucho tema para un ensayo de cinco páginas" |
-| 4 jun 2026 | Borrador extenso | ~30 KB con los 7 autores. Absorbido por la versión final; copia en `/tmp/ensayo-archivo/` |
-| 4 jun 2026 | v2 (2.780 palabras) | Destilación del borrador: autores reducidos a **Aristóteles + Perelman-Olbrechts-Tyteca + Cialdini**, §3.4 dedicado a la orientación al bien. Ronda de crítica (3 lentes) + dos pasadas de corrección. Respaldo en `/tmp/` (fuera del repo). |
-| 5 jun 2026 | v3 (canónica) | Pulido dirigido a los 3 reparos de la ronda anterior: rebalanceo §3.1–3.3 vs §3.4, contraste Perelman↔Toulmin (3-5 líneas), tramo de Calicles argumentado con 503e–504e / 506d–507a. Estos tres arreglos se aplicaron *dentro* del archivo que antes se llamaba `Ensayo_Final_v2.md`; al quedar listos, ese archivo se renombró a **`Ensayo_Final.md`** (única versión canónica en disco, 2.795 palabras). *(nota final: ver cierre de esta bitácora)* |
-| 5 jul 2026 | v4 (revisión pre-entrega) | Revisión multi-lente (solidez lógica, abogado del diablo platónico, fidelidad exegética, respuesta al profesor, forma) + verificación de todas las citas de Platón contra el texto fuente (exactas). Cambios: (a) «criterios que Sócrates *fija*» → «criterios que se siguen de su distinción τέχνη/ἐμπειρία» (Intro y Conclusión), reconociendo que la sistematización de los 4 criterios es propia, no un checklist del diálogo; (b) honestidad de marco + ancla interna en *Fedro* 271c–277a (§3.1); (c) párrafo sobre qué es un «objeto propio» / τέλος (§3.1, equilibra profundidad con §3.2–3.4); (d) §3.4c expandido: la inversión del riesgo democrático como *prueba* de τέχνη recibe desarrollo propio (era una frase); (e) distinción Cialdini/Aristóteles —medir vs. describir— para cerrar el flanco «esto es ἐμπειρία» (§3.3); (f) matización de la lectura de Gorgias en §2; (g) fixes de precisión: 452d «el mayor bien» (era «el mayor de los bienes»), Bekker 1355b→1356a para «toma sus premisas». Autores sin cambios (4). Cuerpo 2.679→2.929 palabras (tras recortes de redundancia). *Fedro* añadido a la bibliografía. Exportado a `Ensayo_Final.docx`. |
-| 6 jul 2026 | v5 (crítica profunda + verificación adversarial) | Crítica profunda en `Critica_Ensayo.md` + workflow de verificación adversarial de 5 lentes (longitud, exégesis helenista, coherencia/regresiones, adversario Sócrates+profesor, completitud). Cambios: (a) **tesis modal** honesta en Intro y Conclusión (la retórica es *susceptible* de τέχνη; su clasificación como *esencialmente* ἐμπειρία es indebida); (b) **notación lógica (∀∃→¬) retirada del cuerpo** a prosa (cumple el invariante de diseño: los símbolos viven en `docs/formal/`); (c) §2: la «falacia de composición» → ataque a la **premisa esencialista**; (d) §3.1: tensión del *Fedro* planteada y resuelta con honestidad (la retórica *toma* premisas de la ética/política, no conoce la verdad dialécticamente); (e) §3.4a: **reinterpretación explícita del 4º criterio**; (f) §3.4b: respuesta a la **paridad con la cocina** (la retórica persuade por λόγος dirigido al juicio; su fin propio es el *asentimiento razonado* del auditorio, no un placer ciego) — cierra el flanco filosófico más duro que detectó la lente adversarial; (g) título: «criterios socráticos» → «implícitos», «verificación aristotélica» → «con Aristóteles»; (h) fixes de citas detectados por la lente helenista: «saber universal (459c)» → «poder universal de persuadir (456a–c)», Bekker 1366a→1358b para los tres géneros, regresión «educar bien»→«elogiar bien» en la Conclusión, título de Toulmin unificado con la bibliografía, «*layout*»→«esquema». La cita «casa con orden… buena… mala» se **confirmó en 504a** contra el fuente (la lente se equivocó de memoria; no se tocó). (i) **retirada de Cialdini** («aplica lo mejor»): el 3.er criterio se funda ahora solo en el libro II de la *Retórica* (tratado causal de las pasiones) — un solo movimiento que atiende la 2ª recomendación del profesor (menos autores), gana rigor (fuera el eslabón más débil / crisis de replicación), baja extensión y **resuelve una incoherencia** (los atajos no-racionales de Cialdini chocaban con el nuevo §3.4b, que sostiene que la retórica persuade por λόγος dirigido al juicio). Intro pasa a **un** anacronismo (teoría de la argumentación). Cuerpo 3.035→**2.906** (−108 vs. el punto de partida 3.014). Autores: Platón, Aristóteles, Perelman, Toulmin. Citas de Platón siguen exactas (`make verify`). |
-| 7–8 jul 2026 | v6 (entrega) | **Vuelta a la versión base del autor** (su planteamiento original): la v5 quedó archivada en `ensayo/archivo/`. Con ello **Cialdini se reincorpora** como uno de los **dos anacronismos declarados** del autor —teoría de la argumentación para los principios racionales (§3.2) y Cialdini *solo* para el conocimiento de causas (§3.3)—, la misma estrategia presente desde el anteproyecto. Se conservan las correcciones factuales de cita (452d «el mayor bien», 454e «creencia sin el saber», Bekker 1356a, 456a–c, 1358b). **Recorte a ≤5 páginas** en el formato de entrega (TNR 12 / 1.5 / 2.54 cm), confirmado con `pdfinfo` (5 pp; cuerpo ~1.305 palabras). Fecha de entrega: **17-jul-2026**. Citas de Platón exactas (`make verify`). |
-| 9 jul 2026 | v6.1 (blindaje de dos flancos) | Al confrontar el v6 con la **recomendación fuerte del profesor** (analizar «especialmente» la orientación al bien y su trilema), se detectaron dos flancos de nivel *defensa oral* y se cerraron con **dos ediciones quirúrgicas** que hacen explícito lo que ya estaba implícito en el texto del autor: **(1)** en §Orientación se refuta de frente la **paridad con la cocina** — el fin propio de la retórica no es el placer que *sortea* el juicio, sino el **asentimiento razonado por λόγος** (un bien del alma), lo que reinterpreta el 4º criterio sin reducirlo a mera persuasión eficaz; **(2)** en el 3.er criterio se recoloca la carga causal en **Aristóteles** (libro II de la *Retórica* = tratado de las αἰτίαι que «da razón de cada efecto», *no* la ἐμπειρία que Sócrates denuncia), y **Cialdini queda como cuantificación experimental** («confirma, no descubre»), blindando el flanco «esto es empeiría». **Transparencia de auditoría:** estas dos reformulaciones fueron *señaladas y aplicadas con asistencia de IA* sobre puntos propios del autor, en su registro, y quedan **pendientes de su revisión de voz**. Cuerpo **1.439 palabras** (≤1490), **5 páginas** (`make pages` OK), citas exactas (`make verify`). Espejado en la web (`web/src/content/essay.jsx`) y en el PDF de descarga. |
-| 9 jul 2026 | v6.2 (auditoría adversarial resuelta) | Se ejecutó la **auditoría de 7 lentes** (formalizada en `docs/METODOLOGIA.md`) contra v6.1; **6 hallazgos de arquitectura argumentativa** (H1–H6), ninguno factual ni de cita, cuatro concentrados en el 4.º criterio. Reparados con edición quirúrgica declarada (ver §Auditoría abajo). Compensado con recortes solo-borrado: cuerpo **1.488 palabras** (≤1490), **5 páginas** (`make pages`), `make verify` OK. Espejado en la web; PDF/DOCX/espejo regenerados. Asistido y declarado; pendiente de la voz del autor. |
-
-## Auditoría adversarial (H1–H6) y su resolución — 9 jul 2026
-
-> Ejecución de las 7 lentes de `docs/METODOLOGIA.md` contra v6.1. Ninguno de los seis
-> hallazgos es error factual o de cita; los seis son de **arquitectura argumentativa**, y
-> cuatro (H1, H2, H4, H6) caen sobre el 4.º criterio —justo donde el profesor avisó que la
-> objeción socrática es más fuerte—. Prioridad de reparación aplicada: H2 → H1 → H4 → H6 → H5 → H3.
-
-| # | Hallazgo (lente) | Reparación aplicada (v6.2) | Ubicación |
-|---|---|---|---|
-| **H1** | «Toma sus premisas de fuera» reabre la objeción: gana el 4.º criterio vaciándolo de contenido normativo (carga de prueba). | Se **declara explícita la reinterpretación** del 4.º criterio (de «conocer el Bien» a «ordenarse a un fin propio») y se defiende: **ninguna** τέχνη cumple la versión fuerte —tampoco la medicina—, luego exigírselo solo a la retórica es arbitrario. | §Orientación (a) |
-| **H2** | «Ser peligroso ⟹ ser τέχνη» prueba demasiado (un terremoto es peligroso). Validez / exceso. | Restringido a «solo quien conoce las causas puede **manipular con método**»; el peligro *sistemático* es lo que prueba la τέχνη. | §Objeción (c) |
-| **H3** | Perelman/Toulmin citados, no usados (economía). | Se les da **función real**: Perelman (auditorio universal) separa convicción razonada de manipulada (H4); Toulmin (*backing*) = cómo la retórica «da razón», el λόγον διδόναι. | §criterio 2 y §Orientación |
-| **H4** | «Convicción razonada» se afirma, no se prueba; la demagogia también usa λόγος (adversario). | Anclada en **el auditorio que juzga**: la τέχνη apela a un oyente que puede sopesar y disentir; la adulación sortea ese juicio. | §Orientación (intro) |
-| **H5** | Tensión §2 (objeto ≠ solo lo justo) vs §Orientación (converge con la justicia). Autoconsistencia. | Cláusula: «converge con la justicia en parte de su materia (lo justo, en lo judicial) sin agotarse en ella (§2)». | §Orientación (b) |
-| **H6** | La conclusión declara el 4.º criterio cumplido al nivel de los otros tres (carga de prueba). | Subordinada: se satisface «en la versión defendible del 4.º criterio, la que ninguna τέχνη cumple en su forma fuerte». | §Conclusión |
-
-**Nota de integridad:** las seis reparaciones se aplicaron con asistencia de IA sobre puntos
-ya propios del autor (hacer explícito lo implícito, no introducir tesis nuevas), en su
-registro y declaradas aquí; quedan **pendientes de su revisión de voz**. El aparato de
-fuentes no se tocó (citas de Platón exactas, `make verify`).
+> El historial **versión por versión** (anteproyecto → v6.2) —cada iteración con su **ciclo de
+> crítica → cambio → evidencia**, incluida la auditoría adversarial H1–H6— vive en
+> **[`docs/iteraciones/`](../docs/iteraciones/README.md)**, seccionado y navegable. No se
+> duplica aquí: esta bitácora registra el **proceso** (plataforma, repositorio) y las **lecciones**.
 
 ## Cobertura de las recomendaciones del profesor (anteproyecto → ensayo)
 
@@ -111,38 +84,12 @@ No eran recomendaciones desatendidas, sino las objeciones que un 5,0 debe antici
 
 ## Ubicaciones
 
-- **Ensayo (única versión):** `01_Gorgias/03_Ensayo_Final/Ensayo_Final.md`
-- **Carta del profesor:** `Steven Vallejo revisado.md` / `.docx`
-- **Guía de lectura por autor:** `Autores_y_Contexto.md`
-- **Investigación previa:** `01_Fragmentos_Retorica_Poder_Gorgias.md`
-- **Respaldos (fuera del sync):** `/tmp/ensayo-archivo/` (borrador extenso y copia de la v2 previa al renombrado) y `/tmp/Ensayo_Final_v2_respaldo.md` (snapshot de una versión intermedia). El archivo canónico `Ensayo_Final.md` vive SOLO dentro de la carpeta del workspace; los respaldos NO se duplican aquí para evitar que el sync de Agora confunda versiones.
-
-## Cierre
-
-**5 jun 2026 — Cierre de la ronda de verificación adversarial: sin objeciones pendientes.**
-
-Los tres reparos de la ronda anterior quedaron resueltos sin abrir frentes nuevos:
-
-1. **Equilibrio:** §3.1–3.3 con cuerpo comparable (objeto propio por la tripartición deducida de la posición del oyente; principios racionales; causas); §3.4 más extensa pero con razón — peso proporcional a la dificultad de cada condición.
-2. **Contraste en principios racionales:** Perelman (auditorio universal como ideal regulativo) nítidamente distinguido de Toulmin (dato/garantía/respaldo, el *backing* como prueba del λόγον διδόναι), ambos atados al entimema aristotélico — "contraste funcional, no dos autores apilados".
-3. **Calicles ya no se afirma, se argumenta:** virtud=orden anclada en 504a, 504d, 506e–507a y 508a (citas verificadas literales contra el texto fuente); "la conclusión no se presupone: se sigue de lo que Calicles concedió".
-
-Veredicto sobre el núcleo: la cadena de contra-preguntas sobre la orientación al bien se enfrentó "en su forma fuerte, una por una" — (a) τέχνη ≠ φρόνησις (*EN* VI, 1140a–b): el τέλος interno del arte no exige la ciencia del Bien último; (b) diferencia con la justicia por objeto formal; (c) la orientación es del arte, el uso es del agente (ἦθος), con lo cual el intelectualismo socrático de 460a–c no aplica y el peligro de la retórica resulta ser prueba de su condición de τέχνη. No quedaron objeciones pendientes en esa ronda.
-
-> El ensayo está listo para revisión personal del autor antes de la entrega del 13 de julio. Recomendación: leerlo en voz alta una vez y validar que la voz se sienta propia.
-
-**5 jul 2026 (add.) — Revisión de pre-entrega (v4).** Revisión multi-lente + verificación de citas (todas las de Platón, exactas contra el fuente). Se aplicaron mejoras de marco (ancla en *Fedro*, honestidad sobre el uso de Aristóteles), profundidad de §3.1 y §3.4c, y precisión de citas (452d, Bekker 1356a). Ensayo exportado a `Ensayo_Final.docx` (TNR 12, justificado). **Único cuidado abierto:** longitud — ~5,5–6 pp a espacio simple; confirmar con el profesor el interlineado y el límite exacto de páginas antes de entregar (si exige ≤5 pp estrictas, hay un kit de recortes marcado en la conversación de revisión).
-
-**6 jul 2026 — Revisión v5 (crítica profunda + verificación adversarial).** Se escribió una crítica adversarial (`Critica_Ensayo.md`) y se corrió un workflow de verificación de 5 lentes. Se aplicaron todas las correcciones de forma, citas y coherencia, y el refuerzo filosófico decisivo (paridad con la cocina: el fin propio de la retórica es el *asentimiento razonado* del auditorio, dado por λόγος dirigido al juicio). Se retiró la notación lógica del cuerpo (restaura el invariante de capas). Cuerpo: **2.906 palabras**. Tras el «aplica lo mejor», se **retiró a Cialdini** (ver fila v5 de la tabla), lo que saldó la 2ª recomendación del profesor. **Decisión abierta restante para el autor antes del 13-jul:** **interlineado** — si el profesor exige doble espacio, «5 páginas» no es alcanzable recortando y hay que restructurar/pactar; a simple (~5,4 pp) el texto ya es aceptable, y si pide un límite estricto ≤2.800, hay un menú de recortes menores en `Critica_Ensayo.md §2.5`. Flanco filosófico frontera (reconocido, no cerrado del todo en 5 pp): si el «bien» del 4º criterio, ya reinterpretado, es formal, la línea τέχνη/ἐμπειρία se apoya sobre todo en el λόγος (criterios 2–3); el ensayo lo asume con transparencia.
-
-**7 jul 2026 — Nueva fecha, formato estricto confirmado y vuelta a la base.** Hechos:
-
-- **Fecha de entrega: 17-jul-2026** (antes 13-jul).
-- **Formato ESTRICTO confirmado** (correos del Prof. Juan Camilo Toro, julio 2026): máximo **5 páginas total** (sin mínimo), interlineado **1.5**, **Times New Roman**, márgenes estándar (**2.54 cm**). Estructura *sugerida* (guía, no obligatoria): título informativo; introducción ≤1 pág (contexto, pregunta en una frase, relevancia, tesis, plan); desarrollo ~3 pág (problema, conceptos, argumento, **1 objeción + 1 respuesta**, implicaciones); conclusión ~0.5 pág (recapitulación + preguntas abiertas); bibliografía de **2–6 referencias** ~0.5 pág. Recomendación fuerte: **subtítulos**.
-- **El autor decidió volver a su versión base.** La revisión v5 (6-jul) se archivó en `ensayo/archivo/Ensayo_v5_revision_2026-07-06.md`; `Ensayo_Final.md` contiene ahora la **versión base del autor** (~2.800 palabras de cuerpo; 2.678 en la métrica de `make wordcount`).
-- **Calibración empírica del formato de entrega** (12pt / 1.5 / 2.54 cm): la base ocupa **8 páginas** al formato estricto; densidad medida ~**349 palabras/página**; **presupuesto de cuerpo recalibrado a ≤ 1490 palabras** (4.5 pág para título+cuerpo, 0.5 pág reservada a bibliografía, colchón del 5%).
-- **Herramientas actualizadas.** `scripts/md2docx.py`: interlineado **1.5** y márgenes **2.54 cm** en los 4 lados (TNR 12 se mantiene). `scripts/md2pdf.sh`: **12pt, interlineado 1.5, márgenes 2.54 cm**, fuente Times-compatible detectada por `fc-list` (**Liberation Serif** en este entorno — no hay «Times New Roman» ni `soffice`/`libreoffice` instalados; TeX Gyre Termes se descartó porque no cubre el griego politónico ἐ/ἦ/ῖ). **Nuevo** `scripts/md2web.py`: genera `web/pdf.html`, página imprimible en el formato exacto del profesor (@page A4 2.54 cm, TNR 12/1.5, justificado, botón «Imprimir / Guardar como PDF»); valida md↔html dentro de ±3%. Makefile: presupuesto de `wordcount` actualizado a ≤1490 y nuevos targets `pages` (regenera PDF y verifica ≤5) y `web`.
-- **v6 (entrega):** partiendo de la versión base del autor, el ensayo se recortó a **≤5 páginas** por eliminación de tramos propios (recorte solo-borrado, verificado como subsecuencia del original) y se **reincorporó a Cialdini** como anacronismo declarado (ver fila v6 de la tabla). **El argumento y la redacción son del autor**; el build solo aplica formato, recorte y verificación de citas. `PLAN_V6_Reestructuracion.md` guía el pulido de estilo que queda a mano del autor.
+- **Ensayo (canónico):** `ensayo/Ensayo_Final.md` (+ `.docx`, `.pdf`).
+- **Historial por versión:** `docs/iteraciones/`.
+- **Método y auditoría:** `docs/METODOLOGIA.md`.
+- **Defensa oral:** `ensayo/Defensa_Oral_QA.md`.
+- **Crítica / evaluación (artefactos v4–v5):** `ensayo/Critica_Ensayo.md`, `ensayo/Evaluacion_5_y_pendientes.md`.
+- **Carta del profesor:** `ensayo/Steven Vallejo revisado.md` (gitignored — no redistribuida).
 
 ---
 

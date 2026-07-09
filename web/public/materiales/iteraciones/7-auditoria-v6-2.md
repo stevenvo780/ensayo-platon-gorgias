@@ -31,6 +31,5 @@ Prioridad de reparación aplicada: **H2 → H1 → H4 → H6 → H5 → H3**.
 
 ## Evidencia
 
-Cuerpo 1.488 palabras (≤1490); **5 páginas**; `make verify` OK. Tabla H1–H6 completa en la
-[bitácora](../../ensayo/Bitacora_Ensayo.md), sección «Auditoría adversarial». **Edición asistida
+Cuerpo 1.488 palabras (≤1490); **5 páginas**; `make verify` OK. Registro maestro: [bitácora](../../ensayo/Bitacora_Ensayo.md). **Edición asistida
 y declarada, pendiente de la voz del autor.**

@@ -27,4 +27,4 @@ argumentado con pasajes.
 ## Evidencia
 
 Cuerpo ~2.780 palabras. Reducción de autores documentada en la
-[bitácora](../../ensayo/Bitacora_Ensayo.md) (fila v2).
+[bitácora](../../ensayo/Bitacora_Ensayo.md).

@@ -29,4 +29,4 @@ arreglo de reparos.
 ## Evidencia
 
 Cuerpo ~2.795 palabras. Citas de Platón verificadas contra el fuente. Cierre de la ronda en la
-[bitácora](../../ensayo/Bitacora_Ensayo.md), sección «Cierre».
+[bitácora](../../ensayo/Bitacora_Ensayo.md).

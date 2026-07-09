@@ -30,4 +30,4 @@ defensa oral esperan a la v6.1.
 ## Evidencia
 
 Cuerpo ~1.305 palabras; **5 páginas** confirmadas con `pdfinfo` (`make pages`). Citas exactas
-(`make verify`). Fila v6 de la [bitácora](../../ensayo/Bitacora_Ensayo.md).
+(`make verify`). Registro maestro: [bitácora](../../ensayo/Bitacora_Ensayo.md).

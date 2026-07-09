@@ -30,5 +30,4 @@ decisión de la v6 de volver a la base.
 
 ## Evidencia
 
-Cuerpo 2.906 palabras. Crítica completa en `Critica_Ensayo.md`. Fila v5 de la
-[bitácora](../../ensayo/Bitacora_Ensayo.md).
+Cuerpo 2.906 palabras. Crítica completa en `Critica_Ensayo.md`. Registro maestro: [bitácora](../../ensayo/Bitacora_Ensayo.md).

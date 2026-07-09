@@ -11,6 +11,10 @@ EL ENSAYO
   Ensayo_Final.md    Fuente en Markdown del ensayo (base de la que se generan PDF y DOCX).
   (El PDF de entrega se descarga desde el sitio: /ensayo-gorgias.pdf)
 
+MÉTODO Y PROCESO (cómo se hizo y se auditó)
+  metodologia.md · bitacora.md · critica.md · evaluacion.md · plan-v6.md
+  propuesta-corte-v6.md · diseno-spec.md · plan-implementacion.md
+
 ESTUDIO DEL GORGIAS (guía de lectura del diálogo)
   00_README.md .. 07_analisis_general_tres_actos.md   Guía por actos + conceptos.
 
@@ -20,8 +24,17 @@ AUTORES Y FUENTES
 APARATO FORMAL Y MAPAS
   derivaciones.md · dodds-guthrie.md · argumento.md · docs-README.md
 
+DEFENSA Y CONTEXTO
+  defensa-oral-qa.md · autores-y-contexto.md · fragmentos-retorica-poder.md
+
+VERSIONES DEL ENSAYO (trazabilidad)
+  base-original-steven.md · v5-revision.md · base-pre-v6.md
+
 NOTAS DE CLASE / CURSO
   Clase_08_Gorgias_486e-527e.md · curso-plan-de-trabajo.md · curso-temas-borrador.md
+
+REPOSITORIO
+  repo-readme.md · web-design.md
 
 FUENTE PRIMARIA
   Platón, Gorgias, trad. J. Calonge (Gredos, 1983) — no redistribuida por

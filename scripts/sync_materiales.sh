@@ -48,6 +48,30 @@ cp "$ROOT/notas-clase/Clase_08_Gorgias_486e-527e.md" "$DST/Clase_08_Gorgias_486e
 cp "$ROOT/curso/Plan de trabajo - Fedon y Gorgias.md" "$DST/curso-plan-de-trabajo.md"
 cp "$ROOT/curso/temas_borrador.md"                    "$DST/curso-temas-borrador.md"
 
+# --- Método y proceso (documentos de trabajo, expuestos como referencia auditable) ---
+cp "$ROOT/docs/METODOLOGIA.md"                 "$DST/metodologia.md"
+cp "$ROOT/ensayo/Bitacora_Ensayo.md"           "$DST/bitacora.md"
+cp "$ROOT/ensayo/Critica_Ensayo.md"            "$DST/critica.md"
+cp "$ROOT/ensayo/Evaluacion_5_y_pendientes.md" "$DST/evaluacion.md"
+cp "$ROOT/ensayo/PLAN_V6_Reestructuracion.md"  "$DST/plan-v6.md"
+cp "$ROOT/ensayo/Ensayo_V6_propuesta_corte.md" "$DST/propuesta-corte-v6.md"
+cp "$ROOT/docs/superpowers/specs/2026-07-05-elevar-ensayo-gorgias-design.md" "$DST/diseno-spec.md"
+cp "$ROOT/docs/superpowers/plans/2026-07-05-elevar-ensayo-gorgias.md"        "$DST/plan-implementacion.md"
+
+# --- Defensa y contexto ---
+cp "$ROOT/ensayo/Defensa_Oral_QA.md"                       "$DST/defensa-oral-qa.md"
+cp "$ROOT/ensayo/Autores_y_Contexto.md"                    "$DST/autores-y-contexto.md"
+cp "$ROOT/ensayo/01_Fragmentos_Retorica_Poder_Gorgias.md"  "$DST/fragmentos-retorica-poder.md"
+
+# --- Versiones del ensayo (base + archivadas: trazabilidad) ---
+cp "$ROOT/ensayo/Ensayo_Base_Original_Steven.md"            "$DST/base-original-steven.md"
+cp "$ROOT/ensayo/archivo/Ensayo_v5_revision_2026-07-06.md"  "$DST/v5-revision.md"
+cp "$ROOT/ensayo/archivo/Ensayo_base_pre-v6_2026-07-07.md"  "$DST/base-pre-v6.md"
+
+# --- Repositorio (documentación técnica) ---
+cp "$ROOT/README.md"     "$DST/repo-readme.md"
+cp "$ROOT/web/DESIGN.md" "$DST/web-design.md"
+
 # --- Manifiesto legible del espejo (generado) ---
 cat > "$DST/README.txt" <<'EOF'
 MATERIALES · La retórica como τέχνη — Ensayo sobre el Gorgias de Platón
@@ -63,6 +87,10 @@ EL ENSAYO
   Ensayo_Final.md    Fuente en Markdown del ensayo (base de la que se generan PDF y DOCX).
   (El PDF de entrega se descarga desde el sitio: /ensayo-gorgias.pdf)
 
+MÉTODO Y PROCESO (cómo se hizo y se auditó)
+  metodologia.md · bitacora.md · critica.md · evaluacion.md · plan-v6.md
+  propuesta-corte-v6.md · diseno-spec.md · plan-implementacion.md
+
 ESTUDIO DEL GORGIAS (guía de lectura del diálogo)
   00_README.md .. 07_analisis_general_tres_actos.md   Guía por actos + conceptos.
 
@@ -72,8 +100,17 @@ AUTORES Y FUENTES
 APARATO FORMAL Y MAPAS
   derivaciones.md · dodds-guthrie.md · argumento.md · docs-README.md
 
+DEFENSA Y CONTEXTO
+  defensa-oral-qa.md · autores-y-contexto.md · fragmentos-retorica-poder.md
+
+VERSIONES DEL ENSAYO (trazabilidad)
+  base-original-steven.md · v5-revision.md · base-pre-v6.md
+
 NOTAS DE CLASE / CURSO
   Clase_08_Gorgias_486e-527e.md · curso-plan-de-trabajo.md · curso-temas-borrador.md
+
+REPOSITORIO
+  repo-readme.md · web-design.md
 
 FUENTE PRIMARIA
   Platón, Gorgias, trad. J. Calonge (Gredos, 1983) — no redistribuida por

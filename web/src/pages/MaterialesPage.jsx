@@ -4,10 +4,11 @@ import { LogoMark } from '../components/Logo.jsx';
 import './materiales.css';
 
 /* ---------------------------------------------------------------
-   MaterialesPage — el proyecto como referencia descargable.
-   Cada categoría es una tarjeta con una rejilla de archivos.
-   Archivos servidos como estáticos desde /public/materiales/.
-   Los binarios (PDF/DOCX) se descargan; los .md abren en pestaña.
+   MaterialesPage — el proyecto COMPLETO como referencia auditable.
+   Todo el .md del repositorio, organizado por capas metodológicas.
+   Archivos servidos como estáticos desde /public/materiales/ (espejo
+   generado por `make materiales`). Los .md abren en el visor de
+   lectura (/lectura/:slug); los binarios (PDF/DOCX) se descargan.
    --------------------------------------------------------------- */
 
 const BASE = '/materiales/';
@@ -19,11 +20,64 @@ const TYPE = {
   md: { label: 'MD', cls: 'is-md' },
 };
 
+/* Autores y fuentes: cada resumen es un .md en /materiales/autores/.
+   Abren en el visor de lectura (/lectura/autores/:slug). */
+const AUTHORS = [
+  {
+    slug: 'platon-gorgias',
+    name: 'Platón',
+    line: 'El Gorgias: la retórica como ἐμπειρία y κολακεία, no como τέχνη.',
+  },
+  {
+    slug: 'socrates',
+    name: 'Sócrates',
+    line: 'El personaje: exige objeto, razón y causa; intelectualismo moral.',
+  },
+  {
+    slug: 'gorgias',
+    name: 'Gorgias',
+    line: 'El sofista: la retórica como poder omnímodo y herramienta neutral.',
+  },
+  {
+    slug: 'polo',
+    name: 'Polo',
+    line: 'Poder aparente vs. real: cometer injusticia es peor que sufrirla.',
+  },
+  {
+    slug: 'calicles',
+    name: 'Calicles',
+    line: 'Naturaleza contra convención, hedonismo y el reto a la filosofía.',
+  },
+  {
+    slug: 'aristoteles',
+    name: 'Aristóteles',
+    line: 'El eje: géneros, ἦθος/πάθος/λόγος y el entimema como prueba.',
+  },
+  {
+    slug: 'perelman-olbrechts-tyteca',
+    name: 'Perelman y Olbrechts-Tyteca',
+    line: 'La nueva retórica: el auditorio universal y la razón argumentativa.',
+  },
+  {
+    slug: 'toulmin',
+    name: 'Stephen Toulmin',
+    line: 'La anatomía del argumento: dato, garantía, respaldo, refutación.',
+  },
+  {
+    slug: 'cialdini',
+    name: 'Robert Cialdini',
+    line: 'Los seis principios: las causas psicológicas de la persuasión.',
+  },
+];
+
 /**
- * Cada archivo:
- *  { title, desc, type, file, href?, download? }
- *  - `href` explícito para el PDF (vive en la raíz de /public).
- *  - binarios (pdf/docx) → download; .md → target _blank.
+ * Cada sección: { id, kicker, title, lead, files? , authors? }
+ *  - `files`: array de { title, desc, type, file, href?, download? }
+ *     · `href` explícito para el PDF (vive en la raíz de /public).
+ *     · binarios (pdf/docx) → download; .md → visor de lectura.
+ *  - `authors`: rejilla especial de fichas de autor.
+ * Orden = recorrido metodológico: producto → método → estudio →
+ * aparato → defensa → versiones → institucional → fuentes → repo.
  */
 const SECTIONS = [
   {
@@ -54,8 +108,64 @@ const SECTIONS = [
     ],
   },
   {
-    id: 'estudio',
+    id: 'metodo',
     kicker: '02',
+    title: 'Método y proceso',
+    lead: 'Cómo se produjo y se auditó el ensayo: la metodología, la bitácora completa, la crítica adversarial y los planes de trabajo. La transparencia del proceso es parte del trabajo.',
+    files: [
+      {
+        title: 'Metodología — 7 lentes de auditoría',
+        desc: 'El proceso de trabajo y verificación de punta a punta, y la batería adversarial de siete lentes.',
+        type: 'md',
+        file: 'metodologia.md',
+      },
+      {
+        title: 'Bitácora del ensayo',
+        desc: 'Registro completo: versiones, decisiones, críticas, auditorías e iteraciones de diseño.',
+        type: 'md',
+        file: 'bitacora.md',
+      },
+      {
+        title: 'Crítica profunda',
+        desc: 'Teardown adversarial del ensayo con hallazgos, severidad y reparaciones propuestas.',
+        type: 'md',
+        file: 'critica.md',
+      },
+      {
+        title: 'Evaluación y pendientes',
+        desc: 'Lectura calibrada a la nota y la defensa: qué está listo, qué falta y qué cuidar.',
+        type: 'md',
+        file: 'evaluacion.md',
+      },
+      {
+        title: 'Plan operativo v6',
+        desc: 'Mapa de trabajo para llevar la base del autor al formato estricto de ≤ 5 páginas.',
+        type: 'md',
+        file: 'plan-v6.md',
+      },
+      {
+        title: 'Propuesta de corte v6',
+        desc: 'Recorte propuesto del ensayo (solo-borrado) como andamiaje de reescritura a mano.',
+        type: 'md',
+        file: 'propuesta-corte-v6.md',
+      },
+      {
+        title: 'Diseño del proyecto (spec)',
+        desc: 'Especificación de la capa extendida: derivaciones formales, aparato, mapas y build.',
+        type: 'md',
+        file: 'diseno-spec.md',
+      },
+      {
+        title: 'Plan de implementación',
+        desc: 'Plan de ejecución de la capa extendida y la arquitectura del repositorio.',
+        type: 'md',
+        file: 'plan-implementacion.md',
+      },
+    ],
+  },
+  {
+    id: 'estudio',
+    kicker: '03',
     title: 'Estudio del Gorgias',
     lead: 'Guía de lectura del diálogo: visión general, los tres interlocutores y los conceptos clave.',
     files: [
@@ -111,7 +221,7 @@ const SECTIONS = [
   },
   {
     id: 'aparato',
-    kicker: '03',
+    kicker: '04',
     title: 'Aparato formal y mapas',
     lead: 'El andamiaje del ensayo: derivaciones lógicas, aparato erudito y el mapa del argumento.',
     files: [
@@ -142,10 +252,62 @@ const SECTIONS = [
     ],
   },
   {
+    id: 'defensa',
+    kicker: '05',
+    title: 'Defensa y contexto',
+    lead: 'Preparación de la sustentación oral y la investigación previa que la sostiene.',
+    files: [
+      {
+        title: 'Defensa oral — Q&A',
+        desc: 'Diez preguntas probables del profesor: dónde responde el ensayo y notas para hablar.',
+        type: 'md',
+        file: 'defensa-oral-qa.md',
+      },
+      {
+        title: 'Autores y contexto',
+        desc: 'Guía de lectura por autor: qué aporta cada uno y dónde entra en el argumento.',
+        type: 'md',
+        file: 'autores-y-contexto.md',
+      },
+      {
+        title: 'Fragmentos: retórica, poder y Gorgias',
+        desc: 'Investigación previa: pasajes y fragmentos sobre retórica y poder en el diálogo.',
+        type: 'md',
+        file: 'fragmentos-retorica-poder.md',
+      },
+    ],
+  },
+  {
+    id: 'versiones',
+    kicker: '06',
+    title: 'Versiones del ensayo',
+    lead: 'Trazabilidad del texto: la base original del autor y las revisiones archivadas.',
+    files: [
+      {
+        title: 'Base original del autor',
+        desc: 'El planteamiento original de Steven, base de la versión de entrega.',
+        type: 'md',
+        file: 'base-original-steven.md',
+      },
+      {
+        title: 'v5 — revisión (archivada)',
+        desc: 'La revisión del 6-jul con verificación adversarial de cinco lentes, archivada.',
+        type: 'md',
+        file: 'v5-revision.md',
+      },
+      {
+        title: 'Base pre-v6 (archivada)',
+        desc: 'Snapshot de la base del autor antes del recorte a ≤ 5 páginas.',
+        type: 'md',
+        file: 'base-pre-v6.md',
+      },
+    ],
+  },
+  {
     id: 'notas',
-    kicker: '04',
-    title: 'Notas de clase',
-    lead: 'Apuntes tomados en el seminario sobre el tramo final del diálogo.',
+    kicker: '07',
+    title: 'Notas de clase y curso',
+    lead: 'Apuntes del seminario y los documentos de planificación del curso.',
     files: [
       {
         title: 'Clase 08 · Gorgias 486e–527e',
@@ -153,14 +315,6 @@ const SECTIONS = [
         type: 'md',
         file: 'Clase_08_Gorgias_486e-527e.md',
       },
-    ],
-  },
-  {
-    id: 'curso',
-    kicker: '05',
-    title: 'Curso',
-    lead: 'Documentos de planificación del seminario sobre Fedón y Gorgias.',
-    files: [
       {
         title: 'Plan de trabajo — Fedón y Gorgias',
         desc: 'Cronograma y objetivos del seminario a lo largo de las sesiones.',
@@ -175,55 +329,32 @@ const SECTIONS = [
       },
     ],
   },
-];
-
-/* Autores y fuentes: cada resumen es un .md en /materiales/autores/.
-   Abren en el visor de lectura (/lectura/autores/:slug). */
-const AUTHORS = [
   {
-    slug: 'platon-gorgias',
-    name: 'Platón',
-    line: 'El Gorgias: la retórica como ἐμπειρία y κολακεία, no como τέχνη.',
+    id: 'autores',
+    kicker: '08',
+    title: 'Autores y fuentes',
+    lead: 'Los interlocutores del Gorgias y los teóricos modernos de la argumentación, en resúmenes con citas verificables.',
+    authors: AUTHORS,
   },
   {
-    slug: 'socrates',
-    name: 'Sócrates',
-    line: 'El personaje: exige objeto, razón y causa; intelectualismo moral.',
-  },
-  {
-    slug: 'gorgias',
-    name: 'Gorgias',
-    line: 'El sofista: la retórica como poder omnímodo y herramienta neutral.',
-  },
-  {
-    slug: 'polo',
-    name: 'Polo',
-    line: 'Poder aparente vs. real: cometer injusticia es peor que sufrirla.',
-  },
-  {
-    slug: 'calicles',
-    name: 'Calicles',
-    line: 'Naturaleza contra convención, hedonismo y el reto a la filosofía.',
-  },
-  {
-    slug: 'aristoteles',
-    name: 'Aristóteles',
-    line: 'El eje: géneros, ἦθος/πάθος/λόγος y el entimema como prueba.',
-  },
-  {
-    slug: 'perelman-olbrechts-tyteca',
-    name: 'Perelman y Olbrechts-Tyteca',
-    line: 'La nueva retórica: el auditorio universal y la razón argumentativa.',
-  },
-  {
-    slug: 'toulmin',
-    name: 'Stephen Toulmin',
-    line: 'La anatomía del argumento: dato, garantía, respaldo, refutación.',
-  },
-  {
-    slug: 'cialdini',
-    name: 'Robert Cialdini',
-    line: 'Los seis principios: las causas psicológicas de la persuasión.',
+    id: 'repo',
+    kicker: '09',
+    title: 'Repositorio',
+    lead: 'La documentación técnica del proyecto y de su sitio web.',
+    files: [
+      {
+        title: 'README del repositorio',
+        desc: 'Panorama del proyecto: tesis, estructura de carpetas y targets de build.',
+        type: 'md',
+        file: 'repo-readme.md',
+      },
+      {
+        title: 'Diseño de la web',
+        desc: 'El sistema de diseño del sitio: tipografía, color, tema claro/oscuro y componentes.',
+        type: 'md',
+        file: 'web-design.md',
+      },
+    ],
   },
 ];
 
@@ -316,11 +447,12 @@ export default function MaterialesPage() {
             <LogoMark size={64} />
           </motion.div>
           <p className="mat-hero__kicker">Materiales</p>
-          <h1>El proyecto como referencia</h1>
+          <h1>El proyecto completo, abierto</h1>
           <p className="mat-hero__subtitle">
-            Todo el trabajo detrás del ensayo, abierto y descargable: el ensayo en
-            sus formatos, la guía de estudio del <em>Gorgias</em>, el aparato formal
-            y las notas de clase.
+            Todo el trabajo detrás del ensayo, ordenado por capas del método y
+            auditable de principio a fin: el ensayo, el <strong>proceso</strong>{' '}
+            (metodología, bitácora, crítica y auditorías), la guía de estudio del{' '}
+            <em>Gorgias</em>, el aparato formal, la defensa oral y las versiones.
           </p>
           <div className="mat-hero__divider" />
         </motion.div>
@@ -345,39 +477,21 @@ export default function MaterialesPage() {
                 <p className="mat-section__lead">{s.lead}</p>
               </div>
             </header>
-            <div className="mat-grid">
-              {s.files.map((f) => (
-                <FileCard key={f.file ?? f.href} f={f} />
-              ))}
-            </div>
+            {s.authors ? (
+              <div className="mat-grid mat-grid--authors">
+                {s.authors.map((a) => (
+                  <AuthorCard key={a.slug} a={a} />
+                ))}
+              </div>
+            ) : (
+              <div className="mat-grid">
+                {s.files.map((f) => (
+                  <FileCard key={f.file ?? f.href} f={f} />
+                ))}
+              </div>
+            )}
           </motion.section>
         ))}
-
-        {/* AUTORES Y FUENTES */}
-        <motion.section
-          id="autores"
-          className="mat-section"
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '0px 0px -10% 0px' }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-        >
-          <header className="mat-section__head">
-            <span className="mat-section__kicker">06</span>
-            <div>
-              <h2>Autores y fuentes</h2>
-              <p className="mat-section__lead">
-                Los interlocutores del <em>Gorgias</em> y los teóricos modernos
-                de la argumentación, en resúmenes con citas verificables.
-              </p>
-            </div>
-          </header>
-          <div className="mat-grid mat-grid--authors">
-            {AUTHORS.map((a) => (
-              <AuthorCard key={a.slug} a={a} />
-            ))}
-          </div>
-        </motion.section>
 
         <p className="mat-note">
           Fuente primaria: Platón, <em>Gorgias</em>, trad. J. Calonge (Gredos, 1983)

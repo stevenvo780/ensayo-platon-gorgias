@@ -1,0 +1,91 @@
+# La retórica como τέχνη y no ἐμπειρία: verificación, con Aristóteles, de los cuatro criterios implícitos en el *Gorgias* (462b–466a)
+
+***
+
+## Introducción
+
+El *Gorgias* contiene la confrontación más extensa de Platón con la retórica como práctica política y educativa. En la Atenas democrática del siglo V la palabra era casi la única vía de acción política —ῥήτωρ designa por igual al orador y al político—, de modo que atacar la retórica era atacar la política misma. Sobre ese trasfondo, Sócrates define la retórica como «adulación» (κολακεία) y «práctica empírica» (ἐμπειρία), nunca como arte (τέχνη) (462b–466a). La distinción es estrictamente epistemológica: una τέχνη tiene (1) un objeto propio, (2) procede con razón y da cuenta de sus principios (λόγον ἔχει), (3) conoce sus causas (αἰτίαι) y (4) orienta su acción al bien (ἀγαθόν) de su objeto; una ἐμπειρία repite lo que produce placer sin tener «ningún fundamento por el que ofrecer las cosas que ella ofrece» (465a), esto es, sin poder decir la causa.
+
+Defiendo una hipótesis que toma en serio ese marco: **acepto la jerarquía socrática —las τέχναι son superiores a las ἐμπειρίαι—, pero disputo que la retórica pertenezca a las segundas por naturaleza y no por uno de sus usos**. Por *defensa analítica* entiendo verificar la retórica frente a los cuatro criterios que se siguen de la propia distinción socrática entre τέχνη y ἐμπειρία —criterios que Sócrates no formula como lista, pero que su clasificación presupone—. Los criterios son socráticos; aristotélica es solo la teoría que los satisface: el eje es la *Retórica*, que da de la disciplina lo que Sócrates la supone incapaz de tener. La refuerzo con un anacronismo *declarado y acotado*: la teoría de la argumentación, **solo** para los principios racionales; el conocimiento de causas lo funda Aristóteles mismo. No toca la orientación al bien, cuestión normativa que ninguna ciencia descriptiva puede zanjar.
+
+**Pregunta central:** ¿puede mostrarse, dentro del marco epistemológico del propio Sócrates, que la retórica es τέχνη y no ἐμπειρία? Procedo en tres movimientos: reconstruyo el problema en los tres interlocutores, muestro que la clasificación de 462b–466a es arbitraria y verifico los cuatro requisitos, deteniéndome en el último, donde la objeción socrática es más fuerte.
+
+***
+
+## §1. El problema: retórica, poder y alma en los tres interlocutores
+
+**Gorgias** (447a–461b) define la retórica como arte de la persuasión y la proclama «el mayor bien», pues da poder sin ser experto en cada materia (452d–456a). Sócrates le arranca que produce «creencia sin el saber», no «ciencia» (454e); y cuando Gorgias añade que enseña a usarla con justicia, lo atrapa: quien aprende lo justo es justo, luego el discípulo no podría obrar mal (460a–c). La refutación es elegante, pero —lo veremos— descansa sobre una premisa de contrabando: que la retórica *versa sobre la justicia*.
+
+**Polo** (461b–481b) abandona el arte y se queda con el poder desnudo: el retórico y el tirano hacen «lo que les parece» (δοκεῖ) y son los más felices. Sócrates replica que no hacen lo que *quieren* (βούλεται), y que cometer injusticia es peor que padecerla. **Calicles** (481b–527e) radicaliza: opone φύσις a νόμος y cifra la vida buena en el placer sin freno; en su boca la retórica es el instrumento con que el fuerte somete la asamblea a su apetito: el riesgo democrático en estado puro. Frente a él, Sócrates establece —y no solo afirma— que el bien del alma es su orden (κόσμος): «una casa con orden [...] es buena, pero sin orden es mala» (504a); del orden resultan «la justicia y la moderación» (σωφροσύνη, 504d) y «un alma moderada es buena» (506e–507a), mientras el placer sin freno de Calicles es lo *des*-ordenado (508a). La conclusión no se presupone: se sigue de la ecuación virtud = orden que él mismo concedió. Retendré ese riesgo —no la tesis de Calicles— para el §3.4.
+
+Acepto, con Sócrates, que el cinismo de Polo y el desenfreno de Calicles son indefendibles; pero son usos de la palabra, no la retórica misma. Mi defensa no rescata al hombre, sino el arte que tergiversa.
+
+***
+
+## §2. La clasificación de 462b–466a es arbitraria
+
+Sócrates clasifica la retórica como ἐμπειρία equiparándola a la cocina: como la culinaria simula a la medicina dando placer sin salud, la retórica simula a la justicia dando placer al pueblo sin hacerlo mejor; es «un simulacro de una parte de la política» (463d) que «no se ocupa del bien» (464d). Impecable, pero descansa sobre dos movimientos no probados que el resto del ensayo desmonta.
+
+**Primero, reduce el objeto de la retórica a «lo justo y lo injusto».** Al forzar a Gorgias a precisar sobre qué persuade, fija el campo en «lo justo y lo injusto en los tribunales y las asambleas» (454b–455a), equiparando la retórica entera con un solo género, el judicial. (O, si se prefiere, quien capituló fue Gorgias; da igual: la concesión de un interlocutor no fija la disciplina.) El propio texto lo desmiente: el Gorgias que cita a Temístocles y a Pericles aconsejando sobre murallas, puertos y arsenales (455d–e) describe un discurso *deliberativo* sobre el bien de la ciudad, no un alegato sobre la justicia. La reducción sostiene la analogía con «la justicia, medicina del alma»; el §3.1 mostrará por qué es arbitraria.
+
+**Segundo, niega a la retórica principios racionales sin probarlo.** La tesis de que es «irracional» (ἄλογον) y no puede «decir la causa» (465a) se apoya *únicamente* en que el orador persuade sin conocer la materia (459a–c). Pero eso describe un *uso posible*, no la naturaleza de la retórica. Que *algunos* oradores persuadan sin saber solo probaría que la retórica carece de principios si persuadir sin saber fuera su esencia y no uno de sus ejercicios —y es justamente esa premisa esencialista la que Sócrates presupone sin demostrar—. Retirada ella, junto con la reducción del objeto, se disuelve también la refutación de Gorgias: el orador cae en contradicción no por ser retórico, sino por la pretensión —suya, no de la retórica— de enseñar *justicia*.
+
+***
+
+## §3. Verificación de los cuatro requisitos de τέχνη
+
+### 3.1 Objeto propio: los tres géneros del discurso
+
+Una τέχνη se individúa por su objeto propio: un dominio gobernado por un fin (τέλος) del que ella responde y que la separa de las artes vecinas —la medicina de la salud, la arquitectura de lo edificado—. La pregunta no es si la retórica *tiene* materia, sino si tiene una *suya*, irreductible a otra τέχνη. Sócrates se lo niega, pero por reducción (§2), no por examen del campo. Aristóteles, en cambio, lo fija con precisión clasificatoria: la retórica se divide en tres géneros, y la división no es estipulativa, sino que se deduce de los tres tipos de oyente —el que decide sobre el futuro, el que juzga sobre el pasado y el mero espectador— (*Retórica* I, 1358a–b). El deliberativo (συμβουλευτικόν) versa sobre lo conveniente y mira al futuro de la ciudad; el judicial (δικανικόν), sobre lo justo y lo injusto en un hecho pasado; el epidíctico (ἐπιδεικτικόν), sobre lo bello y lo feo, mediante elogio y censura (*Retórica* I, 1358b).
+
+Esta tripartición revela *por qué* la clasificación socrática es arbitraria. Sócrates reduce el objeto a lo justo y lo injusto (454b–455a) —lo que en el esquema aristotélico cae en el género judicial— y lo hace pasar por el todo: la falacia de tomar la parte por el conjunto, como quien definiera la medicina por la sola cirugía. La división aristotélica, en cambio, descansa en un principio no arbitrario —la posición del oyente ante el tiempo— y exhibe los dos géneros omitidos, y con ellos un objeto que excede al de la justicia: lo conveniente y lo bello no son especies de lo justo. La retórica no es ni el poder universal de persuadir que Gorgias presumía (456a–c) ni la sola justicia, sino el arte que «considera en cada caso lo que es apto para persuadir» (*Retórica* I, 1355b). Que la sistematización sea de Aristóteles, no de Platón, no la vuelve ajena: el propio Sócrates, en el *Fedro* (271c–277a), admite una retórica que conoce las almas y procede con método, digna del nombre de τέχνη —señal de que la censura del *Gorgias* recae sobre un *uso* de la palabra, no sobre la disciplina—. Que el *Fedro* exija más —conocer las almas y la verdad— no me estorba: la ciencia del alma la da el libro II de la *Retórica* (§3.3); la verdad de la materia la aportan la ética y la política, de las que la retórica toma sus premisas (§3.4). Primer criterio satisfecho.
+
+### 3.2 Principios racionales: ἦθος, πάθος, λόγος y τόποι
+
+El segundo criterio exige proceder con razón y dar cuenta de lo que se hace (λόγον διδόναι); la *Retórica* es exactamente eso. Aristóteles distingue tres pruebas técnicas (*Retórica* I, 1356a): el ἦθος, que persuade por el carácter creíble del orador; el πάθος, que dispone emocionalmente al auditorio; y el λόγος, que persuade mediante el argumento. Suma los τόποι, esquemas aplicables a cualquier materia, y el entimema —silogismo retórico de premisas probables—, que llama «cuerpo de la prueba» (σῶμα τῆς πίστεως, *Retórica* I, 1354a). Un arte que clasifica sus medios y enseña a construir argumentos no persuade por azar.
+
+Aquí —y *solo* aquí— introduzco el anacronismo declarado. Perelman y Olbrechts-Tyteca, en *La nueva retórica* (1958), muestran que la argumentación posee una racionalidad propia, irreductible a la lógica formal y no por ello arbitraria. Su **auditorio universal** ofrece un criterio: un argumento es racional en la medida en que podría aceptarlo todo ser razonable, no solo el público al que se halaga. No es un público empírico, sino un **ideal regulativo** que distingue la razón compartida de la complacencia.
+
+No conviene apoyar el criterio en una sola voz: si Perelman aporta un patrón de validez, Toulmin (*Los usos de la argumentación*, 1958) aporta una *anatomía*: el argumento práctico tiene estructura analizable —dato, garantía (*warrant*) y respaldo (*backing*)—, y el *backing*, respuesta articulada a «¿por qué de ahí se sigue esto?», es la prueba misma de que la retórica puede dar cuenta de su proceder (λόγον διδόναι). Que el dato sea contingente y la garantía revisable no la vuelve irracional: esa garantía no es sino la premisa callada del entimema aristotélico. Segundo criterio satisfecho.
+
+### 3.3 Conocimiento de causas: las αἰτίαι de la persuasión
+
+El tercer criterio —el que Sócrates niega con más énfasis al decir que la retórica no puede «decir la causa» (465a)— exige conocer las αἰτίαι de lo que se produce. El libro II de la *Retórica* es un tratado causal de las pasiones: cada πάθος se define por la disposición del sujeto, su objeto y sus circunstancias. La ira, por caso, es «un deseo de venganza acompañado de dolor, por un desprecio manifiesto e injustificado» (*Retórica* II, 1378a); quien tiene esa definición sabe *por qué* surge y *cómo* suscitarla o calmarla. Lo mismo vale para el argumento, cuyo mecanismo —entimema y ejemplo, probabilidad (εἰκός) y signo (σημεῖον)— Aristóteles explica, no solo constata. Conocer esas αἰτίαι —por qué surge la ira, por qué convence el entimema— es justo lo que el «no puede decir la causa» de 465a le niega sin prueba: no la mera experiencia de *que* algo persuade —eso es la ἐμπειρία—, sino la razón *por la que* persuade. Y ese saber se confina al conocimiento de causas: saber *por qué* alguien se deja persuadir nada dice sobre si *debe* persuadírselo. Tercer criterio satisfecho.
+
+### 3.4 Orientación al bien: el criterio decisivo
+
+Es el criterio más exigente y el núcleo del ensayo. Sócrates sostiene que la retórica «pone su punto de mira en el placer sin el bien» (464d–465a). Lo enfrento en su forma fuerte, como una cadena de tres preguntas.
+
+**(a) ¿Cómo puede la retórica orientarse al bien si no lo conoce?** La objeción entiende «orientarse al bien» como *poseer la ciencia normativa que determina qué es lo justo*. Reinterpreto ahí el criterio, y con razón: así entendido, ninguna τέχνη lo cumpliría. Aristóteles distingue la τέχνη —ordenada a producir algo distinto de sí— de la φρόνησις, sabiduría práctica del bien en la acción (*Ética a Nicómaco* VI, 1140a–b); porque la técnica no es la φρόνησις, puede emplearse mal: el dominio del arte no incluye la rectitud del fin. Lo que el criterio sí exige es que el arte se ordene a un **fin propio bueno** del que dé cuenta —la medicina, a la salud—. La retórica no fija qué es lo conveniente o lo justo —eso toca a la política y la ética, de las que toma sus premisas (*Retórica* I, 1356a)—, pero sí se ordena al buen ejercicio de sus tres géneros: deliberar, juzgar y elogiar rectamente (*Retórica* I, 1358b). Se dirá que la medicina produce un bien tangible —la salud del cuerpo— y la retórica solo asentimiento; la asimetría es real, y a ella responde (b). No el bien mismo, pues, sino **su fin propio y los medios que a él conducen**.
+
+**(b) Si conoce el fin, ¿en qué se diferencia de la justicia?** La diferencia es de *objeto formal*: la justicia —en el esquema del diálogo (464b–c)— produce el orden del alma y hace *justo* al sujeto; la retórica no produce almas justas, sino **discursos persuasivos sobre lo conveniente, lo justo y lo bello**: conoce los medios para persuadir respecto del fin, pero no *es* la virtud que lo realiza. Al contragolpe más duro —que esa persuasión sería *apariencia sin saber* (454e–455a), πίστις y no ἐπιστήμη— ya respondieron los criterios segundo y tercero: lo que la separa de la cocina-ἐμπειρία es que procede por principios racionales (λόγον ἔχει), conoce las αἰτίαι del asentimiento y persuade *dando razones* que el oyente puede sopesar y rechazar —el entimema se dirige a su juicio, no a un apetito que no juzga—. Ahí está su fin propio: no la salud del cuerpo ni un placer ciego, sino el asentimiento razonado del auditorio. No es simulacro ciego.
+
+**(c) ¿Entonces el retórico nunca podría actuar injustamente? Y si nunca, ¿no deja de ser la retórica un riesgo para la democracia?** Es una *trampa simétrica*: afirmar que su orientación al bien la vuelve incapaz de daño la volvería inocua, contra la premisa del comienzo. No caigo en ella. La pregunta descansa en el **intelectualismo socrático** (460a–c): quien aprende lo justo se hace justo, y el justo no obra mal; luego el que aprendió lo justo no obraría injustamente. No necesito negar esa doctrina, pues ni siquiera se aplica al caso: la inferencia solo valdría si lo que el retórico conoce *fuera* la virtud que realiza el bien, pero (a) y (b) mostraron que conoce los **medios** para persuadir respecto de un fin, no la φρόνησις ni la justicia. Le falta su antecedente. Conocer los medios **no garantiza el buen uso del arte**, porque ninguna τέχνη lo garantiza: el médico que conoce la salud conoce con ello el veneno, y los medios sirven a fines opuestos según la voluntad del agente —su ἦθος—, no según su técnica.
+
+De aquí la salida, que disuelve la disyuntiva sin negar ninguno de sus cuernos: la retórica **se orienta a su fin** y, **a la vez, puede usarse injustamente**, sin contradicción, porque la orientación es del *arte* (su τέλος) y el uso, del *agente* (su elección) —sujetos distintos—. Así se responde el temor que cerraba la cadena: su buen τέλος no cancela la libertad del agente para torcerlo, de modo que la retórica no deja de ser un riesgo para la ciudad. Y hay más: solo un arte que conoce de veras las αἰτίαι del asentimiento puede manipular con método; la mera ἐμπειρία, ciega a las causas, a lo sumo tropieza con la persuasión, no la gobierna. Que el retórico pueda manipular al pueblo es, así, un *efecto* del saber causal establecido en §3.3: el peligro de la retórica no prueba que sea ἐμπειρία —como quería Sócrates—, sino, paradójicamente, que es τέχνη. La objeción del cuarto criterio descansaba en dos presuposiciones —exigir que la sola posesión asegure el buen uso e identificar su objeto con el de la justicia—; retiradas ambas, el criterio, así reinterpretado, queda satisfecho.
+
+***
+
+## Conclusión
+
+La clasificación de la retórica como ἐμπειρία reduce su objeto a lo justo, ignora los géneros deliberativo y epidíctico y le niega principios racionales sin demostración. Verificada frente a los cuatro criterios implícitos en la distinción socrática τέχνη/ἐμπειρία, los satisface: tiene **objeto propio** (los tres géneros del discurso); **principios racionales** —ἦθος, πάθος, λόγος y τόποι—, cuya racionalidad confirman el auditorio universal de Perelman y el esquema de Toulmin; conoce sus **causas**, las αἰτίαι de las pasiones y los argumentos (libro II de la *Retórica*); y se **orienta a su fin propio** —deliberar, juzgar y elogiar bien— sin confundirse con la justicia. Ese cuarto criterio es el aporte distintivo: la retórica se ordena a su fin bueno y, a la vez, no asegura su buen uso, de modo que conserva la posibilidad del mal uso que la mantiene como poder real —y como riesgo— en la ciudad. La retórica es, pues, τέχνη y no ἐμπειρία —susceptible de serlo por su objeto, sus principios y sus causas, aunque ningún arte garantice el buen uso—; y esa sola posibilidad basta para volver indebida la clasificación de 465a, que la declara empírica *por naturaleza* y no en uno de sus usos. No abandono el *criterio* de Sócrates —sus cuatro exigencias para una τέχνη—, aunque para satisfacerlas recurra a la teoría que él no alcanzó a ver; lo aplico con el rigor que él reclama, examinando la cosa y no la caricatura que de ella trazan sus adversarios.
+
+***
+
+## Bibliografía
+
+**Fuentes primarias**
+
+* Aristóteles. (1985). *Ética a Nicómaco* (J. Pallí Bonet, Trad.). Madrid: Gredos.
+* Aristóteles. (1990). *Retórica* (Q. Racionero, Trad.). Madrid: Gredos.
+* Platón. (1983). *Gorgias* (J. Calonge, Trad.). Madrid: Gredos.
+* Platón. (1988). *Fedro* (E. Lledó Íñigo, Trad.). Madrid: Gredos.
+
+**Fuentes secundarias**
+
+* Perelman, Ch. & Olbrechts-Tyteca, L. (1958). *Traité de l'argumentation: La nouvelle rhétorique*. París: PUF. [Trad. esp.: *Tratado de la argumentación. La nueva retórica*. Madrid: Gredos, 1989.]
+* Toulmin, S. E. (1958). *The Uses of Argument*. Cambridge: Cambridge University Press. [Trad. esp.: *Los usos de la argumentación*. Barcelona: Península, 2007.]
+
+***
+
+*Ensayo final para el curso de Platón. Fecha de entrega: 13 de julio de 2026.*

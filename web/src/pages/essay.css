@@ -138,10 +138,10 @@
   display: grid;
   grid-template-columns: 210px minmax(0, var(--measure));
   justify-content: center;
-  gap: clamp(2rem, 5vw, 4rem);
-  max-width: 1180px;
+  gap: clamp(1.75rem, 3.5vw, 3.25rem);
+  max-width: 1320px;
   margin: 0 auto;
-  padding: clamp(1.5rem, 4vw, 2.5rem) 1.25rem 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 2rem) 2rem;
 }
 
 .essay-toc {
@@ -839,12 +839,15 @@
 }
 
 /* --- Responsive --- */
-@media (max-width: 1024px) {
+/* En pantallas medianas y verticales (≤1280): el índice deja de ser barra
+   lateral y pasa a una BARRA COLAPSABLE arriba que se pliega hacia arriba; el
+   artículo queda centrado, estable y ocupa el ancho útil. */
+@media (max-width: 1280px) {
   .essay-wrap {
-    grid-template-columns: minmax(0, var(--measure));
+    grid-template-columns: minmax(0, min(96vw, 60rem));
     justify-content: center;
-    gap: 1.5rem;
-    padding: 1.5rem 1.25rem 2rem;
+    gap: 1.25rem;
+    padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 4vw, 2rem) 2.5rem;
   }
   .essay-toc {
     position: relative;
@@ -852,23 +855,29 @@
     max-height: none;
     overflow: visible;
     border-right: none;
-    border-bottom: 1px solid var(--divider);
-    padding: 0 0 0.5rem;
+    padding: 0;
+    margin: 0.5rem 0 2rem;
   }
-  /* El índice colapsa tras un botón para no empujar el cuerpo del ensayo. */
+  /* Barra del índice: botón claro con aire; el panel se pliega hacia arriba. */
   .essay-toc__toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
     margin-bottom: 0;
-    padding: 0.9rem 0.2rem;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid var(--divider);
+    border-radius: 10px;
+    background: var(--bg2);
     -webkit-tap-highlight-color: transparent;
+    transition: border-color 0.2s ease;
   }
+  .essay-toc__toggle:hover { border-color: var(--gold); }
+  .essay-toc.is-open .essay-toc__toggle { border-radius: 10px 10px 0 0; }
   .essay-toc__chev {
     display: inline-block;
     transition: transform 0.28s ease;
-    color: var(--muted);
+    color: var(--gold);
   }
   .essay-toc.is-open .essay-toc__chev {
     transform: rotate(180deg);
@@ -876,17 +885,21 @@
   .essay-toc__panel {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease;
+    transition: grid-template-rows 0.32s ease;
+    border: 1px solid transparent;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
   }
   .essay-toc.is-open .essay-toc__panel {
     grid-template-rows: 1fr;
+    border-color: var(--divider);
   }
   .essay-toc__panel-inner {
     min-height: 0;
     overflow: hidden;
   }
   .essay-toc.is-open .essay-toc__panel-inner {
-    padding-bottom: 1rem;
+    padding: 1rem 1.1rem 1.2rem;
   }
 }
 
@@ -912,3 +925,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Legibilidad general del cuerpo: algo mayor y más aireado (clave en
+   pantallas verticales, donde el texto pequeño cuesta). */
+.essay-article { font-size: clamp(1.05rem, 0.4vw + 0.97rem, 1.18rem); }
+.essay-article p { line-height: 1.78; }

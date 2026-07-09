@@ -44,7 +44,7 @@ const CRITERIOS = [
     n: '04',
     label: <>Orientación al bien <span className="map-gk">{gk('ἀγαθόν')}</span></>,
     result: (
-      <>Fin propio ≠ {gk('φρόνησις')}: asentimiento razonado (§3.4)</>
+      <>Fin propio ≠ {gk('φρόνησις')}: asentimiento razonado</>
     ),
   },
 ];

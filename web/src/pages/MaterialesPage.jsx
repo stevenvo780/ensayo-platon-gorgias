@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { LogoMark } from '../components/Logo.jsx';
 import './materiales.css';
 
@@ -176,30 +177,122 @@ const SECTIONS = [
   },
 ];
 
-function fileProps(f) {
-  const href = f.href ?? BASE + f.file;
-  const isMd = f.type === 'md';
-  if (isMd) {
-    return { href, target: '_blank', rel: 'noopener' };
-  }
-  return { href, download: f.download ?? f.file };
+/* Autores y fuentes: cada resumen es un .md en /materiales/autores/.
+   Abren en el visor de lectura (/lectura/autores/:slug). */
+const AUTHORS = [
+  {
+    slug: 'platon-gorgias',
+    name: 'Platón',
+    line: 'El Gorgias: la retórica como ἐμπειρία y κολακεία, no como τέχνη.',
+  },
+  {
+    slug: 'socrates',
+    name: 'Sócrates',
+    line: 'El personaje: exige objeto, razón y causa; intelectualismo moral.',
+  },
+  {
+    slug: 'gorgias',
+    name: 'Gorgias',
+    line: 'El sofista: la retórica como poder omnímodo y herramienta neutral.',
+  },
+  {
+    slug: 'polo',
+    name: 'Polo',
+    line: 'Poder aparente vs. real: cometer injusticia es peor que sufrirla.',
+  },
+  {
+    slug: 'calicles',
+    name: 'Calicles',
+    line: 'Naturaleza contra convención, hedonismo y el reto a la filosofía.',
+  },
+  {
+    slug: 'aristoteles',
+    name: 'Aristóteles',
+    line: 'El eje: géneros, ἦθος/πάθος/λόγος y el entimema como prueba.',
+  },
+  {
+    slug: 'perelman-olbrechts-tyteca',
+    name: 'Perelman y Olbrechts-Tyteca',
+    line: 'La nueva retórica: el auditorio universal y la razón argumentativa.',
+  },
+  {
+    slug: 'toulmin',
+    name: 'Stephen Toulmin',
+    line: 'La anatomía del argumento: dato, garantía, respaldo, refutación.',
+  },
+  {
+    slug: 'cialdini',
+    name: 'Robert Cialdini',
+    line: 'Los seis principios: las causas psicológicas de la persuasión.',
+  },
+];
+
+/* slug de lectura para un .md: explícito (`slug`) o derivado del nombre. */
+function mdSlug(f) {
+  return f.slug ?? (f.file ? f.file.replace(/\.md$/i, '') : '');
 }
 
 function FileCard({ f }) {
   const badge = TYPE[f.type] ?? TYPE.md;
   const isMd = f.type === 'md';
-  const props = fileProps(f);
+
+  /* Los .md abren en el VISOR de lectura (/lectura/:slug) con un enlace
+     secundario para descargar el crudo. Los binarios (PDF/DOCX) se
+     descargan directamente. */
+  if (isMd) {
+    const slug = mdSlug(f);
+    const rawHref = f.href ?? BASE + (f.file ?? slug + '.md');
+    return (
+      <div className="mat-file mat-file--md">
+        <span className={'mat-file__badge ' + badge.cls}>{badge.label}</span>
+        <span className="mat-file__body">
+          <Link
+            to={'/lectura/' + slug}
+            className="mat-file__title mat-file__stretch"
+          >
+            {f.title}
+          </Link>
+          <span className="mat-file__desc">{f.desc}</span>
+          <a
+            className="mat-file__dl"
+            href={rawHref}
+            download={(f.download ?? (f.file || slug + '.md')).split('/').pop()}
+          >
+            descargar .md ↓
+          </a>
+        </span>
+        <span className="mat-file__action" aria-hidden="true">
+          Leer →
+        </span>
+      </div>
+    );
+  }
+
+  const href = f.href ?? BASE + f.file;
   return (
-    <a className="mat-file" {...props}>
+    <a className="mat-file" href={href} download={f.download ?? f.file}>
       <span className={'mat-file__badge ' + badge.cls}>{badge.label}</span>
       <span className="mat-file__body">
         <span className="mat-file__title">{f.title}</span>
         <span className="mat-file__desc">{f.desc}</span>
       </span>
       <span className="mat-file__action" aria-hidden="true">
-        {isMd ? 'Abrir ↗' : 'Descargar ↓'}
+        Descargar ↓
       </span>
     </a>
+  );
+}
+
+/* Tarjeta de autor: nombre + una línea; abre su resumen en el visor. */
+function AuthorCard({ a }) {
+  return (
+    <Link to={'/lectura/autores/' + a.slug} className="mat-author">
+      <span className="mat-author__name">{a.name}</span>
+      <span className="mat-author__line">{a.line}</span>
+      <span className="mat-author__action" aria-hidden="true">
+        Leer resumen →
+      </span>
+    </Link>
   );
 }
 
@@ -259,6 +352,32 @@ export default function MaterialesPage() {
             </div>
           </motion.section>
         ))}
+
+        {/* AUTORES Y FUENTES */}
+        <motion.section
+          id="autores"
+          className="mat-section"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
+          <header className="mat-section__head">
+            <span className="mat-section__kicker">06</span>
+            <div>
+              <h2>Autores y fuentes</h2>
+              <p className="mat-section__lead">
+                Los interlocutores del <em>Gorgias</em> y los teóricos modernos
+                de la argumentación, en resúmenes con citas verificables.
+              </p>
+            </div>
+          </header>
+          <div className="mat-grid mat-grid--authors">
+            {AUTHORS.map((a) => (
+              <AuthorCard key={a.slug} a={a} />
+            ))}
+          </div>
+        </motion.section>
 
         <p className="mat-note">
           Fuente primaria: Platón, <em>Gorgias</em>, trad. J. Calonge (Gredos, 1983)

@@ -16,8 +16,16 @@
 | `05_socrates_politica_justicia_y_cuidado_del_alma.md` | Política verdadera vs. falsa, crítica a los gobernantes atenienses, Sócrates como único político auténtico, el mito final    |
 | `06_conceptos_clave.md`                               | Síntesis de todos los conceptos fundamentales del diálogo                                                                    |
 | `07_analisis_general_tres_actos.md`                   | Análisis completo del diálogo en sus tres actos, basado en las notas de la Clase 8                                           |
+| `08_platon-gorgias.md`                                | Resumen académico verificable: Platón y el Gorgias. La retórica como κολακεία/ἐμπειρία, 462b–466a, cuidado del alma        |
+| `09_socrates.md`                                      | Resumen académico verificable: Sócrates (personaje). Criterios implícitos de τέχνη, intelectualismo moral, 460a–c            |
+| `10_gorgias.md`                                       | Resumen académico verificable: Gorgias (interlocutor sofista). La retórica como poder, 452d–461b, pistis vs. epistéme       |
+| `11_polo.md`                                          | Resumen académico verificable: Polo. Poder aparente vs. real, 466a–481b, cometer injusticia peor que sufrirla               |
+| `12_calicles.md`                                      | Resumen académico verificable: Calicles. Phýsis vs. nómos, hedonismo, 482e–527e, abandono del diálogo                      |
+| `13_aristoteles.md`                                   | Resumen académico verificable: Aristóteles — EJE DEL ENSAYO. Géneros retóricos, pruebas técnicas, entimema, pasiones        |
 
-> ⏳ **Pendientes (planeados, aún no creados):** `08_argumentos_formales` (reconstrucción lógica de los argumentos de Sócrates), `09_tablas_comparativas`, `10_preguntas_de_estudio` y `11_glosario_filosofico`, además de mapas y diagramas Mermaid.
+> ⏳ **Pendientes (planeados, aún no creados):** `14_argumentos_formales` (reconstrucción lógica de los argumentos de Sócrates), `15_tablas_comparativas`, `16_preguntas_de_estudio` y `17_glosario_filosofico`, además de mapas y diagramas Mermaid.
+>
+> ✅ **08–13 COMPLETADOS (17-jul-2026):** Resúmenes académicos verificables de los 6 autores/figuras clave del ensayo sobre la retórica como τέχνη. Formato verificable con citas Stephanus/Bekker exactas, aptos para defensa académica rigurosa.
 
 ***
 

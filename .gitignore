@@ -16,3 +16,6 @@ ensayo/Steven Vallejo revisado.docx
 *.log
 .DS_Store
 ~$*
+
+# Config local del harness (hook auto-sync) — NO se publica
+.claude/settings.local.json

@@ -33,17 +33,19 @@ Bien, sino el **asentimiento razonado** del auditorio.
 
 ```
 .
-├── ensayo/           El trabajo: Ensayo_Final en Markdown, .docx y .pdf
-├── material-estudio/ Guía de lectura del Gorgias por actos (Gorgias · Polo · Calicles)
+├── ensayo/           El trabajo: Ensayo_Final (.md canónico, .docx, .pdf) + bitácora y proceso
+├── material-estudio/ Guía de lectura del Gorgias por actos + autores/ (fichas citadas de cada autor)
 ├── notas-clase/      Apuntes del seminario (Gorgias 486e–527e)
 ├── fuente/           Texto primario del diálogo (uso interno; no redistribuido)
-├── docs/             Aparato: derivaciones formales, comentario y mapas del argumento
+├── docs/             Aparato y método
+│   ├── METODOLOGIA.md  proceso + las 7 lentes de auditoría adversarial
 │   ├── formal/         derivaciones lógicas (st-lang)
 │   ├── aparato/        notas apoyadas en Dodds y Guthrie
 │   └── mapas/          esquema del argumento
 ├── curso/            Plan de trabajo y temas del seminario
-├── scripts/          Generación de .docx / .pdf y verificación de citas
-└── web/              El sitio (Vite + React)
+├── scripts/          Generación de .docx / .pdf, verificación de citas y espejo de materiales
+└── web/              El sitio (Vite + React). `web/public/materiales/` es un espejo GENERADO
+                      (`make materiales`) desde las fuentes de arriba — no editar a mano.
 ```
 
 ## La web
@@ -69,9 +71,13 @@ El `Makefile` genera y verifica los entregables desde la fuente en Markdown:
 | `docx`      | Regenera `ensayo/Ensayo_Final.docx` con el formato de entrega      |
 | `pdf`       | Compila `ensayo/Ensayo_Final.pdf` (Pandoc + XeLaTeX)               |
 | `pdf-web`   | Regenera el PDF y lo sincroniza en `web/public/ensayo-gorgias.pdf` |
+| `materiales`| Regenera el espejo `web/public/materiales/` desde las fuentes canónicas |
 | `wordcount` | Cuenta las palabras del cuerpo y las contrasta con el presupuesto  |
 | `pages`     | Verifica que el PDF no exceda las 5 páginas                        |
 | `all`       | Encadena `verify + wordcount + docx + pdf`                         |
+
+El método completo de trabajo y verificación (incluida la **auditoría adversarial de 7
+lentes**) está en [`docs/METODOLOGIA.md`](docs/METODOLOGIA.md).
 
 ## Formato de entrega
 

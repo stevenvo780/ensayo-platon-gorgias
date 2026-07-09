@@ -4,7 +4,26 @@ import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import './lectura.css';
+
+/* El contenido es de confianza (archivos .md del propio repo, sin input de
+   usuario), pero sanitizamos igual por defensa en profundidad: rehype-raw
+   convierte el HTML embebido y rehype-sanitize elimina <script>, manejadores
+   de eventos, etc. Solo ampliamos el esquema por defecto para permitir el
+   atributo `align` (los enlaces centrados del README) — nada ejecutable. */
+const SANITIZE_SCHEMA = {
+  ...defaultSchema,
+  attributes: {
+    ...defaultSchema.attributes,
+    p: [...(defaultSchema.attributes?.p || []), 'align'],
+    div: [...(defaultSchema.attributes?.div || []), 'align'],
+    h1: [...(defaultSchema.attributes?.h1 || []), 'align'],
+    h2: [...(defaultSchema.attributes?.h2 || []), 'align'],
+    h3: [...(defaultSchema.attributes?.h3 || []), 'align'],
+    img: [...(defaultSchema.attributes?.img || []), 'align'],
+  },
+};
 
 /* ---------------------------------------------------------------
    LecturaPage — visor editorial de Markdown.
@@ -129,7 +148,7 @@ export default function LecturaPage() {
         >
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw]}
+            rehypePlugins={[rehypeRaw, [rehypeSanitize, SANITIZE_SCHEMA]]}
             components={{
               // Las tablas GFM se envuelven para permitir scroll horizontal
               // propio sin romper el ancho de la página.

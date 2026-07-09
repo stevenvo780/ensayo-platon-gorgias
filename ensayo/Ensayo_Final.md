@@ -32,13 +32,13 @@ Una τέχνη exige, ante todo, un objeto propio que la distinga de las demás.
 
 Aristóteles distingue tres pruebas técnicas (*Retórica* I, 1356a): el ἦθος, el πάθος, y el λόγος, que persuade mediante el argumento. Suma los τόποι, y el entimema que llama «cuerpo de la prueba» (σῶμα τῆς πίστεως, *Retórica* I, 1354a). Perelman y Olbrechts-Tyteca, en *La nueva retórica* (1958), muestran que la argumentación posee una racionalidad propia, irreductible a la lógica formal y no por ello arbitraria. Su **auditorio universal** ofrece un criterio: un argumento es racional en la medida en que podría aceptarlo todo ser razonable, no solo el público al que se halaga. Toulmin (*Los usos del argumento*, 1958) aporta una *anatomía*: el argumento práctico tiene estructura analizable —dato, garantía (*warrant*) y respaldo (*backing*)—. Segundo criterio satisfecho.
 
-El tercer criterio —el que Sócrates niega con más énfasis al decir que la retórica no puede «decir la causa» (465a)— exige conocer las αἰτίαι de lo que se produce. El libro II de la *Retórica* es un tratado causal de las pasiones. En *Influence* (1984) sistematiza seis principios de persuasión e identifica el *mecanismo* causal de cada uno: Cialdini no los crea, sino que cuantifica lo que Aristóteles describía. Tercer criterio satisfecho.
+El tercer criterio —el que Sócrates niega con más énfasis al decir que la retórica no puede «decir la causa» (465a)— exige conocer las αἰτίαι de lo que se produce. Quien las expone es Aristóteles: el libro II de la *Retórica* es un tratado causal de las pasiones —qué es cada una, ante quién y por qué se siente— que da *razón* de cada efecto; por eso es saber de causas y no la ἐμπειρία que Sócrates denuncia. Cialdini (*Influence*, 1984) no funda ese conocimiento: solo *cuantifica* con método experimental lo que Aristóteles ya explicaba —confirma, no descubre—. Tercer criterio satisfecho.
 
 ***
 
 ## Orientación al bien: el criterio decisivo
 
-Sócrates sostiene que la retórica «pone su punto de mira en el placer sin el bien» (464d–465a). Lo enfrento en su forma fuerte, como una cadena de tres preguntas.
+Sócrates sostiene que la retórica «pone su punto de mira en el placer sin el bien» (464d–465a). Pero, a diferencia de la cocina, no procura el placer *sorteando* el juicio, sino el asentimiento *mediante* λόγος dirigido a él: su fin propio no es la gratificación ciega, sino la **convicción razonada** —un bien del alma que la adulación jamás toca, y que disuelve la paridad con la culinaria—. Lo enfrento en su forma fuerte, como una cadena de tres preguntas.
 
 **(a) ¿Cómo puede la retórica orientarse al bien si no lo conoce?** Aristóteles distingue la τέχνη de la φρόνησις (*Ética a Nicómaco* VI, 1140a–b); y porque la técnica no es la φρόνησις, puede emplearse mal: el dominio del arte no incluye la rectitud del fin. La retórica no establece qué es lo conveniente o lo justo —eso toca a la política y la ética, de las que toma sus premisas (*Retórica* I, 1356a)—; dado un fin, inscrito en sus tres géneros (deliberar, juzgar, educar el carácter, *Retórica* I, 1358b), **conoce los medios para persuadir respecto de él**.
 

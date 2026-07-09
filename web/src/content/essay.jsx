@@ -347,11 +347,14 @@ export function EssayContent({ extras = null }) {
         <p>
           El tercer criterio —el que Sócrates niega con más énfasis al decir que la
           retórica no puede «decir la causa» <Ref>(465a)</Ref>— exige conocer las
-          αἰτίαι de lo que se produce. El libro II de la <em>Retórica</em> es un
-          tratado causal de las pasiones. En <em>Influence</em> (1984) sistematiza
-          seis principios de persuasión e identifica el <em>mecanismo</em> causal
-          de cada uno: Cialdini no los crea, sino que cuantifica lo que Aristóteles
-          describía. <strong>Tercer criterio satisfecho.</strong>
+          αἰτίαι de lo que se produce. Quien las expone es Aristóteles: el libro II
+          de la <em>Retórica</em> es un tratado causal de las pasiones —qué es cada
+          una, ante quién y por qué se siente— que da <em>razón</em> de cada efecto;
+          por eso es saber de causas y no la ἐμπειρία que Sócrates denuncia. Cialdini
+          (<em>Influence</em>, 1984) no funda ese conocimiento: solo{' '}
+          <em>cuantifica</em> con método experimental lo que Aristóteles ya
+          explicaba —confirma, no descubre—.{' '}
+          <strong>Tercer criterio satisfecho.</strong>
         </p>
       </section>
 
@@ -361,8 +364,12 @@ export function EssayContent({ extras = null }) {
         <div className="section-divider" />
         <p>
           Sócrates sostiene que la retórica «pone su punto de mira en el placer sin
-          el bien» <Ref>(464d–465a)</Ref>. Lo enfrento en su forma fuerte, como una
-          cadena de tres preguntas.
+          el bien» <Ref>(464d–465a)</Ref>. Pero, a diferencia de la cocina, no
+          procura el placer <em>sorteando</em> el juicio, sino el asentimiento{' '}
+          <em>mediante</em> λόγος dirigido a él: su fin propio no es la gratificación
+          ciega, sino la <strong>convicción razonada</strong> —un bien del alma que
+          la adulación jamás toca, y que disuelve la paridad con la culinaria—. Lo
+          enfrento en su forma fuerte, como una cadena de tres preguntas.
         </p>
         <div className="pull-quote">
           <strong>

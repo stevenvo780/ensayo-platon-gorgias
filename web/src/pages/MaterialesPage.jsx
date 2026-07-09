@@ -137,30 +137,6 @@ const SECTIONS = [
         type: 'md',
         file: 'evaluacion.md',
       },
-      {
-        title: 'Plan operativo v6',
-        desc: 'Mapa de trabajo para llevar la base del autor al formato estricto de ≤ 5 páginas.',
-        type: 'md',
-        file: 'plan-v6.md',
-      },
-      {
-        title: 'Propuesta de corte v6',
-        desc: 'Recorte propuesto del ensayo (solo-borrado) como andamiaje de reescritura a mano.',
-        type: 'md',
-        file: 'propuesta-corte-v6.md',
-      },
-      {
-        title: 'Diseño del proyecto (spec)',
-        desc: 'Especificación de la capa extendida: derivaciones formales, aparato, mapas y build.',
-        type: 'md',
-        file: 'diseno-spec.md',
-      },
-      {
-        title: 'Plan de implementación',
-        desc: 'Plan de ejecución de la capa extendida y la arquitectura del repositorio.',
-        type: 'md',
-        file: 'plan-implementacion.md',
-      },
     ],
   },
   {

@@ -14,63 +14,25 @@
 > **[`docs/iteraciones/`](../docs/iteraciones/README.md)**, seccionado y navegable. No se
 > duplica aquí: esta bitácora registra el **proceso** (plataforma, repositorio) y las **lecciones**.
 
-## Cobertura de las recomendaciones del profesor (anteproyecto → ensayo)
+## Cobertura de las recomendaciones del profesor
 
-> El anteproyecto obtuvo **Nota 5,0** con dos recomendaciones. Aquí se audita, punto por
-> punto, que el ensayo final las atiende. Es también la **hoja de ruta de la defensa oral**.
+> Auditoría de cierre del **Nota 5,0** y sus dos recomendaciones. El detalle está en una sola
+> fuente por tema: el historial en `docs/iteraciones/`; las respuestas tácticas en
+> `Defensa_Oral_QA.md`. Aquí queda solo el veredicto.
 
-**Elogios del profesor (para no perderlos de vista):** intuición filosóficamente valiosa
-(la retórica tiene más fundamento teórico y conocimiento de causas de lo que Platón admite);
-contextualización clara y rigurosa; pregunta bien formulada; estrategia bien estructurada
-—«su proyecto de ensayo es impecable»—. El ensayo final **no debe perder** esas fortalezas.
+**Elogios del profesor (no perderlos):** intuición filosóficamente valiosa; contextualización
+clara y rigurosa; pregunta bien formulada; estrategia bien estructurada —«impecable»—.
 
-### Recomendación 1 — orientación al bien (la fuerte). Estado: **abordada**
-
-El profesor invitó a analizar las cuatro condiciones, «especialmente esta», y planteó un
-**trilema-trampa**. Mapa de cobertura en el v6.1:
-
-| Pregunta del profesor | Dónde responde el ensayo | Movimiento |
-|---|---|---|
-| ¿Cómo orientarse al bien si no lo conoce? | §Orientación **(a)** | τέχνη ≠ φρόνησις (*EN* VI 1140a–b): conoce los **medios** dado un fin, no la ciencia del Bien |
-| Si lo conoce, ¿en qué difiere de la justicia? | §Orientación **(b)** | **objeto formal** distinto: produce discursos persuasivos, no almas justas |
-| ¿Entonces nunca actúa injustamente? | §Objeción **(c)** | orientación = del **arte** (τέλος); uso = del **agente** (ἦθος) |
-| ¿Entonces no es riesgo democrático? | §Objeción **(c)** | **la paradoja**: que pueda manipular *prueba* que es τέχνη — solo un arte que conoce las causas del asentimiento es peligroso |
-
-La 4ª condición recibe **dos secciones** (Orientación + Objeción), como pidió el profesor
-(profundizar «especialmente» en ella).
-
-### Recomendación 2 — reducir autores. Estado: **resuelta**
-
-Anteproyecto: Aristóteles + Perelman + Toulmin + **Cialdini + Kahneman + Thaler-Sunstein +
-Lakoff** = 7 modernos. Ensayo final: **3** (Perelman, Toulmin, Cialdini), cada uno **confinado
-a un solo criterio**, y con la restricción que el propio autor declaró (conductuales *solo*
-para las causas, nunca para el bien). Fuera: Kahneman, Thaler-Sunstein, Lakoff.
-
-### Dos flancos de segundo nivel (nivel defensa oral) — cerrados en v6.1
-
-No eran recomendaciones desatendidas, sino las objeciones que un 5,0 debe anticipar:
-
-1. **¿Redefinir el criterio 4?** Sócrates pide orientación *al bien del alma*, no a un fin
-   interno cualquiera (eso lo cumple hasta la cocina). **Cierre (v6.1):** el fin propio de la
-   retórica es el **asentimiento razonado por λόγος** —que ejercita el juicio del oyente en vez
-   de sortearlo—, y *eso* es un bien del alma que la adulación no toca. Disuelve la paridad con
-   la culinaria.
-2. **¿Cialdini = ἐμπειρία?** Sus principios son regularidades empíricas — justo lo que Sócrates
-   denuncia. **Cierre (v6.1):** la carga causal la porta **Aristóteles** (libro II de la
-   *Retórica*, que «da razón de cada efecto»); Cialdini baja a **cuantificación experimental**
-   («confirma, no descubre»).
-
-### Guía rápida para la sustentación oral
-
-- **Carta más fuerte:** la paradoja del riesgo democrático (§Objeción c). Que el retórico pueda
-  manipular **prueba** que la retórica es τέχνη —no lo contrario—.
-- **Si aprietan por el criterio 4:** insistir en *asentimiento razonado* (bien del alma) vs.
-  placer ciego (cocina); el «bien» del arte es el de su función, no la φρόνησις.
-- **Si aprietan por Cialdini:** replegarse a Aristóteles II como el saber causal; Cialdini es
-  solo confirmación moderna. Si incomoda, es el eslabón *prescindible* (v5 llegó a quitarlo).
-- **Punto que se asume con transparencia:** si el «bien» del 4º criterio es formal, la línea
-  τέχνη/ἐμπειρία se apoya sobre todo en el λόγος (criterios 2–3). El ensayo lo reconoce, no lo
-  esconde.
+- **Recomendación 1 — orientación al bien (la fuerte). Estado: abordada.** El trilema-trampa y el
+  mapa pregunta→respuesta están en [`iteraciones/0-anteproyecto`](../docs/iteraciones/0-anteproyecto.md)
+  y en `Defensa_Oral_QA.md` (Q1–Q3). La 4.ª condición recibe **dos secciones** (Orientación + Objeción).
+- **Recomendación 2 — reducir autores. Estado: resuelta.** De **7** modernos a **3** (Perelman,
+  Toulmin, Cialdini), cada uno confinado a un criterio. Detalle en
+  [`iteraciones/1-destilacion-v2`](../docs/iteraciones/1-destilacion-v2.md).
+- **Dos flancos de nivel defensa oral** (paridad cocina → asentimiento razonado; Cialdini como
+  cuantificación): cierre en [`iteraciones/6-flancos-v6-1`](../docs/iteraciones/6-flancos-v6-1.md);
+  respuestas para hablar en `Defensa_Oral_QA.md` (Q5–Q6). **Guía rápida de sustentación →
+  `Defensa_Oral_QA.md`.**
 
 ## Lecciones aprendidas (no repetir)
 

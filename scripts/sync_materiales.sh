@@ -53,10 +53,8 @@ cp "$ROOT/docs/METODOLOGIA.md"                 "$DST/metodologia.md"
 cp "$ROOT/ensayo/Bitacora_Ensayo.md"           "$DST/bitacora.md"
 cp "$ROOT/ensayo/Critica_Ensayo.md"            "$DST/critica.md"
 cp "$ROOT/ensayo/Evaluacion_5_y_pendientes.md" "$DST/evaluacion.md"
-cp "$ROOT/ensayo/PLAN_V6_Reestructuracion.md"  "$DST/plan-v6.md"
-cp "$ROOT/ensayo/Ensayo_V6_propuesta_corte.md" "$DST/propuesta-corte-v6.md"
-cp "$ROOT/docs/superpowers/specs/2026-07-05-elevar-ensayo-gorgias-design.md" "$DST/diseno-spec.md"
-cp "$ROOT/docs/superpowers/plans/2026-07-05-elevar-ensayo-gorgias.md"        "$DST/plan-implementacion.md"
+# (PLAN_V6, propuesta-corte-v6, diseno-spec y plan-implementacion NO se exponen:
+#  son docs operativos/internos, hogar canónico en el repo pero no material de estudio.)
 
 # --- Defensa y contexto ---
 cp "$ROOT/ensayo/Defensa_Oral_QA.md"                       "$DST/defensa-oral-qa.md"
@@ -92,8 +90,7 @@ EL ENSAYO
   (El PDF de entrega se descarga desde el sitio: /ensayo-gorgias.pdf)
 
 MÉTODO Y PROCESO (cómo se hizo y se auditó)
-  metodologia.md · bitacora.md · critica.md · evaluacion.md · plan-v6.md
-  propuesta-corte-v6.md · diseno-spec.md · plan-implementacion.md
+  metodologia.md · bitacora.md · critica.md · evaluacion.md
 
 ESTUDIO DEL GORGIAS (guía de lectura del diálogo)
   00_README.md .. 07_analisis_general_tres_actos.md   Guía por actos + conceptos.

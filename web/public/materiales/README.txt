@@ -12,8 +12,7 @@ EL ENSAYO
   (El PDF de entrega se descarga desde el sitio: /ensayo-gorgias.pdf)
 
 MÉTODO Y PROCESO (cómo se hizo y se auditó)
-  metodologia.md · bitacora.md · critica.md · evaluacion.md · plan-v6.md
-  propuesta-corte-v6.md · diseno-spec.md · plan-implementacion.md
+  metodologia.md · bitacora.md · critica.md · evaluacion.md
 
 ESTUDIO DEL GORGIAS (guía de lectura del diálogo)
   00_README.md .. 07_analisis_general_tres_actos.md   Guía por actos + conceptos.

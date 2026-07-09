@@ -9,7 +9,7 @@
 
 - El escrito final es un ensayo sobre **la retórica en el *Gorgias***; entrega 13-jul-2026 (`curso/Plan de trabajo`).
 - **No hay** requisito duro de formato, extensión ni norma de citación. La única señal de longitud es la carta del profesor: *"un ensayo de cinco páginas"* (blanda). Sus dos recomendaciones (analizar a fondo las 4 condiciones de τέχνη —esp. la orientación al bien— y reducir autores) **ya están atendidas** en `Ensayo_Final.md`.
-- El ensayo actual **cumple todos los requisitos explícitos** (2.929 palabras de cuerpo; 5,0 en evaluación simulada; citas de Platón verificadas literales).
+- El ensayo actual **cumple todos los requisitos explícitos** (2.929 palabras de cuerpo; sin objeciones pendientes en la verificación adversarial; citas de Platón verificadas literales).
 - Hallazgo latente: el propio plan del autor (`Autores_y_Contexto.md`, Fase 4) quería promover **Dodds** y **Guthrie** (aparato erudito) al cuerpo §1–§2; nunca se hizo.
 
 ## 2. Objetivo y no-objetivos

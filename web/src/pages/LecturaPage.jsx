@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import './lectura.css';
 
 /* ---------------------------------------------------------------
@@ -128,6 +129,7 @@ export default function LecturaPage() {
         >
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
             components={{
               // Las tablas GFM se envuelven para permitir scroll horizontal
               // propio sin romper el ancho de la página.

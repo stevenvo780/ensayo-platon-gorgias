@@ -235,7 +235,7 @@ export function EssayContent({ extras = null }) {
           atacar la retórica era atacar la política misma.
           Sobre ese trasfondo, Sócrates define la retórica como «adulación»
           (κολακεία) y «práctica empírica» (ἐμπειρία), nunca como arte (τέχνη){' '}
-          <Ref>(462b–466a)</Ref>. La distinción es estrictamente epistemológica:
+          <Ref>(462b–466a)</Ref>. La distinción es epistemológica y teleológica:
           una τέχνη tiene (1) un objeto propio, (2) procede con razón y da cuenta
           de sus principios (λόγον ἔχει), (3) conoce sus causas (αἰτίαι) y (4)
           orienta su acción al bien (ἀγαθόν) de su objeto; una ἐμπειρία repite lo
@@ -268,7 +268,7 @@ export function EssayContent({ extras = null }) {
           arte de la persuasión y la proclama «el mayor bien», pues da poder sin
           ser experto en cada materia <Ref>(452d–456a)</Ref>. Sócrates le arranca
           que produce «creencia sin el saber», no «ciencia» <Ref>(454e)</Ref>. La
-          refutación es elegante, pero descansa sobre una premisa de contrabando:
+          refutación es elegante, pero descansa sobre una concesión que Sócrates generaliza:
           que la retórica <em>versa sobre la justicia</em>.
         </p>
         <p>
@@ -300,8 +300,8 @@ export function EssayContent({ extras = null }) {
           La tesis de que es «irracional» (ἄλογον) y no puede «decir la causa»{' '}
           <Ref>(465a)</Ref> se apoya <em>únicamente</em> en que el orador persuade
           sin conocer la materia <Ref>(459a–c)</Ref>. Pero eso describe un{' '}
-          <em>uso posible</em>, no la naturaleza de la retórica: es una falacia de
-          composición.
+          <em>uso posible</em>, no la naturaleza de la retórica: es una generalización
+          indebida.
         </p>
       </section>
 
@@ -329,7 +329,7 @@ export function EssayContent({ extras = null }) {
           <Ref>1356a</Ref>): el ἦθος, el πάθος, y el λόγος, que persuade mediante
           el argumento. Suma los τόποι, y el entimema que llama «cuerpo de la
           prueba» (σῶμα τῆς πίστεως, <em>Retórica</em> I, <Ref>1354a</Ref>).
-          Perelman y Olbrechts-Tyteca (<em>La nueva retórica</em>, 1958) muestran
+          Perelman y Olbrechts-Tyteca (<em>La nueva retórica</em>, 1958) ilustran
           que la argumentación tiene racionalidad propia y no arbitraria: su{' '}
           <strong>auditorio universal</strong> —lo aceptable por todo ser razonable,
           no por el público que se halaga— es el criterio de esa racionalidad.
@@ -346,8 +346,8 @@ export function EssayContent({ extras = null }) {
           una, ante quién y por qué se siente— que da <em>razón</em> de cada efecto;
           por eso es saber de causas y no la ἐμπειρία que Sócrates denuncia. Cialdini
           (<em>Influence</em>, 1984) no funda ese conocimiento: solo{' '}
-          <em>cuantifica</em> con método experimental lo que Aristóteles ya
-          explicaba —confirma, no descubre—.{' '}
+          <em>cuantifica</em> con método experimental algunos efectos que Aristóteles
+          ya explicaba causalmente.{' '}
           <strong>Tercer criterio satisfecho.</strong>
         </p>
       </section>
@@ -381,12 +381,12 @@ export function EssayContent({ extras = null }) {
           retórica no establece qué es lo conveniente o lo justo —eso toca a la
           política y la ética, de las que toma sus premisas (<em>Retórica</em> I,{' '}
           <Ref>1356a</Ref>)—; dado un fin, inscrito en sus tres géneros (deliberar,
-          juzgar, educar el carácter, <em>Retórica</em> I, <Ref>1358b</Ref>),{' '}
+          juzgar, alabar, <em>Retórica</em> I, <Ref>1358b</Ref>),{' '}
           <strong>conoce los medios para persuadir respecto de él</strong>.
-          Reinterpreto aquí el cuarto criterio: exigir que la retórica{' '}
-          <em>conozca el Bien</em> es pedirle lo que ninguna τέχνη cumple —tampoco
-          la medicina posee la ciencia del Bien, y no por ello deja de ser arte—;
-          basta que se ordene a su fin propio. Exigírselo solo a la retórica sería
+          Preciso aquí el cuarto criterio: exigir que la retórica{' '}
+          <em>posea la ciencia del Bien moral</em> es pedirle lo que ninguna τέχνη
+          productiva cumple —la medicina conoce la salud, bien del cuerpo, pero no
+          la virtud—; basta que se ordene a su fin propio. Exigírselo solo a la retórica sería
           la arbitrariedad que ya denuncié.
         </p>
         <div className="pull-quote">
@@ -452,7 +452,7 @@ export function EssayContent({ extras = null }) {
           racionales sin demostración. Verificada frente a los cuatro criterios que
           el propio Sócrates establece, los satisface: tiene{' '}
           <strong>objeto propio</strong> (los tres géneros del discurso);{' '}
-          <strong>principios racionales</strong> —ἦθος, πάθος, λόγος y τόποι—,
+          <strong>principios técnicos</strong> —ἦθος, πάθος, λόγος y τόποι—,
           conoce sus <strong>causas</strong>, y —en la versión defendible del
           cuarto criterio, la que ninguna τέχνη cumple en su forma fuerte— se{' '}
           <strong>orienta a su fin propio</strong> sin confundirse con la justicia.

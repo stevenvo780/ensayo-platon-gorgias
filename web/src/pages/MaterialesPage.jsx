@@ -308,6 +308,12 @@ const SECTIONS = [
         file: 'iteraciones/7-auditoria-v6-2.md',
       },
       {
+        title: '8 · v6.3 · Auditoría tri-modelo',
+        desc: 'Gemini + Codex + MiniMax M3 auditan el manuscrito → 9 críticas aplicadas, 9 rechazadas con razón.',
+        type: 'md',
+        file: 'iteraciones/8-auditoria-trimodelo.md',
+      },
+      {
         title: 'Snapshot · Base original del autor',
         desc: 'Texto completo del planteamiento original de Steven (referencia de la iteración 5).',
         type: 'md',

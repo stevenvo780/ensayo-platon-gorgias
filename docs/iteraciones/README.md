@@ -16,6 +16,7 @@
 | 5 | [v6 · Entrega](5-entrega-v6.md) | Volver a la voz del autor + ≤5 páginas → recorte solo-borrado | ~1.305 |
 | 6 | [v6.1 · Flancos](6-flancos-v6-1.md) | Recomendación fuerte del profesor → asentimiento razonado; Cialdini cuantifica | 1.439 |
 | 7 | [v6.2 · Auditoría](7-auditoria-v6-2.md) | 7 lentes → 6 hallazgos (H1–H6) reparados | 1.488 |
+| 8 | [v6.3 · Auditoría tri-modelo](8-auditoria-trimodelo.md) | Gemini + Codex + MiniMax M3 → 9 críticas aplicadas (analogía médica auto-refutante, etc.) | 1.486 |
 
 ## El hilo conductor
 

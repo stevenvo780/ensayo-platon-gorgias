@@ -19,3 +19,8 @@ ensayo/Steven Vallejo revisado.docx
 
 # Config local del harness (hook auto-sync) — NO se publica
 .claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/

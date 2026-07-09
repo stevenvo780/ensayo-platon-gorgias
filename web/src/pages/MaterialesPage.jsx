@@ -240,12 +240,6 @@ const SECTIONS = [
         file: 'defensa-oral-qa.md',
       },
       {
-        title: 'Autores y contexto',
-        desc: 'Guía de lectura por autor: qué aporta cada uno y dónde entra en el argumento.',
-        type: 'md',
-        file: 'autores-y-contexto.md',
-      },
-      {
         title: 'Fragmentos: retórica, poder y Gorgias',
         desc: 'Investigación previa: pasajes y fragmentos sobre retórica y poder en el diálogo.',
         type: 'md',

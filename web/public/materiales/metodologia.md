@@ -79,24 +79,16 @@ Criterio: reconstruir la mejor objeción posible a cada movimiento y comprobar s
 
 ## 4. Cómo reproducir una auditoría
 
-```bash
-make verify      # lente 2: citas ↔ fuente (falla si una cita literal no aparece)
-make wordcount   # forma: cuerpo ≤ presupuesto
-make pages       # forma: PDF ≤ 5 páginas (pdfinfo)
-```
+**Build:** ver README §Build para la invocación de `make` targets.
 
 Las lentes 1, 3–7 son de juicio: se ejecutan leyendo el ensayo con cada lente y anotando
 hallazgos con **ubicación, severidad y reparación propuesta** (formato de la última
 ejecución en la bitácora, sección «Auditoría adversarial»). Cada hallazgo confirmado se
 repara con edición quirúrgica declarada y se re-corren los guardianes.
 
-## 5. Ruteo multi-modelo (cuando aplica)
+## 5. Política de delegación
 
-Las fases mecánicas o voluminosas pueden delegarse a modelos de la flota (lectura/resumen
-masivo, drafts, conversiones); la **orquestación, la edición quirúrgica del ensayo, la
-verificación adversarial y la síntesis final no se delegan**. La asignación por fase se
-declara antes de ejecutar y se elige por calidad primero (el modelo más capaz con saldo),
-no por ahorro.
+**Ruteo multi-modelo:** ver docs/superpowers/specs/2026-07-05-elevar-ensayo-gorgias-design.md §6 (asignación de fases a modelos de la flota).
 
 ---
 

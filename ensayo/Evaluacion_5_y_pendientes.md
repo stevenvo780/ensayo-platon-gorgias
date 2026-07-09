@@ -52,8 +52,7 @@ sabes. Eso es "defendible sin huecos muy grandes".
 
 Esto es lo que hoy te costaría la nota si lo dejas como está:
 
-1. **Longitud → la v6 (≤5 páginas).** Bloqueante duro (el profesor: "seré estricto"). Hoy son 8 pp
-   / 2.678 palabras; el techo es ~1.490. **No es opcional.** El recorte solo-borrado ya está en
+1. **Longitud → la v6 (≤5 páginas).** Bloqueante duro (el profesor: "seré estricto"). **Presupuesto y calibración: ver PLAN_V6_Reestructuracion.md §1.** El recorte solo-borrado ya está en
    `Ensayo_V6_propuesta_corte.md` + `REVISION_corte.html`.
 2. **Tres piezas que la plantilla pide y HOY FALTAN** (las escribes tú, con tu voz):
    - **Relevancia filosófica explícita** en la intro (1–2 frases: por qué importa hoy que la

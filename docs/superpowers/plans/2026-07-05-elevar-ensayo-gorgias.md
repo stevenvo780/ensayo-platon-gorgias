@@ -10,11 +10,11 @@
 
 ## Global Constraints
 
-- **Invariante:** borrar `docs/` NO debe romper el ensayo. Ninguna cita/argumento del cuerpo depende de `docs/`. (verbatim del spec §3)
+- **Invariante de auto-contención:** spec §3. El ensayo no depende de `docs/` ni de rutas externas.
 - **Notación legible** (∀ ∃ → ¬ ∧ ↔ con prosa); **sin** proof-checkers/CI. (spec §2, decisión del usuario)
 - **No** añadir autores teóricos nuevos al ensayo graduado; Dodds/Guthrie son *aparato*, con marca `⚠️ VERIFICAR` y sólo 1–2 apoyos seguros pueden tocar el cuerpo. (spec §5.2)
 - Ejecutar desde la **raíz del repo**; rama `elevar-ensayo-gorgias`.
-- Reparto por `get_ai_quotas` al ejecutar; **la edición del ensayo la hace Opus** (no delegar).
+- Edición del ensayo: spec §5.5 (Opus, sin delegación). Reparto de modelos: spec §6.
 - Todo texto en español; citas Stephanus `\b\d{3}[a-e]\b`, Bekker `1354a`… .
 
 ---
@@ -316,51 +316,14 @@ git commit -m "build: verify_citations guardián de citas Stephanus (make verify
 
 **Molde fijo por argumento:** **(i) enunciado natural · (ii) formalización · (iii) veredicto de validez · (iv) nexo con §/pasaje del ensayo.** Notación legible; una línea por premisa. Cabecera del archivo que declare el invariante ("apéndice; el ensayo no depende de esto").
 
-- [ ] **Step 1: Escribir A1 (ejemplo trabajado, patrón para el resto)**
-```markdown
-### A1 · Refutación de Gorgias (460b)
-**(i)** Quien aprendió lo justo es justo; el justo no obra injustamente; luego el discípulo no podría obrar mal — y como sí puede, Gorgias se contradice.
-**(ii)** Dominio: personas. `Aj(x)`: aprendió lo justo · `J(x)`: es justo · `I(x)`: obra injustamente.
-- P1  ∀x( Aj(x) → J(x) )
-- P2  ∀x( J(x) → ¬I(x) )
-- C   ∀x( Aj(x) → ¬I(x) )
-**(iii)** **Válido** (encadenamiento de condicionales universales). El fallo no está aquí.
-**(iv)** §1–§2. El ensayo no niega P1–P2; ataca la **premisa oculta** `P0 ∀x(aprende_retórica(x) → Aj(x))` (la retórica *versa sobre la justicia*). Sin P0 la cadena no arranca para la retórica. §2 muestra que P0 es la reducción arbitraria del objeto; retirada, la refutación sólo toca la pretensión de Gorgias de *enseñar justicia*, no a la retórica como τέχνη.
-```
+- [ ] **Step 1: Crear `docs/formal/derivaciones.md` con molde (i)–(iv)**
+Seguir spec §5.1: (i) enunciado natural · (ii) formalización · (iii) veredicto · (iv) nexo con § ensayo.
+Incluir A1–A5 (referencia canónica con ejemplos trabajados: reproducción exacta en `docs/formal/derivaciones.md`).
 
-- [ ] **Step 2: Escribir A2–A5 con estas formalizaciones (prosa en el molde (i)–(iv))**
-```
-A2 · Falacia de composición (§2)
-  R(x): x es un ejercicio de retórica · S(x): persuade sin conocer la materia
-  Sócrates: ∃x(R(x)∧S(x))  ⟹  ∀y(R(y) → ¬Principios(y))
-  Veredicto: INVÁLIDO — de una propiedad de algunos ejemplares no se sigue una
-  propiedad del arte (composición). Contraejemplo estructural: "algún médico
-  envenena" ⊬ "la medicina carece de principios".
-
-A3 · τέχνη como predicado (marco de todo el §3)
-  τέχνη(x) ↔ Obj(x) ∧ Prin(x) ∧ Caus(x) ∧ Orient(x)
-  El ensayo prueba Obj(ret) [§3.1], Prin(ret) [§3.2], Caus(ret) [§3.3],
-  Orient(ret) [§3.4] ⊢ τέχνη(ret). Veredicto: válido si los cuatro conyuntos
-  se sostienen (modus ponens sobre la bicondicional).
-
-A4 · Trampa simétrica (§3.4c)
-  Paso que el objetor asume: Orient(r) → ¬◇Daño(r).
-  Veredicto: INVÁLIDO — orientarse a un fin bueno no implica incapacidad de
-  daño; confunde el τέλος del arte con la conducta del agente.
-
-A5 · Disolución arte/agente (§3.4c)
-  Aparente contradicción: Orient(r) ∧ ◇MalUso(r).
-  Se disuelve por *scope*: Orient(r) predica del ARTE (su τέλος);
-  MalUso = ∃a( agente(a) ∧ usa(a,r) ∧ mal(a,r) ) predica del AGENTE.
-  Sujetos distintos ⇒ la conjunción es CONSISTENTE (no hay contradicción).
-  Corolario (la inversión de §3.4c): ◇ManipulaciónMetódica(r) requiere
-  Caus(r); sólo una τέχνη la posee ⇒ el peligro *prueba* que es τέχνη.
-```
-
-- [ ] **Step 3: Aceptación**
+- [ ] **Step 2: Aceptación**
 Revisar que el archivo: tiene cabecera con el invariante, cubre A1–A5 con el molde (i)–(iv), no referencia rutas que el ensayo necesite. (Delegable a modelo capaz; Opus valida.)
 
-- [ ] **Step 4: Commit**
+- [ ] **Step 3: Commit**
 ```bash
 git add docs/formal/derivaciones.md
 git commit -m "docs(formal): refutaciones del Gorgias en notación legible (A1-A5)"

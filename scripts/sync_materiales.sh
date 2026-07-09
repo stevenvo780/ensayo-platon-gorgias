@@ -58,7 +58,6 @@ cp "$ROOT/ensayo/Evaluacion_5_y_pendientes.md" "$DST/evaluacion.md"
 
 # --- Defensa y contexto ---
 cp "$ROOT/ensayo/Defensa_Oral_QA.md"                       "$DST/defensa-oral-qa.md"
-cp "$ROOT/ensayo/Autores_y_Contexto.md"                    "$DST/autores-y-contexto.md"
 cp "$ROOT/ensayo/01_Fragmentos_Retorica_Poder_Gorgias.md"  "$DST/fragmentos-retorica-poder.md"
 
 # --- Versiones del ensayo (base + archivadas: trazabilidad) ---
@@ -102,7 +101,7 @@ APARATO FORMAL Y MAPAS
   derivaciones.md · dodds-guthrie.md · argumento.md · docs-README.md
 
 DEFENSA Y CONTEXTO
-  defensa-oral-qa.md · autores-y-contexto.md · fragmentos-retorica-poder.md
+  defensa-oral-qa.md · fragmentos-retorica-poder.md
 
 VERSIONES DEL ENSAYO (trazabilidad)
   base-original-steven.md · v5-revision.md · base-pre-v6.md

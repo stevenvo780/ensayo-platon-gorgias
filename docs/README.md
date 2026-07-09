@@ -1,7 +1,6 @@
 # Capa extendida (`docs/`)
 
-> Material **supplementary**. El ensayo (`../ensayo/Ensayo_Final.md`) se sostiene
-> solo; borrar esta carpeta no lo rompe.
+**Invariante y arquitectura:** ver [`docs/superpowers/specs/2026-07-05-elevar-ensayo-gorgias-design.md`](superpowers/specs/2026-07-05-elevar-ensayo-gorgias-design.md) §3–§4.
 
 - `METODOLOGIA.md` — cómo se produce y **se audita** el ensayo (proceso + las 7 lentes adversariales + cómo reproducirlo).
 - `iteraciones/` — historial del ensayo versión por versión, cada una con su **ciclo de crítica** y evidencia (del anteproyecto a la v6.2).

@@ -24,7 +24,7 @@ APARATO FORMAL Y MAPAS
   derivaciones.md · dodds-guthrie.md · argumento.md · docs-README.md
 
 DEFENSA Y CONTEXTO
-  defensa-oral-qa.md · autores-y-contexto.md · fragmentos-retorica-poder.md
+  defensa-oral-qa.md · fragmentos-retorica-poder.md
 
 VERSIONES DEL ENSAYO (trazabilidad)
   base-original-steven.md · v5-revision.md · base-pre-v6.md

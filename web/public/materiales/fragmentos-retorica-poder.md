@@ -6,52 +6,9 @@
 
 ---
 
-## 🎯 Núcleo de la crítica: persuasión sin saber
+## 🎯 Análisis del Acto I: Sócrates vs. Gorgias
 
-### 1. Los dos tipos de persuasión (454c–455a)
-
-Sócrates fuerza a Gorgias a distinguir entre dos formas de persuasión:
-
-| Tipo | Produce | Fundamento | Ejemplo |
-|---|---|---|---|
-| **Creencia sin conocimiento** (*pistis*) | Convicción sin saber | Apariencia, emoción, opinión | El orador ante un público lego |
-| **Conocimiento genuino** (*epistéme*) | Saber fundamentado | Razón, demostración, verdad | El matemático que enseña geometría |
-
-> **Cita clave (454e):** «¿La retórica es el arte de producir persuasión que enseña a creer sin saber, o la que enseña a saber?»
-
-### 2. La admisión fatal de Gorgias (459b–c)
-
-Gorgias concede que el orador **no necesita saber la verdad** sobre aquello de lo que habla. Basta con que **parezca saber** ante un público que tampoco sabe. Esta concesión es el punto de quiebre: la retórica queda definida como una técnica que produce convicción sin conocimiento.
-
-> **Cita clave (459b–c):** «El orador no necesita saber la verdad; basta con que parezca saber ante quienes no saben.»
-
-### 3. Consecuencia: la retórica no es un arte (*téchne*) sino adulación (*kolakeía*)
-
-Criterios socráticos del arte verdadero:
-1. Conocer la **naturaleza** (*phýsis*) de su objeto.
-2. Conocer la **causa** (*aitía*) de lo que produce.
-3. Apuntar al **bien** (*agathón*) de su objeto.
-
-La retórica **no cumple ninguno**:
-- No conoce qué es la justicia (no necesita saberlo).
-- No puede dar razón de por qué persuade (solo sabe *que* persuade).
-- No apunta al bien del alma (solo busca agradar al auditorio).
-
-> **Cita clave (465c):** «Si la retórica es adulación, entonces es a la justicia lo que la cocina a la medicina: una simulación de lo que cuida el alma.»
-
----
-
-## ⚡ La contradicción de Gorgias: retórica y justicia (460a–461b)
-
-Gorgias añade que él, como maestro, enseña a sus discípulos a usar la retórica **con justicia**. Sócrates detecta una inconsistencia lógica:
-
-1. Quien conoce la justicia **es justo** y obra justamente.
-2. Gorgias enseña retórica, que trata sobre lo justo y lo injusto.
-3. Por tanto, sus discípulos deberían **conocer la justicia**.
-4. Si conocen la justicia, **no pueden obrar injustamente**.
-5. La excusa de «el discípulo usó mal lo aprendido» es **lógicamente imposible**.
-
-**Implicación para el ensayo:** La retórica no puede ser moralmente neutra. Si pretende versar sobre la justicia, debe producir conocimiento de la justicia — y entonces no puede usarse injustamente. Si no produce tal conocimiento, entonces no es un arte sino mera adulación.
+→ **Para el análisis completo del Acto I (447a–461b):** distinción pistis/episteme, la admisión fatal de Gorgias, los criterios socráticos de la *téchne*, y la contradicción sobre la enseñanza de la justicia, ver `material-estudio/02_gorgias_retórica_y_persuasión.md`.
 
 ---
 

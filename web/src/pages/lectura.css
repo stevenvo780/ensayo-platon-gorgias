@@ -333,3 +333,16 @@
     animation-duration: 1.6s;
   }
 }
+
+/* Pantalla VERTICAL (monitor en portrait): el 68ch dejaba márgenes laterales
+   excesivos (hasta ~20% por lado). El cuerpo y la barra aprovechan más ancho,
+   con tope en ~92ch para no alargar en exceso la línea. No afecta a móviles
+   (ya llenan el ancho) ni a pantallas horizontales. */
+@media (orientation: portrait) and (min-width: 680px) {
+  .lec-doc {
+    max-width: min(94vw, 92ch);
+  }
+  .lec-bar__inner {
+    max-width: min(94vw, 92ch);
+  }
+}

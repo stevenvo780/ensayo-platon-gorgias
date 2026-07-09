@@ -930,3 +930,13 @@
    pantallas verticales, donde el texto pequeño cuesta). */
 .essay-article { font-size: clamp(1.05rem, 0.4vw + 0.97rem, 1.18rem); }
 .essay-article p { line-height: 1.78; }
+
+/* Pantalla VERTICAL (monitor en portrait): con el índice ya colapsado como
+   barra superior (≤1280), el ensayo aprovecha más ancho para no dejar bandas
+   laterales grandes; tope en 64rem (~82ch) por legibilidad de la prosa. */
+@media (orientation: portrait) and (min-width: 680px) and (max-width: 1280px) {
+  .essay-wrap {
+    grid-template-columns: minmax(0, min(96vw, 64rem));
+    padding-inline: clamp(1rem, 2.5vw, 1.75rem);
+  }
+}

@@ -2,8 +2,9 @@ MATERIALES · La retórica como τέχνη — Ensayo sobre el Gorgias de Plató
 Sitio: https://retorica.stevenvallejo.com/materiales
 Autor: Steven Vallejo · Seminario Gorgias y Fedón
 
-Esta carpeta reúne el proyecto como material de referencia. A continuación, qué
-es cada archivo.
+*** CARPETA GENERADA — no editar a mano. Se regenera con `make materiales`
+    desde las fuentes canónicas (ensayo/, material-estudio/, docs/, notas-clase/,
+    curso/). Editar allí, no aquí. ***
 
 EL ENSAYO
   Ensayo_Final.docx  El ensayo final en Word (editable), mismo contenido que el PDF.
@@ -11,27 +12,16 @@ EL ENSAYO
   (El PDF de entrega se descarga desde el sitio: /ensayo-gorgias.pdf)
 
 ESTUDIO DEL GORGIAS (guía de lectura del diálogo)
-  00_README.md                                  Índice de la serie de guías de estudio.
-  01_vision_general_del_gorgias.md              Estructura, personajes y problema de fondo.
-  02_gorgias_retórica_y_persuasión.md           Primer acto: la retórica y su refutación.
-  03_polo_poder_injusticia_y_castigo.md         Segundo acto: injusticia, poder y castigo.
-  04_calicles_naturaleza_convencion_y_placer.md Tercer acto: ley del más fuerte y hedonismo.
-  05_socrates_politica_justicia_y_cuidado_del_alma.md  Respuesta socrática y mito final.
-  06_conceptos_clave.md                         Glosario razonado de nociones clave.
-  07_analisis_general_tres_actos.md             Lectura de conjunto en tres actos.
+  00_README.md .. 07_analisis_general_tres_actos.md   Guía por actos + conceptos.
+
+AUTORES Y FUENTES
+  autores/*.md   Resumen citado de cada autor citado en el ensayo (9 fichas).
 
 APARATO FORMAL Y MAPAS
-  derivaciones.md    Los cinco argumentos del ensayo formalizados (st-lang).
-  dodds-guthrie.md   Aparato erudito apoyado en Dodds y Guthrie.
-  argumento.md       Mapa del argumento: premisas, pasos y conclusión.
-  docs-README.md     Guía de la carpeta docs/ (aparato, formal, mapas).
+  derivaciones.md · dodds-guthrie.md · argumento.md · docs-README.md
 
-NOTAS DE CLASE
-  Clase_08_Gorgias_486e-527e.md  Apuntes del cierre del diálogo (réplica a Calicles y mito).
-
-CURSO
-  curso-plan-de-trabajo.md  Plan de trabajo del seminario (Fedón y Gorgias).
-  curso-temas-borrador.md   Borrador preliminar de temas del curso.
+NOTAS DE CLASE / CURSO
+  Clase_08_Gorgias_486e-527e.md · curso-plan-de-trabajo.md · curso-temas-borrador.md
 
 FUENTE PRIMARIA
   Platón, Gorgias, trad. J. Calonge (Gredos, 1983) — no redistribuida por

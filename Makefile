@@ -5,7 +5,7 @@ ESSAY := ensayo/Ensayo_Final.md
 # reservada a bibliografía) con colchón del 5% -> 1490 palabras. Ver `make pages`.
 BUDGET := 1490
 
-.PHONY: all verify docx pdf web wordcount pages venv clean
+.PHONY: all verify docx pdf web wordcount pages venv clean materiales
 venv:
 	@test -d .venv || python3 -m venv .venv
 	@.venv/bin/pip install -q -r requirements.txt
@@ -49,3 +49,8 @@ clean:
 pdf-web: pdf
 	@cp ensayo/Ensayo_Final.pdf web/public/ensayo-gorgias.pdf
 	@echo "OK: PDF de descarga sincronizado en web/public/ensayo-gorgias.pdf"
+
+# Regenera el espejo web/public/materiales/ desde las fuentes canónicas.
+# NO editar web/public/materiales a mano; editar las fuentes y correr esto.
+materiales:
+	@bash scripts/sync_materiales.sh

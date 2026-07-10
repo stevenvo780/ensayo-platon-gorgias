@@ -7,7 +7,7 @@ import './pdf.css';
  * como PDF» (window.print()) oculto en @media print.
  *
  * Se enruta FUERA del Layout compartido: sin header ni footer (chrome), para
- * que la impresión salga limpia. Contenido = ensayo canónico v6 (<=5 páginas).
+ * que la impresión salga limpia. Contenido = ensayo canónico v6.3 (<=5 páginas).
  */
 export default function PdfPage() {
   return (
@@ -35,17 +35,15 @@ export default function PdfPage() {
         <h2 className="subtitulo">Introducción</h2>
         <p>
           El <em>Gorgias</em> contiene la confrontación más extensa de Platón con
-          la retórica como práctica política y educativa. En la Atenas
-          democrática del siglo V la palabra era casi la única vía de acción
-          política, de modo que atacar la retórica era atacar la política misma.
-          Sobre ese trasfondo, Sócrates define la retórica como «adulación»
-          (κολακεία) y «práctica empírica» (ἐμπειρία), nunca como arte (τέχνη)
-          (462b–466a). La distinción es estrictamente epistemológica: una τέχνη
-          tiene (1) un objeto propio, (2) procede con razón y da cuenta de sus
-          principios (λόγον ἔχει), (3) conoce sus causas (αἰτίαι) y (4) orienta su
-          acción al bien (ἀγαθόν) de su objeto; una ἐμπειρία repite lo que produce
-          placer sin tener «ningún fundamento por el que ofrecer las cosas que
-          ella ofrece» (465a), esto es, sin poder decir la causa.
+          la retórica como práctica política y educativa. En la Atenas democrática
+          la palabra era casi la única vía de acción política: atacar la retórica
+          era atacar la política misma. Sobre ese trasfondo, Sócrates define la
+          retórica como «adulación» (κολακεία) y «práctica empírica» (ἐμπειρία),
+          nunca como arte (τέχνη) (462b–466a). La distinción es epistemológica y
+          teleológica: una τέχνη tiene (1) un objeto propio, (2) procede con razón y
+          da cuenta de sus principios (λόγον ἔχει), (3) conoce sus causas (αἰτίαι) y
+          (4) orienta su acción al bien (ἀγαθόν) de su objeto; una ἐμπειρία repite lo
+          que produce placer sin poder decir su causa (465a).
         </p>
         <p>
           Defiendo una hipótesis que no abandona ese marco:{' '}
@@ -60,9 +58,8 @@ export default function PdfPage() {
         </p>
         <p>
           <strong>Pregunta central:</strong> ¿puede mostrarse, dentro del marco
-          epistemológico del propio Sócrates, que la retórica es τέχνη y no
-          ἐμπειρία, en virtud de su objeto propio, sus principios racionales, su
-          conocimiento de causas y su orientación al bien?
+          epistemológico del propio Sócrates, que la retórica satisface los cuatro
+          criterios de τέχνη y no es una ἐμπειρία?
         </p>
         <hr className="sep" />
 
@@ -72,7 +69,7 @@ export default function PdfPage() {
           persuasión y la proclama «el mayor bien», pues da poder sin ser experto
           en cada materia (452d–456a). Sócrates le arranca que produce «creencia
           sin el saber», no «ciencia» (454e). La refutación es elegante, pero
-          descansa sobre una premisa de contrabando: que la retórica{' '}
+          descansa sobre una concesión que Sócrates generaliza: que la retórica{' '}
           <em>versa sobre la justicia</em>.
         </p>
         <p>
@@ -80,12 +77,10 @@ export default function PdfPage() {
           poder desnudo. <strong>Calicles</strong> (481b–527e) radicaliza: opone
           φύσις a νόμος; en su boca la retórica es el instrumento con que el fuerte
           somete la asamblea a su apetito: el riesgo democrático en estado puro.
-          Frente a él, Sócrates establece que el bien del alma es su orden
-          (κόσμος): «una casa con orden [...] es buena, pero sin orden es mala»
-          (504a); del orden del alma resultan «la justicia y la moderación»
-          (σωφροσύνη, 504d), de suerte que «un alma moderada es buena» (506e–507a)
-          y el placer sin freno de Calicles es, literalmente, lo <em>des</em>
-          -ordenado (508a).
+          Frente a él, Sócrates establece que el bien del alma es su orden (κόσμος):
+          del orden resultan «la justicia y la moderación» (σωφροσύνη, 504d), de
+          suerte que «un alma moderada es buena» (506e–507a), y el placer sin freno
+          de Calicles es lo <em>des</em>-ordenado (508a).
         </p>
         <p>
           Sócrates clasifica la retórica como ἐμπειρία equiparándola a la cocina:
@@ -105,7 +100,7 @@ export default function PdfPage() {
           La tesis de que es «irracional» (ἄλογον) y no puede «decir la causa»
           (465a) se apoya <em>únicamente</em> en que el orador persuade sin
           conocer la materia (459a–c). Pero eso describe un <em>uso posible</em>,
-          no la naturaleza de la retórica: es una falacia de composición.
+          no la naturaleza de la retórica: es una generalización indebida.
         </p>
         <hr className="sep" />
 
@@ -116,48 +111,55 @@ export default function PdfPage() {
           Una τέχνη exige, ante todo, un objeto propio que la distinga de las
           demás. Aristóteles: la retórica se divide en tres géneros, y la división
           se deduce de los tres tipos de oyente (<em>Retórica</em> I, 1358a–b). El
-          deliberativo (συμβουλευτικόν) versa sobre lo conveniente y mira al
-          futuro de la ciudad; el judicial (δικανικόν), sobre lo justo y lo
-          injusto en un hecho pasado; el epidíctico (ἐπιδεικτικόν), sobre lo bello
-          y lo feo, mediante elogio y censura (<em>Retórica</em> I, 1358b).
-          Sócrates toma uno solo de los géneros —el judicial (454b–455a)— y lo
-          hace pasar por el todo: la falacia de tomar la parte por el conjunto. La
-          retórica no es ni el saber universal que Gorgias presumía (456a–c) ni la
-          sola justicia, sino el arte que «considera en cada caso lo que es apto
-          para persuadir» (<em>Retórica</em> I, 1355b). Primer criterio
-          satisfecho.
+          deliberativo (συμβουλευτικόν) versa sobre lo conveniente; el judicial
+          (δικανικόν), sobre lo justo y lo injusto; el epidíctico (ἐπιδεικτικόν),
+          sobre lo bello y lo feo (<em>Retórica</em> I, 1358b). Sócrates toma uno
+          solo —el judicial (454b–455a)— por el todo: la falacia de tomar la parte
+          por el conjunto. La retórica no es ni el saber universal que Gorgias
+          presumía (456a–c) ni la sola justicia, sino el arte que «considera en cada
+          caso lo que es apto para persuadir» (<em>Retórica</em> I, 1355b). Primer
+          criterio satisfecho.
         </p>
         <p>
           Aristóteles distingue tres pruebas técnicas (<em>Retórica</em> I,
           1356a): el ἦθος, el πάθος, y el λόγος, que persuade mediante el
           argumento. Suma los τόποι, y el entimema que llama «cuerpo de la prueba»
           (σῶμα τῆς πίστεως, <em>Retórica</em> I, 1354a). Perelman y
-          Olbrechts-Tyteca, en <em>La nueva retórica</em> (1958), muestran que la
-          argumentación posee una racionalidad propia, irreductible a la lógica
-          formal y no por ello arbitraria. Su <strong>auditorio universal</strong>{' '}
-          ofrece un criterio: un argumento es racional en la medida en que podría
-          aceptarlo todo ser razonable, no solo el público al que se halaga.
-          Toulmin (<em>Los usos del argumento</em>, 1958) aporta una{' '}
-          <em>anatomía</em>: el argumento práctico tiene estructura analizable
-          —dato, garantía (<em>warrant</em>) y respaldo (<em>backing</em>)—.
-          Segundo criterio satisfecho.
+          Olbrechts-Tyteca (<em>La nueva retórica</em>, 1958) ilustran que la
+          argumentación tiene racionalidad propia y no arbitraria: su{' '}
+          <strong>auditorio universal</strong> —lo aceptable por todo ser
+          razonable, no por el público que se halaga— es el criterio de esa
+          racionalidad. Toulmin (<em>Los usos del argumento</em>, 1958) responde al
+          cargo de informalidad lógica del entimema: su <em>backing</em> (respaldo)
+          es cómo la retórica <strong>da razón</strong> de la garantía —el λόγον
+          διδόναι que Sócrates reclama—. Segundo criterio satisfecho.
         </p>
         <p>
           El tercer criterio —el que Sócrates niega con más énfasis al decir que
           la retórica no puede «decir la causa» (465a)— exige conocer las αἰτίαι de
-          lo que se produce. El libro II de la <em>Retórica</em> es un tratado
-          causal de las pasiones. En <em>Influence</em> (1984) sistematiza seis
-          principios de persuasión e identifica el <em>mecanismo</em> causal de
-          cada uno: Cialdini no los crea, sino que cuantifica lo que Aristóteles
-          describía. Tercer criterio satisfecho.
+          lo que se produce. Quien las expone es Aristóteles: el libro II de la{' '}
+          <em>Retórica</em> es un tratado causal de las pasiones —qué es cada una,
+          ante quién y por qué se siente— que da <em>razón</em> de cada efecto; por
+          eso es saber de causas y no la ἐμπειρία que Sócrates denuncia. Cialdini
+          (<em>Influence</em>, 1984) no funda ese conocimiento: solo{' '}
+          <em>cuantifica</em> con método experimental algunos efectos que
+          Aristóteles ya explicaba causalmente. Tercer criterio satisfecho.
         </p>
         <hr className="sep" />
 
         <h2 className="subtitulo">Orientación al bien: el criterio decisivo</h2>
         <p>
           Sócrates sostiene que la retórica «pone su punto de mira en el placer sin
-          el bien» (464d–465a). Lo enfrento en su forma fuerte, como una cadena de
-          tres preguntas.
+          el bien» (464d–465a). Pero, a diferencia de la cocina, no procura el
+          placer <em>sorteando</em> el juicio, sino el asentimiento{' '}
+          <em>mediante</em> λόγος dirigido a él: su fin propio no es la
+          gratificación ciega, sino la <strong>convicción razonada</strong>, un
+          bien del alma que la adulación no toca. ¿Y qué separa esa convicción de la{' '}
+          <em>manipulada</em>, que también usa palabras? El auditorio que juzga: la
+          retórica-τέχνη se dirige a un oyente capaz de sopesar razones y disentir
+          —el «auditorio universal» de Perelman como ideal regulativo—, mientras la
+          adulación explota resortes que sortean ese juicio. Enfrento la objeción en
+          su forma fuerte, como una cadena de tres preguntas.
         </p>
         <p>
           <strong>
@@ -168,9 +170,14 @@ export default function PdfPage() {
           el dominio del arte no incluye la rectitud del fin. La retórica no
           establece qué es lo conveniente o lo justo —eso toca a la política y la
           ética, de las que toma sus premisas (<em>Retórica</em> I, 1356a)—; dado
-          un fin, inscrito en sus tres géneros (deliberar, juzgar, educar el
-          carácter, <em>Retórica</em> I, 1358b),{' '}
-          <strong>conoce los medios para persuadir respecto de él</strong>.
+          un fin, inscrito en sus tres géneros (deliberar, juzgar, alabar,{' '}
+          <em>Retórica</em> I, 1358b),{' '}
+          <strong>conoce los medios para persuadir respecto de él</strong>. Preciso
+          aquí el cuarto criterio: exigir que la retórica{' '}
+          <em>posea la ciencia del Bien moral</em> es pedirle lo que ninguna τέχνη
+          productiva cumple —la medicina conoce la salud, bien del cuerpo, pero no
+          la virtud—; basta que se ordene a su fin propio. Exigírselo solo a la
+          retórica sería la arbitrariedad que ya denuncié.
         </p>
         <p>
           <strong>
@@ -181,9 +188,10 @@ export default function PdfPage() {
           sujeto; la retórica no produce almas justas, sino{' '}
           <strong>
             discursos persuasivos sobre lo conveniente, lo justo y lo bello
-          </strong>
-          : conoce los medios para persuadir respecto del fin, pero no <em>es</em>{' '}
-          la virtud que lo realiza.
+          </strong>{' '}
+          —converge con la justicia en parte de su materia (lo justo, en lo
+          judicial) sin agotarse en ella (§2)—: conoce los medios para persuadir
+          respecto del fin, pero no <em>es</em> la virtud que lo realiza.
         </p>
         <hr className="sep" />
 
@@ -207,9 +215,9 @@ export default function PdfPage() {
           <strong>a la vez, puede usarse injustamente</strong>, porque la
           orientación es del <em>arte</em> (su τέλος) y el uso, del <em>agente</em>{' '}
           (su elección). Que el retórico pueda manipular al pueblo no prueba que la
-          retórica no sea arte, sino lo contrario: solo un arte que conoce de veras
-          las causas del asentimiento puede ser peligroso. El peligro de la
-          retórica es, paradójicamente, consecuencia de que es τέχνη.
+          retórica no sea arte, sino lo contrario: solo quien conoce de veras las
+          causas del asentimiento puede manipular <em>con método</em>. Ese peligro
+          sistemático es, paradójicamente, consecuencia de que la retórica es τέχνη.
         </p>
         <hr className="sep" />
 
@@ -220,12 +228,13 @@ export default function PdfPage() {
           racionales sin demostración. Verificada frente a los cuatro criterios que
           el propio Sócrates establece, los satisface: tiene{' '}
           <strong>objeto propio</strong> (los tres géneros del discurso);{' '}
-          <strong>principios racionales</strong> —ἦθος, πάθος, λόγος y τόποι—,
-          conoce sus <strong>causas</strong>, y se{' '}
+          <strong>principios técnicos</strong> —ἦθος, πάθος, λόγος y τόποι—, conoce
+          sus <strong>causas</strong>, y —en la versión defendible del cuarto
+          criterio, la que ninguna τέχνη cumple en su forma fuerte— se{' '}
           <strong>orienta a su fin propio</strong> sin confundirse con la justicia.
           La retórica es, pues, τέχνη y no ἐμπειρία. No abandono el marco de
           Sócrates: lo aplico con el rigor que él reclama, examinando la cosa y no
-          la caricatura que de ella trazan sus adversarios.
+          la caricatura de sus adversarios.
         </p>
         <hr className="sep" />
 

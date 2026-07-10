@@ -1,10 +1,8 @@
 /**
- * Presentación — 13 slides, fieles a _legacy/presentacion.html.
- * Cada slide: { id, kicker, title (JSX), body (JSX) }.
- * Griego politónico correcto.
- *
+ * Presentación — 13 slides. Prosa natural y hilada (no viñetas telegráficas):
+ * cada slide se lee como lo diría un ponente. Alineada con el manuscrito v6.3.
  * `title` y `body` son JSX para conservar cursivas, griego y énfasis.
- * `gk` marca términos griegos; `em`/`strong` conservan el original.
+ * `gk` marca términos griegos.
  */
 
 import {
@@ -56,16 +54,17 @@ export const slides = [
     body: (
       <>
         <p className="deck-lead">
-          En el <em>Gorgias</em> (462b–466a), Sócrates niega que la retórica sea{' '}
-          {gk('τέχνη')}: la llama «adulación» ({gk('κολακεία')}) y «práctica
-          empírica» ({gk('ἐμπειρία')}) —como la cocina, da placer sin conocer el
-          bien—.
+          En el <em>Gorgias</em> (462b–466a), Sócrates le niega a la retórica el
+          rango de arte ({gk('τέχνη')}). La llama adulación ({gk('κολακεία')}) y
+          práctica empírica ({gk('ἐμπειρία')}), y la compara con la cocina, que
+          agrada al cuerpo sin conocer lo que de verdad le conviene.
         </p>
         <p className="deck-sub">
-          La distinción es <strong className="hl">epistemológica</strong>: una{' '}
-          {gk('τέχνη')} tiene objeto propio, procede con razón ({gk('λόγον ἔχει')}
-          ), conoce sus causas ({gk('αἰτίαι')}) y se orienta al bien. Una{' '}
-          {gk('ἐμπειρία')} repite lo que agrada sin poder decir la causa.
+          La distinción es <strong className="hl">epistemológica y teleológica</strong>:
+          un arte tiene un objeto propio, procede con razón y da cuenta de sus
+          principios ({gk('λόγον ἔχει')}), conoce sus causas ({gk('αἰτίαι')}) y se
+          orienta al bien de aquello sobre lo que actúa. Una mera práctica, en
+          cambio, repite lo que agrada sin poder decir por qué funciona.
         </p>
       </>
     ),
@@ -79,27 +78,20 @@ export const slides = [
     body: (
       <>
         <p className="deck-lead">
-          ¿Puede mostrarse, dentro del marco epistemológico del propio Sócrates,
-          que la retórica es {gk('τέχνη')} y no {gk('ἐμπειρία')} —por su objeto
-          propio, sus principios racionales, su conocimiento de causas y su
-          orientación al bien—?
+          Mi pregunta es si puede mostrarse, sin salir del marco epistemológico del
+          propio Sócrates, que la retórica es un arte y no una simple rutina: si
+          satisface su objeto propio, sus principios racionales, su conocimiento de
+          causas y su orientación al bien.
         </p>
-        <ul className="deck-points">
-          <li>
-            <strong>Acepto</strong> la jerarquía socrática: las {gk('τέχναι')} son
-            superiores a las {gk('ἐμπειρίαι')}. <strong>Disputo</strong> que la
-            retórica pertenezca a las segundas.
-          </li>
-          <li>
-            La verifico frente a los <strong>cuatro criterios</strong> que el
-            propio Sócrates fija, con la <em>Retórica</em> de Aristóteles.
-          </li>
-          <li>
-            Dos anacronismos <em>declarados y acotados</em>: la teoría de la
-            argumentación (solo principios racionales) y Cialdini (solo
-            conocimiento de causas).
-          </li>
-        </ul>
+        <p className="deck-sub">
+          Acepto la jerarquía socrática, según la cual los verdaderos artes valen
+          más que las meras prácticas, pero disputo que la retórica caiga entre estas
+          últimas. Para verlo la someto a los cuatro criterios que el propio Sócrates
+          fija, con la <em>Retórica</em> de Aristóteles como eje. Me apoyo, además, en
+          dos anacronismos que declaro y acoto: la teoría moderna de la argumentación,
+          solo para los principios racionales, y Cialdini, solo para el conocimiento
+          de causas.
+        </p>
       </>
     ),
   },
@@ -110,23 +102,22 @@ export const slides = [
     kicker: '§1 · El problema en el diálogo',
     title: <>Tres interlocutores, un mismo poder</>,
     body: (
-      <ul className="deck-points">
-        <li>
-          <strong>Gorgias</strong> — la retórica como «el mayor bien»: poder sin
-          ser experto. Sócrates lo atrapa: produce «creencia sin el saber», no
-          ciencia.
-        </li>
-        <li>
-          <strong>Polo</strong> — el poder desnudo: el tirano hace «lo que le
-          parece». Pero no lo que <em>quiere</em>: cometer injusticia es peor que
-          padecerla.
-        </li>
-        <li>
-          <strong>Calicles</strong> — {gk('φύσις')} contra {gk('νόμος')}, el placer
-          sin freno: el <strong>riesgo democrático</strong> en estado puro. Retengo
-          el riesgo, no su tesis.
-        </li>
-      </ul>
+      <>
+        <p className="deck-lead">
+          El diálogo avanza por tres interlocutores que defienden un mismo poder con
+          crudeza creciente. Gorgias proclama la retórica como el mayor de los bienes,
+          capaz de dar poder sin ser experto en nada; Sócrates lo atrapa enseguida,
+          pues lo que ese poder produce es creencia sin saber, no ciencia.
+        </p>
+        <p className="deck-sub">
+          Polo se queda entonces con el poder desnudo —el tirano hace lo que le
+          parece—, pero Sócrates le muestra que no hace lo que de verdad quiere,
+          porque cometer injusticia es peor que padecerla. Calicles lleva la posición
+          al límite, opone la naturaleza ({gk('φύσις')}) a la ley ({gk('νόμος')}) y
+          reivindica el placer sin freno: es el <strong>riesgo democrático</strong> en
+          estado puro. De él retengo el riesgo, no la tesis.
+        </p>
+      </>
     ),
   },
 
@@ -134,20 +125,23 @@ export const slides = [
   {
     id: 'clasificacion-arbitraria',
     kicker: '§2 · La clasificación es arbitraria',
-    title: <>Dos movimientos no probados</>,
+    title: <>Dos movimientos que no prueba</>,
     body: (
-      <ul className="deck-points">
-        <li>
-          <strong>Reduce el objeto</strong> a «lo justo y lo injusto» —un solo
-          género, el judicial— e ignora el deliberativo y el epidíctico.
-        </li>
-        <li>
-          <strong>Niega principios racionales sin probarlo</strong>: que{' '}
-          <em>algunos</em> oradores persuadan sin saber no implica que la retórica{' '}
+      <>
+        <p className="deck-lead">
+          La clasificación de Sócrates descansa en dos movimientos que en ningún
+          momento demuestra. Primero reduce el objeto de la retórica a lo justo y lo
+          injusto, es decir, a un solo género —el judicial—, e ignora el deliberativo
+          y el epidíctico.
+        </p>
+        <p className="deck-sub">
+          Después le niega principios racionales sin probarlo: del hecho de que{' '}
+          <em>algunos</em> oradores persuadan sin saber no se sigue que la retórica{' '}
           <em>como tal</em> carezca de principios. Es una{' '}
-          <strong>falacia de composición</strong>.
-        </li>
-      </ul>
+          <strong className="hl">generalización indebida</strong>, que toma un uso
+          posible por la naturaleza misma de la cosa.
+        </p>
+      </>
     ),
   },
 
@@ -159,28 +153,34 @@ export const slides = [
     variant: 'grid',
     diagram: <FourCriteriaOrbit />,
     body: (
-      <div className="deck-grid4">
-        <div className="deck-card">
-          <div className="deck-card__n">01</div>
-          <div className="deck-card__t">Objeto propio</div>
-          <div className="deck-card__d">Los tres géneros del discurso.</div>
+      <>
+        <p className="deck-lead">
+          Del diálogo se siguen cuatro rasgos que separan un arte de una rutina.
+          Verifico la retórica contra cada uno de ellos.
+        </p>
+        <div className="deck-grid4">
+          <div className="deck-card">
+            <div className="deck-card__n">01</div>
+            <div className="deck-card__t">Objeto propio</div>
+            <div className="deck-card__d">Los tres géneros del discurso.</div>
+          </div>
+          <div className="deck-card">
+            <div className="deck-card__n">02</div>
+            <div className="deck-card__t">Principios racionales</div>
+            <div className="deck-card__d">{gk('λόγον ἔχει')} — ethos, pathos, logos.</div>
+          </div>
+          <div className="deck-card">
+            <div className="deck-card__n">03</div>
+            <div className="deck-card__t">Conocimiento de causas</div>
+            <div className="deck-card__d">Las {gk('αἰτίαι')} de la persuasión.</div>
+          </div>
+          <div className="deck-card">
+            <div className="deck-card__n">04</div>
+            <div className="deck-card__t">Orientación al bien</div>
+            <div className="deck-card__d">El criterio decisivo.</div>
+          </div>
         </div>
-        <div className="deck-card">
-          <div className="deck-card__n">02</div>
-          <div className="deck-card__t">Principios racionales</div>
-          <div className="deck-card__d">{gk('λόγον ἔχει')} — ethos, pathos, logos.</div>
-        </div>
-        <div className="deck-card">
-          <div className="deck-card__n">03</div>
-          <div className="deck-card__t">Conocimiento de causas</div>
-          <div className="deck-card__d">Las {gk('αἰτίαι')} de la persuasión.</div>
-        </div>
-        <div className="deck-card">
-          <div className="deck-card__n">04</div>
-          <div className="deck-card__t">Orientación al bien</div>
-          <div className="deck-card__d">El criterio decisivo.</div>
-        </div>
-      </div>
+      </>
     ),
   },
 
@@ -193,23 +193,17 @@ export const slides = [
     body: (
       <>
         <p className="deck-lead">
-          La división no es estipulativa: se deduce de los tres tipos de oyente (
-          <em>Retórica</em> I, 1358a–b).
+          El primer requisito de un arte es un objeto propio que lo distinga de los
+          demás, y Aristóteles muestra que la retórica lo tiene. Su división en tres
+          géneros no es estipulativa: se deduce de la posición del oyente ante el
+          tiempo (<em>Retórica</em> I, 1358a–b).
         </p>
-        <ul className="deck-points">
-          <li>
-            <strong>Deliberativo</strong> — lo conveniente, mira al futuro de la
-            ciudad.
-          </li>
-          <li>
-            <strong>Judicial</strong> — lo justo y lo injusto en un hecho pasado.
-          </li>
-          <li>
-            <strong>Epidíctico</strong> — lo bello y lo feo, por elogio y censura.
-          </li>
-        </ul>
         <p className="deck-sub">
-          Sócrates tomó <em>uno</em> por el todo. El objeto excede la justicia.{' '}
+          El discurso deliberativo versa sobre lo conveniente y mira al futuro de la
+          ciudad; el judicial, sobre lo justo y lo injusto de un hecho pasado; y el
+          epidíctico, sobre lo bello y lo feo, por elogio y censura. Sócrates tomó uno
+          solo de los tres, el judicial, y lo hizo pasar por el todo; pero el objeto
+          de la retórica excede con mucho la justicia.{' '}
           <strong className="hl">Primer criterio satisfecho.</strong>
         </p>
       </>
@@ -225,20 +219,17 @@ export const slides = [
     body: (
       <>
         <p className="deck-lead">
-          Un arte que clasifica sus pruebas y enseña a construir entimemas —«cuerpo
-          de la prueba» ({gk('σῶμα τῆς πίστεως')})— no persuade por azar.
+          Un arte que clasifica sus pruebas y enseña a construir entimemas, lo que
+          Aristóteles llama el cuerpo de la prueba ({gk('σῶμα τῆς πίστεως')}), no
+          persuade por azar.
         </p>
-        <ul className="deck-points">
-          <li>
-            <strong>Perelman</strong> — el <em>auditorio universal</em>: racional es
-            lo que aceptaría todo ser razonable, no el público que se halaga.
-          </li>
-          <li>
-            <strong>Toulmin</strong> — dato, garantía, respaldo: el <em>backing</em>{' '}
-            es la prueba de que la retórica da cuenta de su proceder.
-          </li>
-        </ul>
         <p className="deck-sub">
+          La teoría moderna de la argumentación lo ilustra. Perelman describe un
+          auditorio universal por el que lo racional es lo que aceptaría cualquier ser
+          razonable, no el público al que se halaga; y Toulmin, al distinguir el dato,
+          la garantía y el respaldo, encuentra en el respaldo la forma en que la
+          retórica da cuenta de su proceder, el {gk('λόγον διδόναι')} que el propio
+          Sócrates reclama.{' '}
           <strong className="hl">Segundo criterio satisfecho.</strong>
         </p>
       </>
@@ -254,16 +245,16 @@ export const slides = [
     body: (
       <>
         <p className="deck-lead">
-          El libro II de la <em>Retórica</em> es un tratado causal de las pasiones:
-          la ira es «un deseo de venganza…» (II, 1378a) —quien tiene la definición
-          sabe <em>por qué</em> surge—.
+          Este es el criterio que Sócrates niega con más fuerza: que la retórica no
+          puede decir la causa de lo que produce. Pero el libro II de la{' '}
+          <em>Retórica</em> es justamente un tratado causal de las pasiones —define
+          qué es la ira, ante quién y por qué se siente (II, 1378a)—, y quien tiene la
+          definición sabe por qué surge el efecto.
         </p>
         <p className="deck-sub">
-          <strong>Cialdini</strong> —anacronismo <em>declarado y acotado</em>— da
-          contenido empírico a esas {gk('αἰτίαι')}: seis principios cuyo mecanismo
-          se mide y se replica. Aristóteles ya los tematizaba —autoridad en el{' '}
-          {gk('ἦθος')}, {gk('χάρις')} como reciprocidad—; Cialdini <em>cuantifica</em>{' '}
-          lo que él describía.{' '}
+          Cialdini, el anacronismo que declaro y acoto, no funda ese saber: solo
+          cuantifica con método experimental algunos efectos que Aristóteles ya había
+          explicado causalmente.{' '}
           <strong className="hl">Tercer criterio satisfecho.</strong>
         </p>
       </>
@@ -281,24 +272,21 @@ export const slides = [
     ),
     diagram: <ChainABC />,
     body: (
-      <div className="deck-chain">
-        <div className="deck-step">
-          <span className="deck-step__q">(a)</span>
-          <span>
-            ¿Orientarse al bien sin conocerlo? — La {gk('τέχνη')} no es la{' '}
-            {gk('φρόνησις')} (EN VI, 1140a–b): conoce su <strong>fin propio</strong>{' '}
-            y los medios, no el Bien. Ninguna {gk('τέχνη')} exigiría más.
-          </span>
-        </div>
-        <div className="deck-step">
-          <span className="deck-step__q">(b)</span>
-          <span>
-            ¿Entonces = justicia? — No: distinto <strong>objeto formal</strong>.
-            Produce <strong>discursos persuasivos</strong> sobre lo conveniente, lo
-            justo y lo bello, no almas justas.
-          </span>
-        </div>
-      </div>
+      <>
+        <p className="deck-lead">
+          El cuarto criterio es el decisivo, y es donde la objeción de Sócrates aprieta
+          más. Pregunta primero cómo podría la retórica orientarse al bien si no lo
+          conoce. Respondo que un arte no es la prudencia ({gk('φρόνησις')}): conoce su
+          fin propio y los medios que a él conducen, no la ciencia del Bien. Eso mismo
+          vale para la medicina, que conoce la salud, bien del cuerpo, pero no la
+          virtud, y no por ello deja de ser arte.
+        </p>
+        <p className="deck-sub">
+          Si se objeta entonces que conocer el fin la confunde con la justicia, la
+          diferencia está en el objeto formal: la retórica no produce almas justas,
+          sino discursos persuasivos sobre lo conveniente, lo justo y lo bello.
+        </p>
+      </>
     ),
   },
 
@@ -311,16 +299,17 @@ export const slides = [
     body: (
       <>
         <p className="deck-lead">
-          <strong>La objeción:</strong> si su orientación al bien la volviera
-          incapaz de daño, la retórica sería inocua y dejaría de ser un riesgo —una{' '}
-          <em>trampa simétrica</em>—.
+          La última pregunta es la más aguda: si su orientación al bien volviera al
+          retórico incapaz de dañar, la retórica sería inocua y dejaría de ser un
+          riesgo para la democracia. Es una trampa simétrica, y no la muerdo.
         </p>
         <p className="deck-sub">
-          <strong>La respuesta:</strong> la orientación es del <strong>arte</strong>{' '}
-          (su {gk('τέλος')}); el uso, del <strong>agente</strong> (su {gk('ἦθος')}).
-          Y solo un arte que conoce de veras las {gk('αἰτίαι')} puede{' '}
-          <strong className="hl">manipular con método</strong>: el peligro no
-          refuta que sea {gk('τέχνη')} —lo <em>prueba</em>—.
+          La orientación pertenece al <strong>arte</strong> y es su fin ({gk('τέλος')});
+          el uso pertenece al <strong>agente</strong> y a su carácter ({gk('ἦθος')}).
+          Que el retórico pueda manipular al pueblo no prueba que la retórica no sea un
+          arte, sino todo lo contrario: solo quien conoce de veras las causas del
+          asentimiento puede <strong className="hl">manipular con método</strong>. Ese
+          peligro es, paradójicamente, la prueba de que la retórica es un arte.
         </p>
       </>
     ),
@@ -338,20 +327,16 @@ export const slides = [
         <p className="deck-quote">
           «La retórica es, pues, {gk('τέχνη')} y no {gk('ἐμπειρία')}.»
           <span className="deck-quote__src">
-            Aplico el criterio de Sócrates con el rigor que él reclama —examinando
-            la cosa, no la caricatura—.
+            Aplico el criterio de Sócrates con el rigor que él reclama, examinando la
+            cosa y no la caricatura que de ella trazan sus adversarios.
           </span>
         </p>
-        <ul className="deck-points">
-          <li>
-            Si el <em>Gorgias</em> censura un <em>uso</em> y no la disciplina, ¿qué
-            educación del orador se sigue?
-          </li>
-          <li>
-            ¿Basta la posibilidad del mal uso para mantener la vigilancia
-            democrática sobre la retórica?
-          </li>
-        </ul>
+        <p className="deck-sub">
+          Quedan, eso sí, dos preguntas abiertas. Si el <em>Gorgias</em> censura un{' '}
+          <em>uso</em> y no la disciplina, ¿qué educación del orador se sigue de ello?
+          Y ¿basta la mera posibilidad del mal uso para justificar la vigilancia
+          democrática sobre la retórica?
+        </p>
       </>
     ),
   },
